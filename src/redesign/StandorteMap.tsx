@@ -1,214 +1,119 @@
 import { useEffect, useRef } from 'react';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
+import './standorte-map.css';
 
 const DEFAULT_MAPBOX_TOKEN = [
   'pk',
   'eyJ1IjoiY2hlcml4YXBwIiwiYSI6ImNtbHpocmhkMjA1bmUzZHF2aWwyZTIxMHkifQ',
-  '_G8m4oZsJiicmiO_KDR1KQ'
+  '_G8m4oZsJiicmiO_KDR1KQ',
 ].join('.');
-
-const MAPBOX_TOKEN = (import.meta as any).env?.VITE_MAPBOX_TOKEN || DEFAULT_MAPBOX_TOKEN;
+const MAPBOX_TOKEN = import.meta.env.VITE_MAPBOX_TOKEN || DEFAULT_MAPBOX_TOKEN;
 
 const LOCATIONS = [
-  {
-    id: 'castrop',
-    name: 'Castrop-Rauxel',
-    category: 'Hauptstandort',
-    detail: 'Begegnungszentrum Merklinde',
-    coords: [7.3093, 51.5542],
-    color: '#15803d',
-    bgColor: '#0b2e1b',
-    borderColor: '#84cc16'
-  },
-  {
-    id: 'dortmund',
-    name: 'Dortmund',
-    category: 'Projekt-Hub',
-    detail: 'Tandem & Mentoring',
-    coords: [7.4653, 51.5136],
-    color: '#0284c7',
-    bgColor: '#0f172a',
-    borderColor: '#38bdf8'
-  },
-  {
-    id: 'berlin',
-    name: 'Berlin',
-    category: 'Bundesnetzwerk',
-    detail: 'Dialog & Vertretungen',
-    coords: [13.4050, 52.5200],
-    color: '#b45309',
-    bgColor: '#1c1917',
-    borderColor: '#f59e0b'
-  }
+  { number: '1', name: 'Castrop-Rauxel', color: '#246b38' },
+  { number: '2', name: 'Dortmund', color: '#0369a1' },
+  { number: '3', name: 'Berlin', color: '#b45309' },
+];
+
+// The two Ruhrgebiet cities share a regional marker at this map scale.
+const REGIONS: { label: string; description: string; coords: [number, number]; color: string }[] = [
+  { label: '1 · 2', description: 'Castrop-Rauxel und Dortmund', coords: [7.3873, 51.5339], color: '#246b38' },
+  { label: '3', description: 'Berlin', coords: [13.405, 52.52], color: '#b45309' },
 ];
 
 export default function StandorteMap() {
   const mapContainerRef = useRef<HTMLDivElement>(null);
-  const mapRef = useRef<mapboxgl.Map | null>(null);
 
   useEffect(() => {
-    if (!mapContainerRef.current) return;
-
-    mapboxgl.accessToken = MAPBOX_TOKEN;
+    const container = mapContainerRef.current;
+    if (!container) return;
 
     const map = new mapboxgl.Map({
-      container: mapContainerRef.current,
+      container,
+      accessToken: MAPBOX_TOKEN,
       style: 'mapbox://styles/mapbox/light-v11',
       projection: 'globe',
-      center: [10.4, 52.0],
-      zoom: 2.7,
-      pitch: 35,
+      center: [10.4, 52],
+      zoom: 4.5,
+      pitch: 0,
       bearing: 0,
-      interactive: false, // NON MANIPULABLE
+      interactive: false,
       attributionControl: false,
     });
 
-    mapRef.current = map;
+    function fitLocations() {
+      map.resize();
+      map.fitBounds([[7.3093, 51.5136], [13.405, 52.52]], {
+        padding: { top: 64, bottom: 64, left: 44, right: 44 },
+        maxZoom: 5.8,
+        duration: 0,
+      });
+    }
+
+    fitLocations();
+    const resizeObserver = new ResizeObserver(fitLocations);
+    resizeObserver.observe(container);
 
     map.on('style.load', () => {
-      // Pure seamless embedding into white card
-      map.setFog({
-        color: '#ffffff',
-        'high-color': '#f0fdf4',
-        'space-color': '#ffffff',
-        'horizon-blend': 0.03,
-        'star-intensity': 0
+      if (map.getSource('connection')) return;
+      map.addSource('connection', {
+        type: 'geojson',
+        data: {
+          type: 'Feature',
+          properties: {},
+          geometry: {
+            type: 'LineString',
+            coordinates: [REGIONS[0].coords, [10.4, 52.2], REGIONS[1].coords],
+          },
+        },
       });
-
-      // Curved connection arc from Ruhrgebiet to Berlin
-      if (!map.getSource('connection')) {
-        map.addSource('connection', {
-          type: 'geojson',
-          data: {
-            type: 'Feature',
-            properties: {},
-            geometry: {
-              type: 'LineString',
-              coordinates: [
-                [7.3093, 51.5542],
-                [7.4653, 51.5136],
-                [10.4, 52.2],
-                [13.4050, 52.5200]
-              ]
-            }
-          }
-        });
-
-        map.addLayer({
-          id: 'connection-line',
-          type: 'line',
-          source: 'connection',
-          paint: {
-            'line-color': '#16a34a',
-            'line-width': 2.5,
-            'line-dasharray': [2, 2],
-            'line-opacity': 0.85
-          }
-        });
-      }
-
-      // Add custom HTML pins & cards
-      LOCATIONS.forEach(loc => {
-        const el = document.createElement('div');
-        el.className = 'relative flex flex-col items-center pointer-events-none select-none';
-        
-        const isDortmund = loc.id === 'dortmund';
-        
-        el.innerHTML = `
-          <!-- Pin Card -->
-          <div style="
-            position: absolute;
-            ${isDortmund ? 'top: 26px;' : 'bottom: 26px;'}
-            left: 50%;
-            transform: translateX(-50%);
-            background: ${loc.bgColor};
-            color: #ffffff;
-            padding: 6px 12px;
-            border-radius: 12px;
-            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.25);
-            border: 1.5px solid ${loc.borderColor};
-            white-space: nowrap;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            z-index: 30;
-          ">
-            <span style="font-size: 9px; font-weight: 800; color: ${loc.borderColor}; text-transform: uppercase; letter-spacing: 0.05em; line-height: 1;">
-              ${loc.category}
-            </span>
-            <span style="font-size: 11px; font-weight: 700; color: #ffffff; margin-top: 2px; line-height: 1.2;">
-              ${loc.name} • ${loc.detail}
-            </span>
-          </div>
-
-          <!-- Pulsing Pin Marker -->
-          <div style="position: relative; width: 22px; height: 22px; display: flex; align-items: center; justify-content: center;">
-            <div style="
-              position: absolute;
-              inset: -4px;
-              border-radius: 9999px;
-              background-color: ${loc.borderColor};
-              opacity: 0.6;
-              animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
-            "></div>
-            <div style="
-              position: relative;
-              width: 18px;
-              height: 18px;
-              border-radius: 9999px;
-              background-color: ${loc.bgColor};
-              border: 2px solid #ffffff;
-              box-shadow: 0 4px 6px -1px rgba(0,0,0,0.2);
-              display: flex;
-              align-items: center;
-              justify-content: center;
-            ">
-              <div style="width: 6px; height: 6px; border-radius: 9999px; background-color: ${loc.borderColor};"></div>
-            </div>
-          </div>
-        `;
-
-        new mapboxgl.Marker({ element: el })
-          .setLngLat(loc.coords as [number, number])
-          .addTo(map);
+      map.addLayer({
+        id: 'connection-line',
+        type: 'line',
+        source: 'connection',
+        paint: {
+          'line-color': '#246b38',
+          'line-width': 2,
+          'line-dasharray': [2, 3],
+          'line-opacity': 0.55,
+        },
       });
     });
 
-    // Smooth subtle Earth rotation
-    let animId: number;
-    const baseLng = 10.4;
-    let angle = 0;
-
-    function animate() {
-      if (mapRef.current) {
-        angle += 0.003;
-        // Gentle rotation around the focus area so all points remain visible
-        const currentLng = baseLng + Math.sin(angle) * 12;
-        mapRef.current.setCenter([currentLng, 52.0]);
-      }
-      animId = requestAnimationFrame(animate);
-    }
-
-    animId = requestAnimationFrame(animate);
+    const markers = REGIONS.map(region => {
+      const element = document.createElement('div');
+      element.className = 'efi-map-marker';
+      element.style.borderColor = region.color;
+      element.style.color = region.color;
+      element.textContent = region.label;
+      element.setAttribute('role', 'img');
+      element.setAttribute('aria-label', region.description);
+      return new mapboxgl.Marker({ element })
+        .setLngLat(region.coords)
+        .addTo(map);
+    });
 
     return () => {
-      cancelAnimationFrame(animId);
+      resizeObserver.disconnect();
+      markers.forEach(marker => marker.remove());
       map.remove();
     };
   }, []);
 
   return (
-    <div className="relative w-full h-[460px] sm:h-[520px] bg-white flex items-center justify-center overflow-hidden">
-      <style>{`
-        .mapboxgl-ctrl-bottom-left, .mapboxgl-ctrl-bottom-right, .mapboxgl-ctrl-logo, .mapboxgl-ctrl-attrib {
-          display: none !important;
-        }
-      `}</style>
-      <div 
-        ref={mapContainerRef} 
-        className="w-full h-full pointer-events-none select-none" 
-      />
+    <div className="efi-locations-map">
+      <div ref={mapContainerRef} className="efi-locations-map__canvas" />
+      <ul className="efi-locations-map__legend" aria-label="Unsere Standorte">
+        {LOCATIONS.map(location => (
+          <li key={location.number}>
+            <span className="efi-locations-map__number" style={{ backgroundColor: location.color }} aria-hidden="true">
+              {location.number}
+            </span>
+            <span>{location.name}</span>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
