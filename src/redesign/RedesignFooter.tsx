@@ -5,9 +5,9 @@ export default function RedesignFooter() {
   return (
     <footer className="bg-brand-deep text-white pt-20 pb-10 border-t border-brand-800" data-purpose="site-footer">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-16 border-b border-white/10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 pb-16 border-b border-white/10">
 
-          <div className="lg:col-span-4 space-y-5">
+          <div className="md:col-span-2 lg:col-span-5 space-y-5">
             <Link to="/" className="flex items-center gap-3 w-fit focus:outline-none">
               <div className="w-12 h-12 rounded-full overflow-hidden bg-white p-0.5 border-2 border-limeAccent-500 shadow-md flex items-center justify-center flex-shrink-0">
                 <Logo size={46} className="w-full h-full" />
@@ -25,7 +25,7 @@ export default function RedesignFooter() {
             </div>
           </div>
 
-          <div className="lg:col-span-2 space-y-4">
+          <div className="lg:col-span-3 space-y-4">
             <h4 className="text-xs font-bold uppercase tracking-wider text-limeAccent-400">Navigation</h4>
             <ul className="space-y-2.5 text-xs sm:text-sm text-stone-300">
               <li><Link className="hover:text-white transition-colors" to="/">Startseite</Link></li>
@@ -38,7 +38,7 @@ export default function RedesignFooter() {
             </ul>
           </div>
 
-          <div className="lg:col-span-3 space-y-4">
+          <div className="lg:col-span-4 min-w-0 space-y-4">
             <h4 className="text-xs font-bold uppercase tracking-wider text-limeAccent-400">Standorte &amp; Kontakt</h4>
             <div className="text-xs sm:text-sm text-stone-300 space-y-3">
               <div>
@@ -57,38 +57,18 @@ export default function RedesignFooter() {
                 <a className="text-limeAccent-400 hover:underline inline-flex items-center gap-1.5 font-medium" href="https://wa.me/491773218743" target="_blank" rel="noopener noreferrer">
                   <span>WhatsApp: +49 (0) 177 3218743</span>
                 </a>
-                <a className="text-stone-300 hover:text-white transition-colors" href="mailto:info@engagement-integration.de">
+                <a className="text-stone-300 hover:text-white transition-colors break-words" href="mailto:info@engagement-integration.de">
                   info@engagement-integration.de
                 </a>
               </div>
             </div>
           </div>
 
-          <div className="lg:col-span-3 space-y-4">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-limeAccent-400">Newsletter</h4>
-            <p className="text-xs text-stone-300 leading-relaxed">
-              Abonnieren Sie unseren monatlichen Rundbrief, um über neueste Bildungsangebote, Kulturfeste und Berichte informiert zu bleiben.
-            </p>
-            <form className="space-y-2" onSubmit={(e) => { e.preventDefault(); alert("Vielen Dank! Sie wurden für den Newsletter vorgemerkt."); }}>
-              <input 
-                className="w-full px-3.5 py-2.5 rounded-xl bg-brand-900 border border-white/20 text-white text-xs placeholder:text-stone-400 focus:outline-none focus:border-limeAccent-400" 
-                placeholder="Ihre E-Mail-Adresse..." 
-                required 
-                type="email"
-              />
-              <button 
-                className="w-full py-2.5 rounded-xl text-xs font-bold bg-limeAccent-500 hover:bg-limeAccent-400 text-brand-950 transition-colors" 
-                type="submit"
-              >
-                Abonnieren
-              </button>
-            </form>
-          </div>
         </div>
 
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-400">
+        <div className="pt-8 flex flex-col lg:flex-row items-center justify-between gap-4 text-center lg:text-left text-xs text-stone-400">
           <p>© 2026 EFI - Engagement für Integration e.V. – Alle Rechte vorbehalten.</p>
-          <div className="flex items-center space-x-6">
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
             <Link className="hover:text-white transition-colors" to="/mentions">Impressum</Link>
             <Link className="hover:text-white transition-colors" to="/privacy-policy">Datenschutzerklärung</Link>
             <Link className="hover:text-white transition-colors" to="/about-us">Transparenz</Link>
