@@ -35,27 +35,28 @@ export default function StandorteMap() {
       style: 'mapbox://styles/mapbox/light-v11',
       projection: 'globe',
       center: [10.4, 52],
-      zoom: 4.5,
-      pitch: 0,
+      zoom: 2.7,
+      pitch: 35,
       bearing: 0,
       interactive: false,
       attributionControl: false,
     });
 
-    function fitLocations() {
+    function resizeMap() {
       map.resize();
-      map.fitBounds([[7.3093, 51.5136], [13.405, 52.52]], {
-        padding: { top: 64, bottom: 64, left: 44, right: 44 },
-        maxZoom: 5.8,
-        duration: 0,
-      });
     }
 
-    fitLocations();
-    const resizeObserver = new ResizeObserver(fitLocations);
+    const resizeObserver = new ResizeObserver(resizeMap);
     resizeObserver.observe(container);
 
     map.on('style.load', () => {
+      map.setFog({
+        color: '#ffffff',
+        'high-color': '#f0fdf4',
+        'space-color': '#ffffff',
+        'horizon-blend': 0.03,
+        'star-intensity': 0,
+      });
       if (map.getSource('connection')) return;
       map.addSource('connection', {
         type: 'geojson',
@@ -89,12 +90,29 @@ export default function StandorteMap() {
       element.textContent = region.label;
       element.setAttribute('role', 'img');
       element.setAttribute('aria-label', region.description);
-      return new mapboxgl.Marker({ element })
+      return new mapboxgl.Marker({
+        element,
+        anchor: region.label === '3' ? 'top' : 'bottom',
+        offset: region.label === '3' ? [12, 16] : [-12, -16],
+      })
         .setLngLat(region.coords)
         .addTo(map);
     });
 
+    let animationId = 0;
+    let startedAt: number | undefined;
+    function rotateGlobe(timestamp: number) {
+      startedAt ??= timestamp;
+      const angle = (timestamp - startedAt) * 0.00018;
+      map.setCenter([10.4 + Math.sin(angle) * 12, 52]);
+      animationId = requestAnimationFrame(rotateGlobe);
+    }
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      animationId = requestAnimationFrame(rotateGlobe);
+    }
+
     return () => {
+      cancelAnimationFrame(animationId);
       resizeObserver.disconnect();
       markers.forEach(marker => marker.remove());
       map.remove();
