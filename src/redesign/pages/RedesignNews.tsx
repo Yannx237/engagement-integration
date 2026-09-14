@@ -46,16 +46,16 @@ export default function RedesignNews() {
               </div>
             </div>
 
-            <div className="lg:col-span-5">
-              <div className="rounded-2xl overflow-hidden shadow-lg border border-stone-200 group">
+            <div className="lg:col-span-5 flex flex-col items-center">
+              <div className="w-full max-w-md rounded-2xl overflow-hidden shadow-lg border border-stone-200 group bg-stone-100">
                 <img 
                   src="/assets/images/news-8.png" 
                   alt="Austausch mit der kamerunischen Botschaft in Berlin" 
-                  className="w-full h-80 lg:h-96 object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full aspect-[3/4] object-cover object-top group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                 />
               </div>
-              <p className="text-center text-xs text-stone-500 mt-2">
+              <p className="text-center text-xs text-stone-500 mt-2.5 max-w-sm">
                 Vorstand von EFI e.V. im Gespräch mit Ministerberater NDO MINLA'A Salomon Richard in Berlin.
               </p>
             </div>
