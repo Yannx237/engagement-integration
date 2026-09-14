@@ -1,0 +1,27 @@
+HTTrack3.50-0 launched on Thu, 03 Sep 2026 12:03:15 at https://engagement-integration.de/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2%f#f -F "Mozilla/5.0 (compatible; HTTrack; +https://www.httrack.com/)" -%F "<!-- Mirrored from {url} by HTTrack Website Copier/3.x [XR&CO], {date} -->" -%l "fr, en, *" https://engagement-integration.de/ -O1 "C:\Mes Sites Web\engament" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+12:09:19	Warning: 	Permanent Redirect for https://engagement-integration.de/_next/
+12:09:19	Warning: 	File has moved from https://engagement-integration.de/_next/ to /_next
+12:09:20	Error: 	"Not Found" (404) at link https://engagement-integration.de/e,location.origin (from https://engagement-integration.de/_next/static/chunks/69-72bac779662cd075.js)
+12:09:20	Error: 	"Not Found" (404) at link https://engagement-integration.de/window.location.href (from https://engagement-integration.de/_next/static/chunks/69-72bac779662cd075.js)
+12:09:20	Error: 	"Not Found" (404) at link https://engagement-integration.de/k,window.location.href (from https://engagement-integration.de/_next/static/chunks/69-72bac779662cd075.js)
+12:09:20	Error: 	"Not Found" (404) at link https://engagement-integration.de/(0,h.addBasePath (from https://engagement-integration.de/_next/static/chunks/69-72bac779662cd075.js)
+12:09:20	Error: 	"Not Found" (404) at link https://engagement-integration.de/null!=e?e:t,t (from https://engagement-integration.de/_next/static/chunks/69-72bac779662cd075.js)
+12:09:20	Error: 	"Not Found" (404) at link https://engagement-integration.de/r,location.origin (from https://engagement-integration.de/_next/static/chunks/69-72bac779662cd075.js)
+12:09:20	Error: 	"Not Found" (404) at link https://engagement-integration.de/e (from https://engagement-integration.de/_next/static/chunks/69-72bac779662cd075.js)
+12:09:20	Error: 	"Not Found" (404) at link https://engagement-integration.de/p,r (from https://engagement-integration.de/_next/static/chunks/69-72bac779662cd075.js)
+12:09:20	Error: 	"Not Found" (404) at link https://engagement-integration.de/(0,u.addBasePath (from https://engagement-integration.de/_next/static/chunks/69-72bac779662cd075.js)
+12:09:20	Error: 	"Not Found" (404) at link https://engagement-integration.de/e.canonicalUrl,window.location.href (from https://engagement-integration.de/_next/static/chunks/69-72bac779662cd075.js)
+12:09:20	Warning: 	Permanent Redirect for https://engagement-integration.de/$&/
+12:09:20	Warning: 	File has moved from https://engagement-integration.de/$&/ to /$&
+12:09:21	Error: 	"Not Found" (404) at link https://engagement-integration.de/_next (from https://engagement-integration.de/_next/)
+12:09:21	Error: 	"Not Found" (404) at link https://engagement-integration.de/$%26 (from https://engagement-integration.de/$&/)
+
+HTTrack Website Copier/3.50-0 mirror complete in 6 minutes 6 seconds : 143 links scanned, 128 files written (47545263 bytes overall) [45326373 bytes received at 123842 bytes/sec], 4168475 bytes transferred using HTTP compression in 45 files, ratio 43%
+(12 errors, 4 warnings, 0 messages)

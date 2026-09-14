@@ -1,0 +1,128 @@
+/* Bebas Neue */
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('/fonts/f8cd6b7d650c1a01-s.p.ttf') format('truetype');
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Inter */
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/0b4ff3e020f1ae12-s.p.ttf') format('truetype');
+  font-display: swap;
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/1282ebc61b96a9d9-s.p.ttf') format('truetype');
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/8d213a541b09f168-s.p.ttf') format('truetype');
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/524c2f2ba740ce37-s.p.ttf') format('truetype');
+  font-display: swap;
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Poppins */
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/8b20023e8f811f53-s.p.ttf') format('truetype');
+  font-display: swap;
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/4b4ebe20759bdbf2-s.p.ttf') format('truetype');
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/a52d0bf095c248da-s.p.ttf') format('truetype');
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/98512bf8da1afe43-s.p.ttf') format('truetype');
+  font-display: swap;
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Sk-Modernist */
+@font-face {
+  font-family: 'Sk-Modernist';
+  src: url('/fonts/f80d0330c54b06af-s.p.otf') format('opentype');
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Sk-Modernist';
+  src: url('/fonts/94565ec6846462e1-s.p.otf') format('opentype');
+  font-display: swap;
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Sora */
+@font-face {
+  font-family: 'Sora';
+  src: url('/fonts/4e9239ead7b4df45-s.p.ttf') format('truetype');
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Sora';
+  src: url('/fonts/08ba70b8711450ea-s.p.ttf') format('truetype');
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Sora';
+  src: url('/fonts/ceece816751f0be1-s.p.ttf') format('truetype');
+  font-display: swap;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.__className_1b9ae3, .font-bebas {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.05em;
+}
+
+.__className_eae380, .font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+.__className_2308b8, .font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+.__className_ec1c55, .font-sk-modernist {
+  font-family: 'Sk-Modernist', sans-serif;
+}
+
+.__className_c75753, .font-sora {
+  font-family: 'Sora', sans-serif;
+}
