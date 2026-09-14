@@ -1,3 +1,4 @@
+import LegalContent from '../redesign/components/LegalContent';
 import PageHero from '../redesign/components/PageHero';
 
 export default function Mentions() {
@@ -11,8 +12,7 @@ export default function Mentions() {
         breadcrumbs={[{ label: 'Home', to: '/' }]}
       />
 
-      <section className="max-w-4xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
-        <div className="bg-white rounded-3xl p-8 sm:p-12 shadow-sm border border-stone-200/80 space-y-8">
+      <LegalContent className="bg-white rounded-3xl p-8 sm:p-12 shadow-sm border border-stone-200/80 space-y-8">
           
           <div className="border-b border-stone-100 pb-6">
             <h2 className="text-xl font-bold text-slate-900 mb-2">Angaben gemäß § 5 TMG</h2>
@@ -53,8 +53,7 @@ export default function Mentions() {
             </p>
           </div>
 
-        </div>
-      </section>
+        </LegalContent>
     </div>
   );
 }

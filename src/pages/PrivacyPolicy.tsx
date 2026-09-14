@@ -1,3 +1,4 @@
+import LegalContent from '../redesign/components/LegalContent';
 import PageHero from '../redesign/components/PageHero';
 
 export default function PrivacyPolicy() {
@@ -11,8 +12,7 @@ export default function PrivacyPolicy() {
         breadcrumbs={[{ label: 'Home', to: '/' }]}
       />
 
-      <section className="max-w-4xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
-        <div className="bg-white rounded-3xl p-8 sm:p-12 shadow-sm border border-stone-200/80 space-y-10 text-slate-700 text-sm leading-relaxed">
+      <LegalContent className="bg-white rounded-3xl p-8 sm:p-12 shadow-sm border border-stone-200/80 space-y-10 text-slate-700 text-sm leading-relaxed">
           
           {/* Section 1 */}
           <div className="border-b border-stone-100 pb-8 space-y-4">
@@ -91,8 +91,7 @@ export default function PrivacyPolicy() {
             </p>
           </div>
 
-        </div>
-      </section>
+        </LegalContent>
     </div>
   );
 }
