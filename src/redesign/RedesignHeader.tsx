@@ -56,7 +56,7 @@ export default function RedesignHeader() {
             <Link
               to="/"
               className="absolute top-2.5 z-50 group flex flex-col items-center cursor-pointer focus:outline-none"
-              title="EFI e.V. — Startseite"
+              title="EFI - Engagement für Integration e.V. — Startseite"
             >
               <div className="w-28 h-28 xl:w-32 xl:h-32 rounded-full p-1 bg-white shadow-xl hover:shadow-2xl transition-all duration-300 transform group-hover:scale-105 flex items-center justify-center border-4 border-white">
                 <Logo size={120} className="w-full h-full" />
@@ -111,8 +111,8 @@ export default function RedesignHeader() {
             <Logo size={36} className="w-full h-full" />
           </div>
           <div className="flex flex-col">
-            <span className="font-extrabold text-brand-950 text-base tracking-tight leading-none">EFI e.V.</span>
-            <span className="text-[10px] font-medium text-stone-500 tracking-wider uppercase mt-0.5">Engagement &amp; Integration</span>
+            <span className="font-extrabold text-brand-950 text-base tracking-tight leading-none">EFI - </span>
+            <span className="text-[10px] font-medium text-stone-500 tracking-wider mt-0.5">Engagement für Integration e.V.</span>
           </div>
         </Link>
 

@@ -4,10 +4,14 @@ interface NewsPhotoGalleryProps {
   imageClassName: string;
 }
 
-export default function NewsPhotoGallery({ photos, className, imageClassName }: NewsPhotoGalleryProps) {
+export default function NewsPhotoGallery({
+  photos,
+  className,
+  imageClassName,
+}: NewsPhotoGalleryProps) {
   return (
     <div className={className}>
-      {photos.map(photo => (
+      {photos.map((photo) => (
         <div key={photo.src} className={imageClassName}>
           <img
             src={photo.src}

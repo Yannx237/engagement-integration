@@ -1,7 +1,14 @@
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
-export type ContactSubject = 'allgemein' | 'nachhilfe' | 'beratung' | 'tandem' | 'spende' | 'mitglied' | 'shop';
+export type ContactSubject =
+  | 'allgemein'
+  | 'nachhilfe'
+  | 'beratung'
+  | 'tandem'
+  | 'spende'
+  | 'mitglied'
+  | 'shop';
 
 interface ContactTargetResult {
   subject?: ContactSubject;
@@ -27,13 +34,19 @@ function getContactTarget(search: string, hash: string): ContactTargetResult {
   if (subject === 'spende' || subject === 'spenden' || hash === '#spenden') {
     return {
       subject: 'spende',
-      target: subject === 'spende' && hash === '#kontaktformular' ? '#kontaktformular' : '#spenden',
+      target:
+        subject === 'spende' && hash === '#kontaktformular'
+          ? '#kontaktformular'
+          : '#spenden',
     };
   }
   if (subject === 'mitglied' || hash === '#mitglied') {
     return {
       subject: 'mitglied',
-      target: subject === 'mitglied' && hash === '#kontaktformular' ? '#kontaktformular' : '#mitglied',
+      target:
+        subject === 'mitglied' && hash === '#kontaktformular'
+          ? '#kontaktformular'
+          : '#mitglied',
     };
   }
   return { subject: undefined, target: hash };
@@ -42,7 +55,11 @@ function getContactTarget(search: string, hash: string): ContactTargetResult {
 export function useContactInquiry() {
   const location = useLocation();
   const target = getContactTarget(location.search, location.hash);
-  const [selection, setSelection] = useState<{ locationKey: string; subject: ContactSubject; message: string }>({
+  const [selection, setSelection] = useState<{
+    locationKey: string;
+    subject: ContactSubject;
+    message: string;
+  }>({
     locationKey: location.key,
     subject: target.subject ?? 'allgemein',
     message: target.message ?? '',
@@ -53,30 +70,38 @@ export function useContactInquiry() {
     setSelection({
       locationKey: location.key,
       subject: target.subject ?? selection.subject,
-      message: target.message !== undefined ? target.message : selection.message,
+      message:
+        target.message !== undefined ? target.message : selection.message,
     });
   }
 
   useEffect(() => {
     if (!target.target) return;
-    const elementId = target.target.startsWith('#') ? target.target.slice(1) : target.target;
+    const elementId = target.target.startsWith('#')
+      ? target.target.slice(1)
+      : target.target;
     const element = document.getElementById(elementId);
     if (!element) return;
-    const timeout = setTimeout(() => element.scrollIntoView({ behavior: 'smooth' }), 120);
+    const timeout = setTimeout(
+      () => element.scrollIntoView({ behavior: 'smooth' }),
+      120
+    );
     return () => clearTimeout(timeout);
   }, [location.key, target.target]);
 
   function setSelectedSubject(subject: ContactSubject) {
-    setSelection(prev => ({ ...prev, subject }));
+    setSelection((prev) => ({ ...prev, subject }));
   }
 
   function setMessageText(message: string) {
-    setSelection(prev => ({ ...prev, message }));
+    setSelection((prev) => ({ ...prev, message }));
   }
 
   function scrollToFormWithSubject(subject: ContactSubject) {
     setSelectedSubject(subject);
-    document.getElementById('kontaktformular')?.scrollIntoView({ behavior: 'smooth' });
+    document
+      .getElementById('kontaktformular')
+      ?.scrollIntoView({ behavior: 'smooth' });
   }
 
   return {

@@ -12,34 +12,24 @@ export default function RedesignHome() {
   return (
     <div className="w-full">
       <main>
+        <HomeHero />
 
-<HomeHero />
+        <HomeMission />
 
+        <HomeAreas />
 
-<HomeMission />
+        <HomeProjects />
 
+        <HomePartners />
 
-<HomeAreas />
+        <HomeJoinBanner />
 
+        <HomeLocations />
 
-<HomeProjects />
+        <HomeContact />
 
-
-<HomePartners />
-
-
-<HomeJoinBanner />
-
-
-<HomeLocations />
-
-
-<HomeContact />
-
-
-<HomeShop />
-
-</main>
+        <HomeShop />
+      </main>
     </div>
   );
 }

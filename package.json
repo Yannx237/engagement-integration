@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "check:markup": "node scripts/check-page-markup.mjs",
+    "test:ui": "node scripts/check-page-interactions.mjs"
   },
   "dependencies": {
     "@types/mapbox-gl": "^3.4.1",

@@ -30,6 +30,16 @@ const LOCATIONS = [
     color: '#0284c7',
     bgColor: '#0f172a',
     borderColor: '#38bdf8'
+  },
+  {
+    id: 'berlin',
+    name: 'Berlin',
+    category: 'Bundesnetzwerk',
+    detail: 'Dialog & Vertretungen',
+    coords: [13.4050, 52.5200],
+    color: '#b45309',
+    bgColor: '#1c1917',
+    borderColor: '#f59e0b'
   }
 ];
 
@@ -46,9 +56,9 @@ export default function StandorteMap() {
       container: mapContainerRef.current,
       style: 'mapbox://styles/mapbox/light-v11',
       projection: 'globe',
-      center: [7.3873, 51.5339],
-      zoom: 2.6,
-      pitch: 38,
+      center: [10.4, 52.0],
+      zoom: 2.7,
+      pitch: 35,
       bearing: 0,
       interactive: false, // NON MANIPULABLE
       attributionControl: false,
@@ -66,7 +76,7 @@ export default function StandorteMap() {
         'star-intensity': 0
       });
 
-      // Curved connection arc
+      // Curved connection arc from Ruhrgebiet to Berlin
       if (!map.getSource('connection')) {
         map.addSource('connection', {
           type: 'geojson',
@@ -77,8 +87,9 @@ export default function StandorteMap() {
               type: 'LineString',
               coordinates: [
                 [7.3093, 51.5542],
-                [7.3873, 51.54],
-                [7.4653, 51.5136]
+                [7.4653, 51.5136],
+                [10.4, 52.2],
+                [13.4050, 52.5200]
               ]
             }
           }
@@ -102,13 +113,13 @@ export default function StandorteMap() {
         const el = document.createElement('div');
         el.className = 'relative flex flex-col items-center pointer-events-none select-none';
         
-        const isCastrop = loc.id === 'castrop';
+        const isDortmund = loc.id === 'dortmund';
         
         el.innerHTML = `
           <!-- Pin Card -->
           <div style="
             position: absolute;
-            ${isCastrop ? 'bottom: 26px;' : 'top: 26px;'}
+            ${isDortmund ? 'top: 26px;' : 'bottom: 26px;'}
             left: 50%;
             transform: translateX(-50%);
             background: ${loc.bgColor};
@@ -166,15 +177,15 @@ export default function StandorteMap() {
 
     // Smooth subtle Earth rotation
     let animId: number;
-    const baseLng = 7.3873;
+    const baseLng = 10.4;
     let angle = 0;
 
     function animate() {
       if (mapRef.current) {
         angle += 0.003;
-        // Gentle rotation around the focus area (orbits +/- 30 degrees so points remain visible)
-        const currentLng = baseLng + Math.sin(angle) * 25;
-        mapRef.current.setCenter([currentLng, 51.5339]);
+        // Gentle rotation around the focus area so all points remain visible
+        const currentLng = baseLng + Math.sin(angle) * 12;
+        mapRef.current.setCenter([currentLng, 52.0]);
       }
       animId = requestAnimationFrame(animate);
     }

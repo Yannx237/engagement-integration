@@ -6,7 +6,13 @@ import PageHero from '../components/PageHero';
 import ShareCTA from '../components/ShareCTA';
 
 export default function RedesignContact() {
-  const { selectedSubject, setSelectedSubject, scrollToFormWithSubject, messageText, setMessageText } = useContactInquiry();
+  const {
+    selectedSubject,
+    setSelectedSubject,
+    scrollToFormWithSubject,
+    messageText,
+    setMessageText,
+  } = useContactInquiry();
 
   return (
     <div className="w-full bg-[#fbfbfa] text-slate-800">

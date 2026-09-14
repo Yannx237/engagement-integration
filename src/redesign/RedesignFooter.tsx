@@ -13,8 +13,8 @@ export default function RedesignFooter() {
                 <Logo size={46} className="w-full h-full" />
               </div>
               <div>
-                <span className="text-lg font-extrabold tracking-tight text-white block leading-none">EFI e.V.</span>
-                <span className="text-[11px] text-limeAccent-400 font-semibold tracking-wider uppercase mt-1 block">Engagement &amp; Integration</span>
+                <span className="text-lg font-extrabold tracking-tight text-white block leading-none">EFI - </span>
+                <span className="text-[11px] text-limeAccent-400 font-semibold tracking-wider mt-1 block">Engagement für Integration e.V.</span>
               </div>
             </Link>
             <p className="text-stone-300 text-xs sm:text-sm leading-relaxed max-w-sm">
@@ -48,6 +48,10 @@ export default function RedesignFooter() {
               <div>
                 <strong className="text-white block font-bold">Dortmund (Netzwerk-Hub):</strong>
                 <span>Tandem-Partnerschaften &amp; Mentoring</span>
+              </div>
+              <div>
+                <strong className="text-white block font-bold">Berlin (Bundesnetzwerk):</strong>
+                <span>Hauptstadt-Dialog &amp; Botschafts-Austausch</span>
               </div>
               <div className="pt-2 flex flex-col gap-1.5">
                 <a className="text-limeAccent-400 hover:underline inline-flex items-center gap-1.5 font-medium" href="https://wa.me/491773218743" target="_blank" rel="noopener noreferrer">
@@ -83,7 +87,7 @@ export default function RedesignFooter() {
         </div>
 
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-400">
-          <p>© 2026 Engagement &amp; Integration e.V. (EFI) – Alle Rechte vorbehalten.</p>
+          <p>© 2026 EFI - Engagement für Integration e.V. – Alle Rechte vorbehalten.</p>
           <div className="flex items-center space-x-6">
             <Link className="hover:text-white transition-colors" to="/mentions">Impressum</Link>
             <Link className="hover:text-white transition-colors" to="/privacy-policy">Datenschutzerklärung</Link>

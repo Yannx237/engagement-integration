@@ -30,7 +30,6 @@ export default function RedesignAboutUs() {
 
       {/* 6. Inline Contact Form */}
       <AboutContact />
-
     </div>
   );
 }

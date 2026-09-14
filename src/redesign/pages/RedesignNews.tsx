@@ -18,7 +18,6 @@ export default function RedesignNews() {
 
       {/* 2. News Articles Container */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 space-y-20">
-
         {/* ========================================================================= */}
         {/* ARTICLE 1: Internationaler Austausch Berlin (Botschaft)                   */}
         {/* ========================================================================= */}
@@ -38,7 +37,6 @@ export default function RedesignNews() {
         {/* ARTICLE 4: Merklinder MitMachMarkt                                        */}
         {/* ========================================================================= */}
         <NeighborhoodMarketArticle />
-
       </div>
 
       {/* 3. Reusable Share CTA */}
