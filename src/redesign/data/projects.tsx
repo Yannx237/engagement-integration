@@ -283,7 +283,9 @@ export const cities: readonly City[] = [
     id: 'dortmund',
     name: 'Dortmund',
     tagline: 'Projekt-Hub und Netzwerkarbeit',
-    address: 'Klarastr. 19, 44388 Dortmund',
+    // The walk-in office, as shown on the storefront and on every Dortmund
+    // flyer. Klarastr. 19 in the Impressum is the postal address, not the venue.
+    address: 'Lütgendortmunder Str. 132, 44388 Dortmund',
     domains: dortmundProjects,
   },
 ];
