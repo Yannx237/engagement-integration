@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import PageMeta from '../../i18n/PageMeta';
 import ProjectsByLocation from '../components/projects/ProjectsByLocation';
 import ProjectGallery from '../components/projects/ProjectGallery';
 import PageHero from '../components/PageHero';
@@ -9,6 +10,7 @@ export default function RedesignProjects() {
   const { t } = useTranslation('projects');
   return (
     <div className="w-full bg-[#fbfbfa] text-slate-800">
+      <PageMeta routeId="projects" />
       {/* 1. Page Hero */}
       <PageHero
         badge={t('hero.badge')}

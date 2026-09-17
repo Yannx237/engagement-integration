@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import PageMeta from '../../i18n/PageMeta';
 import { LocalizedLink } from '../../i18n/LocalizedLink';
 import PageHero from '../components/PageHero';
 import ProjectCard from '../components/projects/ProjectCard';
@@ -10,6 +11,7 @@ export default function RedesignInternational() {
   const { t } = useTranslation('projects');
   return (
     <div className="w-full bg-[#fbfbfa] text-slate-800">
+      <PageMeta routeId="international" />
       <PageHero
         badge={t('international.hero.badge')}
         title={t('international.hero.title')}

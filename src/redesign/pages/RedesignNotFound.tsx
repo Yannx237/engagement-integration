@@ -1,10 +1,12 @@
 import { Trans, useTranslation } from 'react-i18next';
+import PageMeta from '../../i18n/PageMeta';
 import { LocalizedLink } from '../../i18n/LocalizedLink';
 
 export default function RedesignNotFound() {
   const { t } = useTranslation();
   return (
     <div className="min-h-[75vh] flex items-center justify-center bg-sand-50 px-4 sm:px-6 lg:px-8 py-20">
+      <PageMeta routeId="notFound" />
       <div className="max-w-2xl w-full text-center space-y-8 bg-white p-8 sm:p-14 rounded-3xl border border-stone-200/80 shadow-xl relative overflow-hidden">
         
         {/* Background subtle badge */}

@@ -1,3 +1,4 @@
+import PageMeta from '../i18n/PageMeta';
 import HomeHero from './components/home/HomeHero';
 import HomeMission from './components/home/HomeMission';
 import HomeAreas from './components/home/HomeAreas';
@@ -11,6 +12,7 @@ import HomeShop from './components/home/HomeShop';
 export default function RedesignHome() {
   return (
     <div className="w-full">
+      <PageMeta routeId="home" />
       <main>
         <HomeHero />
 

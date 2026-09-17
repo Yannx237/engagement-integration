@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import PageMeta from '../../i18n/PageMeta';
 import BerlinExchangeArticle from '../components/news/BerlinExchangeArticle';
 import WomensDayArticle from '../components/news/WomensDayArticle';
 import RefugeeWelcomeArticle from '../components/news/RefugeeWelcomeArticle';
@@ -10,6 +11,7 @@ export default function RedesignNews() {
   const { t } = useTranslation('news');
   return (
     <div className="w-full bg-[#fbfbfa] text-slate-800">
+      <PageMeta routeId="news" />
       {/* 1. Page Hero */}
       <PageHero
         badge={t('hero.badge')}

@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import PageMeta from '../../i18n/PageMeta';
 import { useContactInquiry } from '../hooks/useContactInquiry';
 import ContactChannels from '../components/contact/ContactChannels';
 import ContactInquiry from '../components/contact/ContactInquiry';
@@ -18,6 +19,7 @@ export default function RedesignContact() {
 
   return (
     <div className="w-full bg-[#fbfbfa] text-slate-800">
+      <PageMeta routeId="contact" />
       {/* 1. Subpage Hero */}
       <PageHero
         badge={t('hero.badge')}

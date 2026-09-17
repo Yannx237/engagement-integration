@@ -7,6 +7,9 @@ export const DEFAULT_LOCALE: Locale = 'de';
 
 export const LOCALE_STORAGE_KEY = 'efi.lang';
 
+/** Absolute origin, needed for canonical and hreflang URLs. */
+export const SITE_URL = 'https://engagement-integration.de';
+
 export function isLocale(value: string | undefined): value is Locale {
   return (LOCALES as readonly string[]).includes(value ?? '');
 }

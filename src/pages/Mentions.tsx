@@ -1,9 +1,11 @@
+import PageMeta from '../i18n/PageMeta';
 import LegalContent from '../redesign/components/LegalContent';
 import PageHero from '../redesign/components/PageHero';
 
 export default function Mentions() {
   return (
     <div className="w-full bg-[#fbfbfa] text-slate-800">
+      <PageMeta routeId="imprint" />
       <PageHero
         badge="Rechtliches"
         title="Impressum &amp;"

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://engagement-integration.de/de</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://engagement-integration.de/de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://engagement-integration.de/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://engagement-integration.de/de"/>
+  </url>
+  <url>
+    <loc>https://engagement-integration.de/en</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://engagement-integration.de/de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://engagement-integration.de/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://engagement-integration.de/de"/>
+  </url>
+  <url>
+    <loc>https://engagement-integration.de/de/ueber-uns</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://engagement-integration.de/de/ueber-uns"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://engagement-integration.de/en/about-us"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://engagement-integration.de/de/ueber-uns"/>
+  </url>
+  <url>
+    <loc>https://engagement-integration.de/en/about-us</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://engagement-integration.de/de/ueber-uns"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://engagement-integration.de/en/about-us"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://engagement-integration.de/de/ueber-uns"/>
+  </url>
+  <url>
+    <loc>https://engagement-integration.de/de/projekte</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://engagement-integration.de/de/projekte"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://engagement-integration.de/en/services-for-immigrants"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://engagement-integration.de/de/projekte"/>
+  </url>
+  <url>
+    <loc>https://engagement-integration.de/en/services-for-immigrants</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://engagement-integration.de/de/projekte"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://engagement-integration.de/en/services-for-immigrants"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://engagement-integration.de/de/projekte"/>
+  </url>
+  <url>
+    <loc>https://engagement-integration.de/de/international</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://engagement-integration.de/de/international"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://engagement-integration.de/en/international"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://engagement-integration.de/de/international"/>
+  </url>
+  <url>
+    <loc>https://engagement-integration.de/en/international</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://engagement-integration.de/de/international"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://engagement-integration.de/en/international"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://engagement-integration.de/de/international"/>
+  </url>
+  <url>
+    <loc>https://engagement-integration.de/de/neuigkeiten</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://engagement-integration.de/de/neuigkeiten"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://engagement-integration.de/en/news"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://engagement-integration.de/de/neuigkeiten"/>
+  </url>
+  <url>
+    <loc>https://engagement-integration.de/en/news</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://engagement-integration.de/de/neuigkeiten"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://engagement-integration.de/en/news"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://engagement-integration.de/de/neuigkeiten"/>
+  </url>
+  <url>
+    <loc>https://engagement-integration.de/de/kontakt</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://engagement-integration.de/de/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://engagement-integration.de/en/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://engagement-integration.de/de/kontakt"/>
+  </url>
+  <url>
+    <loc>https://engagement-integration.de/en/contact</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://engagement-integration.de/de/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://engagement-integration.de/en/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://engagement-integration.de/de/kontakt"/>
+  </url>
+  <url>
+    <loc>https://engagement-integration.de/de/impressum</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://engagement-integration.de/de/impressum"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://engagement-integration.de/en/imprint"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://engagement-integration.de/de/impressum"/>
+  </url>
+  <url>
+    <loc>https://engagement-integration.de/en/imprint</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://engagement-integration.de/de/impressum"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://engagement-integration.de/en/imprint"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://engagement-integration.de/de/impressum"/>
+  </url>
+  <url>
+    <loc>https://engagement-integration.de/de/datenschutz</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://engagement-integration.de/de/datenschutz"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://engagement-integration.de/en/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://engagement-integration.de/de/datenschutz"/>
+  </url>
+  <url>
+    <loc>https://engagement-integration.de/en/privacy-policy</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://engagement-integration.de/de/datenschutz"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://engagement-integration.de/en/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://engagement-integration.de/de/datenschutz"/>
+  </url>
+</urlset>

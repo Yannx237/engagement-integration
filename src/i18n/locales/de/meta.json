@@ -1,1 +1,38 @@
-{}
+{
+  "home": {
+    "title": "EFI – Engagement für Integration e.V. | Castrop-Rauxel, Dortmund & Berlin",
+    "description": "Gemeinnützige Migrantenselbstorganisation in NRW: kostenfreie Nachhilfe, Sprachcafés, Sozialberatung und Tandem-Patenschaften in Castrop-Rauxel, Dortmund und Berlin."
+  },
+  "about": {
+    "title": "Über uns & Leitbild | EFI e.V.",
+    "description": "Wer wir sind: eine anerkannte Migrantenselbstorganisation für Solidarität, Bildung und Chancengleichheit. Leitbild, Werte, Vorstand und Partner."
+  },
+  "projects": {
+    "title": "Unsere Projekte & Standorte | EFI e.V.",
+    "description": "Handlungsfelder und Flyer je Standort: Bildung, Migration und Integration, Kinder, Jugend und Familie in Berlin, Castrop-Rauxel und Dortmund."
+  },
+  "international": {
+    "title": "EFI International | EFI e.V.",
+    "description": "Unser Engagement über Deutschland hinaus: Austausch, Bildungspartnerschaften und Jugendbegegnungen jenseits der deutschen Standorte."
+  },
+  "news": {
+    "title": "Neuigkeiten & Presse | EFI e.V.",
+    "description": "Berichte aus unseren Projekten: Quartiersmärkte in Merklinde, Solidaritätsaktionen und diplomatischer Austausch in Berlin."
+  },
+  "contact": {
+    "title": "Kontakt & Beratung | EFI e.V.",
+    "description": "Fragen zu Nachhilfe, Sprachkursen, Ehrenamt oder Mitgliedschaft? Kontaktformular, Telefon, WhatsApp und unsere Standorte auf einen Blick."
+  },
+  "imprint": {
+    "title": "Impressum | EFI e.V.",
+    "description": "Angaben gemäß § 5 DDG: Vereinsdaten, Vertretung, Registereintrag und Kontakt von Engagement für Integration e.V."
+  },
+  "privacy": {
+    "title": "Datenschutzerklärung | EFI e.V.",
+    "description": "Wie wir personenbezogene Daten erheben, verarbeiten und schützen — Informationen nach DSGVO."
+  },
+  "notFound": {
+    "title": "Seite nicht gefunden | EFI e.V.",
+    "description": "Diese Adresse existiert nicht oder wurde verschoben. Über die Navigation finden Sie zurück zu unseren Angeboten."
+  }
+}

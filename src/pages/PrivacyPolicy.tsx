@@ -1,9 +1,11 @@
+import PageMeta from '../i18n/PageMeta';
 import LegalContent from '../redesign/components/LegalContent';
 import PageHero from '../redesign/components/PageHero';
 
 export default function PrivacyPolicy() {
   return (
     <div className="w-full bg-[#fbfbfa] text-slate-800">
+      <PageMeta routeId="privacy" />
       <PageHero
         badge="Datenschutz"
         title="Datenschutzerklärung"

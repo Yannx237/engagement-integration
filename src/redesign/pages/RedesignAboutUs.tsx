@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import PageMeta from '../../i18n/PageMeta';
 import AboutMission from '../components/about/AboutMission';
 import AboutTeam from '../components/about/AboutTeam';
 import AboutPartners from '../components/about/AboutPartners';
@@ -10,6 +11,7 @@ export default function RedesignAboutUs() {
   const { t } = useTranslation('about');
   return (
     <div className="w-full bg-[#fbfbfa] text-slate-800">
+      <PageMeta routeId="about" />
       {/* 1. Subpage Hero */}
       <PageHero
         badge={t('hero.badge')}

@@ -1,1 +1,38 @@
-{}
+{
+  "home": {
+    "title": "EFI – Engagement für Integration e.V. | Castrop-Rauxel, Dortmund & Berlin",
+    "description": "A non-profit migrant-led organisation in North Rhine-Westphalia: free tutoring, language cafés, social advice and tandem partnerships in Castrop-Rauxel, Dortmund and Berlin."
+  },
+  "about": {
+    "title": "About us & our mission | EFI e.V.",
+    "description": "Who we are: a recognised migrant-led organisation working for solidarity, education and equal opportunity. Mission, values, board and partners."
+  },
+  "projects": {
+    "title": "Our projects & locations | EFI e.V.",
+    "description": "Fields of action and flyers for each location: education, migration and integration, children, youth and family in Berlin, Castrop-Rauxel and Dortmund."
+  },
+  "international": {
+    "title": "EFI International | EFI e.V.",
+    "description": "Our work beyond Germany: exchange, education partnerships and youth encounters outside our German locations."
+  },
+  "news": {
+    "title": "News & press | EFI e.V.",
+    "description": "Reports from our projects: neighbourhood markets in Merklinde, solidarity campaigns and diplomatic exchange in Berlin."
+  },
+  "contact": {
+    "title": "Contact & advice | EFI e.V.",
+    "description": "Questions about tutoring, language courses, volunteering or membership? Contact form, phone, WhatsApp and our locations at a glance."
+  },
+  "imprint": {
+    "title": "Imprint | EFI e.V.",
+    "description": "Legal information under section 5 DDG: association details, representation, register entry and contact for Engagement für Integration e.V."
+  },
+  "privacy": {
+    "title": "Privacy policy | EFI e.V.",
+    "description": "How we collect, process and protect personal data — information under the GDPR."
+  },
+  "notFound": {
+    "title": "Page not found | EFI e.V.",
+    "description": "This address does not exist or has been moved. Use the navigation to find your way back to what we offer."
+  }
+}
