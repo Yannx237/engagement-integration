@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next';
+
 // One shared partner block for the whole site: every logo is listed here once,
 // aligned under "In Zusammenarbeit mit" instead of being repeated per city.
 const partners: readonly { src: string; alt: string; title: string }[] = [
@@ -45,6 +47,7 @@ const partners: readonly { src: string; alt: string; title: string }[] = [
 ];
 
 export default function PartnersStrip() {
+  const { t } = useTranslation();
   return (
     <section
       className="py-20 bg-white scroll-mt-28"
@@ -54,15 +57,13 @@ export default function PartnersStrip() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-14">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-stone-100 text-stone-700 text-xs font-bold uppercase tracking-[0.2em] mb-3">
-            In Zusammenarbeit mit
+            {t('partners.eyebrow')}
           </div>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-            Gemeinsam mit starken Partnern für nachhaltige Wirkung.
+            {t('partners.heading')}
           </h2>
           <p className="text-slate-600 text-sm mt-2">
-            Unsere Projekte und Initiativen werden gefördert, fachlich begleitet
-            und unterstützt von vertrauensvollen Bundes-, Landes- und
-            Kommunalinstitutionen.
+            {t('partners.intro')}
           </p>
         </div>
 

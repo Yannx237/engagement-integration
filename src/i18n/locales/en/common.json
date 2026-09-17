@@ -1,1 +1,86 @@
-{}
+{
+  "brand": {
+    "short": "EFI -",
+    "full": "Engagement für Integration e.V.",
+    "logoAlt": "Engagement für Integration e.V. logo",
+    "homeTitle": "EFI - Engagement für Integration e.V. — Home"
+  },
+  "nav": {
+    "ariaLeft": "Main navigation, left",
+    "home": "Home",
+    "about": "About us",
+    "projects": "Our projects",
+    "international": "International",
+    "internationalLong": "EFI International",
+    "news": "News",
+    "contact": "Contact",
+    "toggle": "Toggle navigation",
+    "breadcrumb": "Breadcrumb"
+  },
+  "cta": {
+    "donate": "Donate",
+    "becomeMember": "Become a member"
+  },
+  "language": {
+    "groupLabel": "Sprache / Language",
+    "de": "Deutsch",
+    "en": "English",
+    "switchToDe": "Auf Deutsch wechseln",
+    "switchToEn": "Switch to English"
+  },
+  "footer": {
+    "tagline": "United for integration, led by diversity. As a recognised migrant-led organisation, we foster social cohesion, multilingual education and lasting opportunities across North Rhine-Westphalia.",
+    "legalNote": "Registered non-profit association",
+    "navHeading": "Navigation",
+    "links": {
+      "home": "Home",
+      "about": "About us & team",
+      "projects": "Our projects",
+      "international": "EFI International",
+      "news": "News & press",
+      "contact": "Contact & advice",
+      "donate": "Donate & support",
+      "becomeMember": "Become a member"
+    },
+    "locationsHeading": "Locations & contact",
+    "locations": {
+      "castropLabel": "Castrop-Rauxel (centre):",
+      "castropValue": "Begegnungszentrum Merklinde, Wittener Str. 322B, 44577 Castrop-Rauxel",
+      "dortmundLabel": "Dortmund (network hub):",
+      "dortmundValue": "Tandem partnerships & mentoring",
+      "berlinLabel": "Berlin (national network):",
+      "berlinValue": "Capital dialogue & embassy exchange"
+    },
+    "whatsapp": "WhatsApp: +49 (0) 177 3218743",
+    "copyright": "© 2026 EFI - Engagement für Integration e.V. – All rights reserved.",
+    "imprint": "Imprint",
+    "privacy": "Privacy policy",
+    "transparency": "Transparency",
+    "accessibility": "Accessibility"
+  },
+  "partners": {
+    "eyebrow": "In cooperation with",
+    "heading": "Working with strong partners for lasting impact.",
+    "intro": "Our projects and initiatives are funded, professionally supported and backed by trusted federal, state and municipal institutions."
+  },
+  "share": {
+    "badge": "Community & solidarity",
+    "heading": "Do you like what we do?",
+    "text": "Help us make our education and integration services known. Every shared link gives another family perspective and support.",
+    "button": "Share this page",
+    "copied": "Link copied!",
+    "sheetTitle": "Engagement für Integration e.V. — Together for equal participation",
+    "sheetText": "A non-profit migrant-led organisation in North Rhine-Westphalia for education, integration and social cohesion.",
+    "copiedFallback": "Link copied: {{url}}"
+  },
+  "notFound": {
+    "badge": "Error 404 • Page not found",
+    "oops": "Oops!",
+    "heading": "Looks like this path got lost.",
+    "text": "The address you requested does not exist, has been renamed or was moved temporarily. Use our navigation to find your way back.",
+    "backHome": "Back to the home page",
+    "projects": "Our projects",
+    "contact": "Get in touch",
+    "help": "Need help right away? Write to us directly at <mail>info@engagement-integration.de</mail>"
+  }
+}

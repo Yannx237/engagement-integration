@@ -156,6 +156,36 @@ try {
   await page.waitForSelector('#kontaktformular', { timeout: 8000 });
   assert.deepEqual(writes, []);
   console.log('Contact presets, manual selection and local confirmation work');
+  // Language switching: the toggle must move both the URL and the document
+  // language, and the business keys carried in the URL must survive it.
+  await page.setViewport({ width: 1440, height: 900 });
+  await visit('/de/projekte');
+  await page.click('header a[hreflang="en"]');
+  await page.waitForFunction(
+    () => location.pathname === '/en/services-for-immigrants'
+  );
+  await page.waitForFunction(() => document.documentElement.lang === 'en');
+  assert(
+    await page.$eval('header', (header) => header.textContent.includes('Our projects'))
+  );
+  await visit('/en/contact?thema=spende#kontaktformular');
+  await page.waitForFunction(
+    () => document.querySelector('#kontaktformular select')?.value === 'spende'
+  );
+  console.log('Language toggle switches URL, lang and copy');
+
+  // A URL indexed before the locale prefix existed must keep both halves.
+  await page.goto(new URL('/contact?thema=mitglied#mitglied', base).href, {
+    waitUntil: 'domcontentloaded',
+  });
+  await page.waitForFunction(
+    () =>
+      location.pathname === '/de/kontakt' &&
+      location.search === '?thema=mitglied' &&
+      location.hash === '#mitglied'
+  );
+  console.log('Legacy URLs redirect with query and hash intact');
+
   assert.deepEqual(errors, [], 'Browser runtime errors');
   console.log('No browser runtime errors');
 } finally {

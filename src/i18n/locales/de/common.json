@@ -1,1 +1,86 @@
-{}
+{
+  "brand": {
+    "short": "EFI -",
+    "full": "Engagement für Integration e.V.",
+    "logoAlt": "Engagement für Integration e.V. Logo",
+    "homeTitle": "EFI - Engagement für Integration e.V. — Startseite"
+  },
+  "nav": {
+    "ariaLeft": "Hauptnavigation Links",
+    "home": "Home",
+    "about": "Über uns",
+    "projects": "Unsere Projekte",
+    "international": "International",
+    "internationalLong": "EFI International",
+    "news": "Neuigkeiten",
+    "contact": "Kontakt",
+    "toggle": "Navigation umschalten",
+    "breadcrumb": "Breadcrumb"
+  },
+  "cta": {
+    "donate": "Spenden",
+    "becomeMember": "Mitglied werden"
+  },
+  "language": {
+    "groupLabel": "Sprache / Language",
+    "de": "Deutsch",
+    "en": "English",
+    "switchToDe": "Auf Deutsch wechseln",
+    "switchToEn": "Switch to English"
+  },
+  "footer": {
+    "tagline": "Vereint für Integration, geführt von Vielfalt. Als anerkannte Migrantenselbstorganisation fördern wir gesellschaftlichen Zusammenhalt, mehrsprachige Bildung und nachhaltige Zukunftschancen in ganz NRW.",
+    "legalNote": "Gemeinnütziger Verein • Eingetragen im Vereinsregister",
+    "navHeading": "Navigation",
+    "links": {
+      "home": "Startseite",
+      "about": "Über uns & Team",
+      "projects": "Unsere Projekte",
+      "international": "EFI International",
+      "news": "Neuigkeiten & Presse",
+      "contact": "Kontakt & Beratung",
+      "donate": "Spenden & Fördern",
+      "becomeMember": "Mitglied werden"
+    },
+    "locationsHeading": "Standorte & Kontakt",
+    "locations": {
+      "castropLabel": "Castrop-Rauxel (Zentrum):",
+      "castropValue": "Begegnungszentrum Merklinde, Wittener Str. 322B, 44577 Castrop-Rauxel",
+      "dortmundLabel": "Dortmund (Netzwerk-Hub):",
+      "dortmundValue": "Tandem-Partnerschaften & Mentoring",
+      "berlinLabel": "Berlin (Bundesnetzwerk):",
+      "berlinValue": "Hauptstadt-Dialog & Botschafts-Austausch"
+    },
+    "whatsapp": "WhatsApp: +49 (0) 177 3218743",
+    "copyright": "© 2026 EFI - Engagement für Integration e.V. – Alle Rechte vorbehalten.",
+    "imprint": "Impressum",
+    "privacy": "Datenschutzerklärung",
+    "transparency": "Transparenz",
+    "accessibility": "Barrierefreiheit"
+  },
+  "partners": {
+    "eyebrow": "In Zusammenarbeit mit",
+    "heading": "Gemeinsam mit starken Partnern für nachhaltige Wirkung.",
+    "intro": "Unsere Projekte und Initiativen werden gefördert, fachlich begleitet und unterstützt von vertrauensvollen Bundes-, Landes- und Kommunalinstitutionen."
+  },
+  "share": {
+    "badge": "Gemeinschaft & Zusammenhalt",
+    "heading": "Magst du unsere Organisation?",
+    "text": "Hilf uns, unsere Bildungs- und Integrationsangebote bekannt zu machen. Jeder geteilte Link schenkt einer weiteren Familie Perspektive und Unterstützung!",
+    "button": "Diese Seite teilen",
+    "copied": "Link kopiert!",
+    "sheetTitle": "Engagement für Integration e.V. — Gemeinsam für gleichberechtigte Teilhabe",
+    "sheetText": "Gemeinnützige Migrantenselbstorganisation in NRW für Bildung, Integration und gesellschaftlichen Zusammenhalt.",
+    "copiedFallback": "Link kopiert: {{url}}"
+  },
+  "notFound": {
+    "badge": "Fehler 404 • Seite nicht gefunden",
+    "oops": "Oops!",
+    "heading": "Hier hat sich wohl ein Pfad verlaufen.",
+    "text": "Die von Ihnen aufgerufene Internetadresse existiert leider nicht, wurde umbenannt oder temporär verschoben. Nutzen Sie unsere Navigation, um wieder auf den richtigen Weg zu finden.",
+    "backHome": "Zurück zur Startseite",
+    "projects": "Unsere Projekte",
+    "contact": "Kontakt aufnehmen",
+    "help": "Benötigen Sie sofortige Unterstützung? Schreiben Sie uns direkt an <mail>info@engagement-integration.de</mail>"
+  }
+}

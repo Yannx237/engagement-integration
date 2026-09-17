@@ -1,12 +1,14 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export default function ShareCTA() {
+  const { t } = useTranslation();
   const [copied, setCopied] = useState(false);
 
   const handleShare = async () => {
     const url = window.location.href;
-    const title = 'Engagement für Integration e.V. — Gemeinsam für gleichberechtigte Teilhabe';
-    const text = 'Gemeinnützige Migrantenselbstorganisation in NRW für Bildung, Integration und gesellschaftlichen Zusammenhalt.';
+    const title = t('share.sheetTitle');
+    const text = t('share.sheetText');
 
     if (navigator.share) {
       try {
@@ -23,7 +25,7 @@ export default function ShareCTA() {
       setCopied(true);
       setTimeout(() => setCopied(false), 3000);
     } catch {
-      alert('Link kopiert: ' + url);
+      alert(t('share.copiedFallback', { url }));
     }
   };
 
@@ -37,13 +39,13 @@ export default function ShareCTA() {
         <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
           <div className="space-y-3 text-center lg:text-left max-w-2xl">
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-700/60 text-limeAccent-400 text-xs font-bold uppercase tracking-wider">
-              Gemeinschaft &amp; Zusammenhalt
+              {t('share.badge')}
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight leading-snug">
-              Magst du unsere Organisation?
+              {t('share.heading')}
             </h2>
             <p className="text-stone-300 text-sm sm:text-base leading-relaxed">
-              Hilf uns, unsere Bildungs- und Integrationsangebote bekannt zu machen. Jeder geteilte Link schenkt einer weiteren Familie Perspektive und Unterstützung!
+              {t('share.text')}
             </p>
           </div>
 
@@ -58,14 +60,14 @@ export default function ShareCTA() {
                   <svg className="w-5 h-5 text-brand-950" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" />
                   </svg>
-                  <span>Link kopiert!</span>
+                  <span>{t('share.copied')}</span>
                 </>
               ) : (
                 <>
                   <svg className="w-5 h-5 text-brand-950" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
                   </svg>
-                  <span>Diese Seite teilen</span>
+                  <span>{t('share.button')}</span>
                 </>
               )}
             </button>
