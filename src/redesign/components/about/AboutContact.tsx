@@ -1,5 +1,7 @@
+import { useTranslation } from 'react-i18next';
 import { useFormConfirmation } from '../../hooks/useFormConfirmation';
 export default function AboutContact() {
+  const { t } = useTranslation('about');
   const { formSubmitted, handleSubmit } = useFormConfirmation();
   return (
     <section
@@ -9,14 +11,13 @@ export default function AboutContact() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-10">
           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-100 text-brand-800 text-xs font-bold uppercase tracking-wider mb-3">
-            Kontakt aufnehmen
+            {t('form.badge')}
           </span>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-            Sich zu informieren, ist bereits eine Hilfe
+            {t('form.heading')}
           </h2>
           <p className="text-slate-600 text-sm mt-2">
-            Haben Sie Fragen zu unserem Verein, unseren Angeboten oder möchten
-            Sie sich ehrenamtlich einbringen? Schreiben Sie uns direkt!
+            {t('form.intro')}
           </p>
         </div>
 
@@ -39,11 +40,10 @@ export default function AboutContact() {
                 </svg>
               </div>
               <h3 className="text-lg font-bold text-brand-900">
-                Vielen Dank für Ihre Nachricht!
+                {t('form.successHeading')}
               </h3>
               <p className="text-sm text-brand-800">
-                Wir haben Ihre Anfrage erhalten und melden uns schnellstmöglich
-                bei Ihnen.
+                {t('form.successText')}
               </p>
             </div>
           ) : (
@@ -51,23 +51,23 @@ export default function AboutContact() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
-                    Name *
+                    {t('form.lastName')}
                   </label>
                   <input
                     type="text"
                     required
-                    placeholder="Ihr Nachname"
+                    placeholder={t('form.lastNamePlaceholder')}
                     className="w-full px-4 py-3 rounded-xl border border-stone-300 text-slate-800 text-sm focus:border-brand-600 focus:ring-2 focus:ring-brand-200 outline-none transition-all"
                   />
                 </div>
                 <div>
                   <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
-                    Vorname *
+                    {t('form.firstName')}
                   </label>
                   <input
                     type="text"
                     required
-                    placeholder="Ihr Vorname"
+                    placeholder={t('form.firstNamePlaceholder')}
                     className="w-full px-4 py-3 rounded-xl border border-stone-300 text-slate-800 text-sm focus:border-brand-600 focus:ring-2 focus:ring-brand-200 outline-none transition-all"
                   />
                 </div>
@@ -75,24 +75,24 @@ export default function AboutContact() {
 
               <div>
                 <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
-                  E-Mail Adresse *
+                  {t('form.email')}
                 </label>
                 <input
                   type="email"
                   required
-                  placeholder="beispiel@domain.de"
+                  placeholder={t('form.emailPlaceholder')}
                   className="w-full px-4 py-3 rounded-xl border border-stone-300 text-slate-800 text-sm focus:border-brand-600 focus:ring-2 focus:ring-brand-200 outline-none transition-all"
                 />
               </div>
 
               <div>
                 <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
-                  Ihre Nachricht *
+                  {t('form.message')}
                 </label>
                 <textarea
                   rows={4}
                   required
-                  placeholder="Wie können wir Ihnen weiterhelfen oder wie möchten Sie mitwirken?"
+                  placeholder={t('form.messagePlaceholder')}
                   className="w-full px-4 py-3 rounded-xl border border-stone-300 text-slate-800 text-sm focus:border-brand-600 focus:ring-2 focus:ring-brand-200 outline-none transition-all resize-y"
                 ></textarea>
               </div>
@@ -101,7 +101,7 @@ export default function AboutContact() {
                 type="submit"
                 className="w-full py-3.5 px-6 rounded-full text-sm font-bold text-white bg-brand-700 hover:bg-brand-800 shadow-md hover:shadow-lg transition-all"
               >
-                Nachricht jetzt absenden
+                {t('form.submit')}
               </button>
             </form>
           )}

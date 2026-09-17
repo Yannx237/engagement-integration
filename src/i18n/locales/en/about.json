@@ -1,1 +1,95 @@
-{}
+{
+  "hero": {
+    "badge": "About us",
+    "title": "Together, so that equal",
+    "highlight": "participation succeeds.",
+    "description": "Engagement für Integration e.V. is a recognised migrant-led organisation. We work with conviction to build bridges, dismantle prejudice and make equal opportunities real for everyone."
+  },
+  "mission": {
+    "badge": "Who we are",
+    "heading": "Our mission: solidarity, education and equal opportunity",
+    "intro": "Since we were founded we have accompanied people with a migration or refugee background through their first steps and along their long-term path in Germany. We are a point of contact, a guide and a dependable partner."
+  },
+  "values": {
+    "engagement": {
+      "subtitle": "Inclusion & solidarity",
+      "title": "Our commitment",
+      "desc": "Founded on firm values of inclusion and lived solidarity, our organisation works actively for the successful integration of migrants and refugees — whatever their origin, language or religion."
+    },
+    "mission": {
+      "subtitle": "Lasting independence",
+      "title": "Mission & purpose",
+      "desc": "As a non-profit migrant-led organisation, our central task is to give newcomers the tools they need to develop on their own terms and to contribute to society as equal citizens."
+    },
+    "diversity": {
+      "subtitle": "Support across the board",
+      "title": "Diversity as a strength",
+      "desc": "We see diversity as a strength for Germany as a whole. Our work covers every area of life: access to basic services such as housing, multilingual education, healthcare, and practical support with language and entering the labour market."
+    },
+    "partnerships": {
+      "subtitle": "Together, locally",
+      "title": "Strong partnerships",
+      "desc": "Working closely with municipalities, city authorities, schools, regional businesses and committed volunteers, we deliver targeted programmes for empowerment and social participation."
+    },
+    "welcome": {
+      "subtitle": "Awareness & dialogue",
+      "title": "A culture of welcome",
+      "desc": "We actively foster intercultural dialogue and mutual respect through open meeting spaces, community festivals, awareness workshops and direct exchange with wider society."
+    },
+    "future": {
+      "subtitle": "Creating prospects",
+      "title": "A future with dignity",
+      "desc": "We work towards a future in which everyone — whatever their origin — has the chance to fulfil their potential in dignity and equality."
+    }
+  },
+  "sidebar": {
+    "badge": "Direct contact",
+    "heading": "We are here for you",
+    "emailLabel": "Email",
+    "emailNote": "A reply within 24 hours on working days.",
+    "locationsLabel": "Locations",
+    "castrop": "Castrop-Rauxel",
+    "castropValue": "Begegnungszentrum Merklinde, Wittener Str. 322B",
+    "dortmund": "Dortmund",
+    "dortmundValue": "Network hub & tandem partnerships",
+    "berlin": "Berlin",
+    "berlinValue": "National network & dialogue",
+    "phoneLabel": "Phone / WhatsApp",
+    "phoneNote": "Monday to Friday, 8:00 – 17:00.",
+    "cta": "Send a message"
+  },
+  "team": {
+    "badge": "Board & leadership",
+    "heading": "The people behind EFI e.V.",
+    "intro": "Dependability, intercultural experience and genuine commitment shape the leadership of our organisation.",
+    "members": {
+      "anita-nga": {
+        "name": "Anita Nga",
+        "role": "Chairwoman",
+        "imageAlt": "Anita Nga — chairwoman",
+        "description": "Leads our integration and education initiatives and coordinates the women's and family projects."
+      }
+    }
+  },
+  "partners": {
+    "badge": "Network & funders",
+    "heading": "Our partners & supporters",
+    "intro": "Together with strong institutions and providers, we deliver effective measures for social participation."
+  },
+  "form": {
+    "badge": "Get in touch",
+    "heading": "Asking is already a first step",
+    "intro": "Do you have questions about the association or our services, or would you like to volunteer? Write to us directly.",
+    "successHeading": "Thank you for your message.",
+    "successText": "We have received your enquiry and will get back to you as soon as possible.",
+    "lastName": "Surname *",
+    "lastNamePlaceholder": "Your surname",
+    "firstName": "First name *",
+    "firstNamePlaceholder": "Your first name",
+    "email": "Email address *",
+    "emailPlaceholder": "example@domain.com",
+    "message": "Your message *",
+    "messagePlaceholder": "How can we help you, or how would you like to get involved?",
+    "submit": "Send message now"
+  }
+}

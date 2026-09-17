@@ -1,1 +1,95 @@
-{}
+{
+  "hero": {
+    "badge": "Über uns",
+    "title": "Gemeinsam damit gleichberechtigte",
+    "highlight": "Teilhabe gelingt.",
+    "description": "Engagement für Integration e.V. ist eine anerkannte Migrantenselbstorganisation. Wir setzen uns mit Herzblut dafür ein, Brücken zu bauen, Vorurteile abzubauen und gleiche Zukunftschancen für alle zu verwirklichen."
+  },
+  "mission": {
+    "badge": "Wer wir sind",
+    "heading": "Unser Leitbild: Solidarität, Bildung und Chancengleichheit",
+    "intro": "Seit unserer Gründung begleiten wir Menschen mit Migrations- und Fluchtbiografie bei ihren ersten Schritten und auf ihrem langfristigen Lebensweg in Deutschland. Wir sind Ansprechpartner, Wegweiser und verlässlicher Partner."
+  },
+  "values": {
+    "engagement": {
+      "subtitle": "Inklusion & Solidarität",
+      "title": "Unser Engagement",
+      "desc": "Unsere Organisation, gegründet auf festen Werten von Inklusion und gelebter Solidarität, engagiert sich aktiv für die gelungene Integration von Migranten und Geflüchteten – unabhängig von Herkunft, Sprache oder Religion."
+    },
+    "mission": {
+      "subtitle": "Nachhaltige Selbstständigkeit",
+      "title": "Mission & Ziel",
+      "desc": "Als gemeinnützige Migrantenselbstorganisation ist es unsere zentrale Aufgabe, den Ankommenden das notwendige Rüstzeug an die Hand zu geben, um sich selbstbestimmt zu entfalten und als gleichberechtigte Bürger zur Gesellschaft beizutragen."
+    },
+    "diversity": {
+      "subtitle": "Ganzheitliche Begleitung",
+      "title": "Vielfalt als Reichtum",
+      "desc": "Wir betrachten Diversität als Stärke für ganz Deutschland. Unser Handeln deckt alle Lebensbereiche ab: Zugang zu Grunddiensten wie Wohnen, mehrsprachige Bildung, Gesundheitsversorgung sowie aktive Unterstützung bei Sprache und Arbeitsmarkteinstieg."
+    },
+    "partnerships": {
+      "subtitle": "Gemeinsam vor Ort",
+      "title": "Starke Partnerschaften",
+      "desc": "In enger Kooperation mit Kommunen, städtischen Behörden, Schulen, regionalen Unternehmen und engagierten Ehrenamtlichen realisieren wir zielgenaue Programme zur Emanzipation und sozialen Teilhabe."
+    },
+    "welcome": {
+      "subtitle": "Aufklärung & Dialog",
+      "title": "Willkommenskultur",
+      "desc": "Wir fördern aktiv den interkulturellen Dialog und gegenseitigen Respekt durch offene Begegnungsräume, Bürgerfeste, Aufklärungsworkshops und den direkten Austausch mit der Mehrheitsgesellschaft."
+    },
+    "future": {
+      "subtitle": "Perspektiven schaffen",
+      "title": "Würdige Zukunft",
+      "desc": "Wir streben nach einer Zukunft, in der jeder Mensch – gleich welcher Herkunft – die Chance erhält, sein volles Potenzial in Würde und Gleichberechtigung zu entfalten."
+    }
+  },
+  "sidebar": {
+    "badge": "Direkter Kontakt",
+    "heading": "Wir sind für Sie da",
+    "emailLabel": "E-Mail",
+    "emailNote": "Schnelle Antwort werktags binnen 24h.",
+    "locationsLabel": "Standorte",
+    "castrop": "Castrop-Rauxel",
+    "castropValue": "Begegnungszentrum Merklinde, Wittener Str. 322B",
+    "dortmund": "Dortmund",
+    "dortmundValue": "Netzwerk-Hub & Tandem-Partnerschaften",
+    "berlin": "Berlin",
+    "berlinValue": "Bundesnetzwerk & Dialog",
+    "phoneLabel": "Telefon / WhatsApp",
+    "phoneNote": "Montag bis Freitag, 8:00 – 17:00 Uhr.",
+    "cta": "Nachricht senden"
+  },
+  "team": {
+    "badge": "Vorstand & Leitung",
+    "heading": "Die Menschen hinter EFI e.V.",
+    "intro": "Verlässlichkeit, interkulturelle Kompetenz und Herzblut prägen die Führung unserer Organisation.",
+    "members": {
+      "anita-nga": {
+        "name": "Anita Nga",
+        "role": "Vorsitzende",
+        "imageAlt": "Anita Nga — Vorsitzende",
+        "description": "Leitung der Integrations- und Bildungsinitiativen, Koordination von Frauen- und Familienprojekten."
+      }
+    }
+  },
+  "partners": {
+    "badge": "Netzwerk & Förderer",
+    "heading": "Unsere Partner & Unterstützer",
+    "intro": "Zusammen mit starken Institutionen und Trägern setzen wir erfolgreiche Maßnahmen zur gesellschaftlichen Teilhabe um."
+  },
+  "form": {
+    "badge": "Kontakt aufnehmen",
+    "heading": "Sich zu informieren, ist bereits eine Hilfe",
+    "intro": "Haben Sie Fragen zu unserem Verein, unseren Angeboten oder möchten Sie sich ehrenamtlich einbringen? Schreiben Sie uns direkt!",
+    "successHeading": "Vielen Dank für Ihre Nachricht!",
+    "successText": "Wir haben Ihre Anfrage erhalten und melden uns schnellstmöglich bei Ihnen.",
+    "lastName": "Name *",
+    "lastNamePlaceholder": "Ihr Nachname",
+    "firstName": "Vorname *",
+    "firstNamePlaceholder": "Ihr Vorname",
+    "email": "E-Mail Adresse *",
+    "emailPlaceholder": "beispiel@domain.de",
+    "message": "Ihre Nachricht *",
+    "messagePlaceholder": "Wie können wir Ihnen weiterhelfen oder wie möchten Sie mitwirken?",
+    "submit": "Nachricht jetzt absenden"
+  }
+}

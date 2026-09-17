@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import BerlinExchangeArticle from '../components/news/BerlinExchangeArticle';
 import WomensDayArticle from '../components/news/WomensDayArticle';
 import RefugeeWelcomeArticle from '../components/news/RefugeeWelcomeArticle';
@@ -6,14 +7,15 @@ import PageHero from '../components/PageHero';
 import ShareCTA from '../components/ShareCTA';
 
 export default function RedesignNews() {
+  const { t } = useTranslation('news');
   return (
     <div className="w-full bg-[#fbfbfa] text-slate-800">
       {/* 1. Page Hero */}
       <PageHero
-        badge="Neuigkeiten &amp; Aktuelles"
-        title="Aktuelle Berichte,"
-        highlight="Ereignisse &amp; Einblicke."
-        description="Erfahren Sie aus erster Hand, wie unsere Projekte Menschen zusammenbringen: von Quartiersmärkten in Merklinde über humanitäre Solidaritätsaktionen bis hin zu diplomatischen Dialogen in Berlin."
+        badge={t('hero.badge')}
+        title={t('hero.title')}
+        highlight={t('hero.highlight')}
+        description={t('hero.description')}
       />
 
       {/* 2. News Articles Container */}

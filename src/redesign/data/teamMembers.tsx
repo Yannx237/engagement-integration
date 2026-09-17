@@ -1,20 +1,18 @@
+// Text lives in about.json under team.members.<id>; this file keeps the photo
+// and the address, which are not translated.
+export type TeamMemberId = 'anita-nga';
+
 export interface TeamMember {
+  id: TeamMemberId;
   image: string;
-  imageAlt: string;
-  role: string;
-  title: string;
-  description: string;
   emailHref: string;
   email: string;
 }
+
 export const teamMembers: readonly TeamMember[] = [
   {
+    id: 'anita-nga',
     image: '/assets/images/partner-3.png',
-    imageAlt: 'Anita Nga — Vorsitzende',
-    role: 'Vorsitzende',
-    title: 'Anita Nga',
-    description:
-      'Leitung der Integrations- und Bildungsinitiativen, Koordination von Frauen- und Familienprojekten.',
     emailHref: 'mailto:anita.nga@engagement-integration.de',
     email: 'anita.nga@engagement-integration.de',
   },

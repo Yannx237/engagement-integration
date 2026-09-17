@@ -1,1 +1,53 @@
-{}
+{
+  "hero": {
+    "badge": "News & updates",
+    "title": "Reports, events",
+    "highlight": "and first-hand insights.",
+    "description": "See for yourself how our projects bring people together: from neighbourhood markets in Merklinde and humanitarian solidarity campaigns to diplomatic dialogue in Berlin."
+  },
+  "articles": {
+    "berlin": {
+      "category": "Diplomatic dialogue",
+      "title": "Official exchange at the embassy in Berlin",
+      "lead": "On 20 March 2024 our board had the honour of presenting the aims and activities of Engagement für Integration e.V. at the Cameroonian embassy in Berlin. The purpose of the meeting was to build a close, forward-looking cooperation on the social and professional integration of young migrants.",
+      "body": "On behalf of the ambassador we were warmly received by ministerial adviser <name>NDO MINLA'A Salomon Richard</name>. In an open dialogue we presented our projects, in particular our education programmes, language courses and support with finding one's way in German society. Particular attention was paid to improving access to education and to raising awareness of the rights and obligations of newcomers.",
+      "quote": "“We thank the embassy for its warm hospitality and openness. This exchange strengthens our commitment to supporting young people on their educational path in Germany.”",
+      "imageAlt": "Exchange with the Cameroonian embassy in Berlin",
+      "caption": "The EFI e.V. board in conversation with ministerial adviser NDO MINLA'A Salomon Richard in Berlin."
+    },
+    "womensDay": {
+      "category": "Empowerment & diversity",
+      "title": "International women's celebration: diversity, strength and solidarity",
+      "lead": "To mark International Women's Day we organised a celebration with 15 committed participants from a range of countries. The event offered a safe and inspiring space to honour the journeys, challenges and achievements of women from different cultures.",
+      "body": "After an opening talk and speeches on equality, the women shared their personal stories in interactive discussion rounds. Cultural performances, traditional dances and a shared buffet of specialities from each country of origin made the celebration memorable. It closed with a recognition ceremony for every participant.",
+      "photos": {
+        "exchange": "Women's celebration, exchange",
+        "culture": "Cultural performance",
+        "dance": "Community & dance",
+        "dinner": "Shared dinner",
+        "ceremony": "Closing ceremony, Women's Day"
+      }
+    },
+    "refugeeWelcome": {
+      "category": "Solidarity on the ground",
+      "title": "Welcome and solidarity event for refugees",
+      "lead": "In Castrop-Rauxel our association held a large welcome event for families who had fled Ukraine and other crisis regions. It focused on first orientation, referral to language courses and child-friendly care.",
+      "photos": {
+        "one": "Ukraine welcome event 1",
+        "two": "Ukraine welcome event 2",
+        "three": "Ukraine welcome event 3"
+      }
+    },
+    "market": {
+      "category": "Merklinde neighbourhood life",
+      "title": "The first Merklinder MitMachMarkt in Castrop-Rauxel",
+      "lead": "The first Merklinder MitMachMarkt took place on 14 May. Organised by the Merklinde neighbourhood management, 21 associations and institutions presented activities, information stands and culinary specialities. Our stand was a popular stop for neighbourhood conversations and on-the-spot integration advice.",
+      "photos": {
+        "one": "MitMachMarkt stand 1",
+        "two": "MitMachMarkt stand 2",
+        "three": "MitMachMarkt stand 3",
+        "four": "MitMachMarkt stand 4"
+      }
+    }
+  }
+}

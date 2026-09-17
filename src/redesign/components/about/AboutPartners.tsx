@@ -1,16 +1,18 @@
+import { useTranslation } from 'react-i18next';
+
 export default function AboutPartners() {
+  const { t } = useTranslation('about');
   return (
     <section className="py-16 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center max-w-2xl mx-auto mb-12">
         <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-100 text-brand-800 text-xs font-bold uppercase tracking-wider mb-3">
-          Netzwerk &amp; Förderer
+          {t('partners.badge')}
         </span>
         <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-          Unsere Partner &amp; Unterstützer
+          {t('partners.heading')}
         </h2>
         <p className="text-slate-600 text-sm mt-2">
-          Zusammen mit starken Institutionen und Trägern setzen wir erfolgreiche
-          Maßnahmen zur gesellschaftlichen Teilhabe um.
+          {t('partners.intro')}
         </p>
       </div>
 
@@ -24,12 +26,21 @@ export default function AboutPartners() {
             src: '/assets/images/logo-kim-nrw.png',
             alt: 'KIM — Kommunales Integrationsmanagement NRW',
           },
-          { src: '/assets/images/image-10.png', alt: 'Partner Institution' },
-          { src: '/assets/images/image-4.png', alt: 'Partner Organisation' },
-          { src: '/assets/images/image-5.png', alt: 'Partner Netzwerk' },
-          { src: '/assets/images/image-6.png', alt: 'Partner Träger' },
-          { src: '/assets/images/image-7.png', alt: 'Kooperationspartner' },
-          { src: '/assets/images/image-8.png', alt: 'Unterstützer' },
+          { src: '/assets/images/image-10.png', alt: 'KOMM-AN NRW' },
+          {
+            src: '/assets/images/image-4.png',
+            alt: 'Kommunales Integrationszentrum Kreis Recklinghausen',
+          },
+          {
+            src: '/assets/images/image-5.png',
+            alt: 'Ministerium für Kinder, Jugend, Familie, Gleichstellung, Flucht und Integration des Landes Nordrhein-Westfalen',
+          },
+          { src: '/assets/images/image-6.png', alt: 'Stiftung Bildung' },
+          { src: '/assets/images/image-7.png', alt: 'MENSCHEN STÄRKEN MENSCHEN' },
+          {
+            src: '/assets/images/image-8.png',
+            alt: 'Bundesministerium für Familie, Senioren, Frauen und Jugend',
+          },
         ].map((partner, i) => (
           <div
             key={i}

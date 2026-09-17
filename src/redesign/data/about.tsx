@@ -1,17 +1,24 @@
 import type { ReactNode } from 'react';
 
+// Text lives in about.json; this file keeps only the identity and the icon.
+// The id is a literal union so that `values.${id}.title` type-checks as a real
+// translation key rather than as an arbitrary string.
+export type ValueId =
+  | 'engagement'
+  | 'mission'
+  | 'diversity'
+  | 'partnerships'
+  | 'welcome'
+  | 'future';
+
 interface AssociationValue {
-  title: string;
-  subtitle: string;
-  desc: string;
+  id: ValueId;
   icon: ReactNode;
 }
 
 export const valuesList: readonly AssociationValue[] = [
   {
-    title: 'Unser Engagement',
-    subtitle: 'Inklusion & Solidarität',
-    desc: 'Unsere Organisation, gegründet auf festen Werten von Inklusion und gelebter Solidarität, engagiert sich aktiv für die gelungene Integration von Migranten und Geflüchteten – unabhängig von Herkunft, Sprache oder Religion.',
+    id: 'engagement',
     icon: (
       <svg
         className="w-6 h-6 text-brand-700"
@@ -29,9 +36,7 @@ export const valuesList: readonly AssociationValue[] = [
     ),
   },
   {
-    title: 'Mission & Ziel',
-    subtitle: 'Nachhaltige Selbstständigkeit',
-    desc: 'Als gemeinnützige Migrantenselbstorganisation ist es unsere zentrale Aufgabe, den Ankommenden das notwendige Rüstzeug an die Hand zu geben, um sich selbstbestimmt zu entfalten und als gleichberechtigte Bürger zur Gesellschaft beizutragen.',
+    id: 'mission',
     icon: (
       <svg
         className="w-6 h-6 text-brand-700"
@@ -49,9 +54,7 @@ export const valuesList: readonly AssociationValue[] = [
     ),
   },
   {
-    title: 'Vielfalt als Reichtum',
-    subtitle: 'Ganzheitliche Begleitung',
-    desc: 'Wir betrachten Diversität als Stärke für ganz Deutschland. Unser Handeln deckt alle Lebensbereiche ab: Zugang zu Grunddiensten wie Wohnen, mehrsprachige Bildung, Gesundheitsversorgung sowie aktive Unterstützung bei Sprache und Arbeitsmarkteinstieg.',
+    id: 'diversity',
     icon: (
       <svg
         className="w-6 h-6 text-brand-700"
@@ -69,9 +72,7 @@ export const valuesList: readonly AssociationValue[] = [
     ),
   },
   {
-    title: 'Starke Partnerschaften',
-    subtitle: 'Gemeinsam vor Ort',
-    desc: 'In enger Kooperation mit Kommunen, städtischen Behörden, Schulen, regionalen Unternehmen und engagierten Ehrenamtlichen realisieren wir zielgenaue Programme zur Emanzipation und sozialen Teilhabe.',
+    id: 'partnerships',
     icon: (
       <svg
         className="w-6 h-6 text-brand-700"
@@ -89,9 +90,7 @@ export const valuesList: readonly AssociationValue[] = [
     ),
   },
   {
-    title: 'Willkommenskultur',
-    subtitle: 'Aufklärung & Dialog',
-    desc: 'Wir fördern aktiv den interkulturellen Dialog und gegenseitigen Respekt durch offene Begegnungsräume, Bürgerfeste, Aufklärungsworkshops und den direkten Austausch mit der Mehrheitsgesellschaft.',
+    id: 'welcome',
     icon: (
       <svg
         className="w-6 h-6 text-brand-700"
@@ -109,9 +108,7 @@ export const valuesList: readonly AssociationValue[] = [
     ),
   },
   {
-    title: 'Würdige Zukunft',
-    subtitle: 'Perspektiven schaffen',
-    desc: 'Wir streben nach einer Zukunft, in der jeder Mensch – gleich welcher Herkunft – die Chance erhält, sein volles Potenzial in Würde und Gleichberechtigung zu entfalten.',
+    id: 'future',
     icon: (
       <svg
         className="w-6 h-6 text-brand-700"

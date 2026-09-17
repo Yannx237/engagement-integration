@@ -1,22 +1,27 @@
+import { useTranslation } from 'react-i18next';
 import type { TeamMember } from '../../data/teamMembers';
+
 export default function TeamMemberCard({ item }: { item: TeamMember }) {
+  const { t } = useTranslation('about');
   return (
     <div className="flex flex-col sm:flex-row items-center gap-6 p-6 rounded-3xl bg-stone-50 border border-stone-200/80 shadow-sm hover:shadow-md transition-shadow">
       <div className="w-36 h-44 rounded-2xl overflow-hidden shadow-md flex-shrink-0 bg-stone-200">
         <img
           src={item.image}
-          alt={item.imageAlt}
+          alt={t(`team.members.${item.id}.imageAlt`)}
           className="w-full h-full object-cover object-top"
           loading="eager"
         />
       </div>
       <div className="text-center sm:text-left space-y-2">
         <span className="inline-block px-2.5 py-0.5 rounded-full bg-brand-100 text-brand-800 text-xs font-bold">
-          {item.role}
+          {t(`team.members.${item.id}.role`)}
         </span>
-        <h3 className="text-xl font-bold text-slate-900">{item.title}</h3>
+        <h3 className="text-xl font-bold text-slate-900">
+          {t(`team.members.${item.id}.name`)}
+        </h3>
         <p className="text-xs text-slate-600 leading-relaxed">
-          {item.description}
+          {t(`team.members.${item.id}.description`)}
         </p>
         <a
           href={item.emailHref}

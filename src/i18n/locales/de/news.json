@@ -1,1 +1,53 @@
-{}
+{
+  "hero": {
+    "badge": "Neuigkeiten & Aktuelles",
+    "title": "Aktuelle Berichte,",
+    "highlight": "Ereignisse & Einblicke.",
+    "description": "Erfahren Sie aus erster Hand, wie unsere Projekte Menschen zusammenbringen: von Quartiersmärkten in Merklinde über humanitäre Solidaritätsaktionen bis hin zu diplomatischen Dialogen in Berlin."
+  },
+  "articles": {
+    "berlin": {
+      "category": "Diplomatischer Dialog",
+      "title": "Offizieller Austausch in der Botschaft in Berlin",
+      "lead": "Am 20. März 2024 hatte unser Vorstand die ehrenvolle Gelegenheit, die Ziele und Aktivitäten unseres Vereins Engagement für Integration e.V. in den Räumlichkeiten der kamerunischen Botschaft in Berlin vorzustellen. Ziel des Treffens war es, eine enge und zukunftsorientierte Kooperation im Bereich der gesellschaftlichen und beruflichen Integration junger Migranten aufzubauen.",
+      "body": "Im Namen des Botschafters wurden wir von Ministerberater <name>NDO MINLA'A Salomon Richard</name> herzlich empfangen. In einem offenen Dialog präsentierten wir unsere Vereinsprojekte, insbesondere unsere Bildungsprogramme, Sprachkurse und Unterstützung bei der Orientierung in der deutschen Gesellschaft. Ein besonderes Augenmerk lag auf der Förderung von Bildungschancen sowie der Sensibilisierung für Rechte und Pflichten von Neuzugewanderten.",
+      "quote": "„Wir danken der Botschaft für die herzliche Gastfreundschaft und Offenheit. Dieser Austausch bestärkt uns in unserem Engagement, junge Menschen auf ihrem Bildungsweg in Deutschland gezielt zu fördern.“",
+      "imageAlt": "Austausch mit der kamerunischen Botschaft in Berlin",
+      "caption": "Vorstand von EFI e.V. im Gespräch mit Ministerberater NDO MINLA'A Salomon Richard in Berlin."
+    },
+    "womensDay": {
+      "category": "Empowerment & Vielfalt",
+      "title": "Internationale Frauenfeier: Vielfalt, Stärke und Zusammenhalt",
+      "lead": "Anlässlich des Internationalen Frauentags organisierten wir eine feierliche Begegnung mit 15 engagierten Teilnehmerinnen aus verschiedenen Nationen. Die Veranstaltung bot einen geschützten und inspirierenden Raum, um die Lebenswege, Herausforderungen und Erfolge von Frauen aus unterschiedlichen Kulturen zu würdigen.",
+      "body": "Nach einer thematischen Einführung und Reden zur Gleichberechtigung teilten die Frauen in interaktiven Gesprächsrunden ihre persönlichen Geschichten. Kulturelle Darbietungen, traditionelle Tänze und ein gemeinsames Buffet mit Spezialitäten aus den jeweiligen Herkunftsländern machten die Feier zu einem unvergesslichen Erlebnis. Den feierlichen Abschluss bildete eine Anerkennungszeremonie für jede Teilnehmerin.",
+      "photos": {
+        "exchange": "Frauenfeier Austausch",
+        "culture": "Kulturelle Präsentation",
+        "dance": "Gemeinschaft & Tanz",
+        "dinner": "Gemeinsames Abendessen",
+        "ceremony": "Abschlusszeremonie Frauentag"
+      }
+    },
+    "refugeeWelcome": {
+      "category": "Solidarität vor Ort",
+      "title": "Willkommens- und Solidaritätsveranstaltung für geflüchtete Menschen",
+      "lead": "In Castrop-Rauxel veranstaltete unser Verein ein großes Willkommensfest für aus der Ukraine und weiteren Krisenregionen geflüchtete Familien. Im Mittelpunkt standen die Erstorientierung, die Vermittlung von Sprachkursen und kinderfreundliche Betreuungsangebote.",
+      "photos": {
+        "one": "Willkommensveranstaltung Ukraine 1",
+        "two": "Willkommensveranstaltung Ukraine 2",
+        "three": "Willkommensveranstaltung Ukraine 3"
+      }
+    },
+    "market": {
+      "category": "Stadtteilleben Merklinde",
+      "title": "1. Merklinder MitMachMarkt in Castrop-Rauxel",
+      "lead": "Am 14. Mai fand der 1. Merklinder MitMachMarkt statt. Organisiert vom Quartiersmanagement Merklinde präsentierten sich insgesamt 21 Vereine und Institutionen mit vielfältigen Aktionen, Informationsständen und kulinarischen Spezialitäten. Unser Stand war ein beliebter Anlaufpunkt für Nachbarschaftsgespräche und direkte Integrationsberatung.",
+      "photos": {
+        "one": "MitMachMarkt Stand 1",
+        "two": "MitMachMarkt Stand 2",
+        "three": "MitMachMarkt Stand 3",
+        "four": "MitMachMarkt Stand 4"
+      }
+    }
+  }
+}

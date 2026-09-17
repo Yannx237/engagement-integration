@@ -1,5 +1,8 @@
+import { useTranslation } from 'react-i18next';
 import { valuesList } from '../../data/about';
+
 export default function AboutMission() {
+  const { t } = useTranslation('about');
   return (
     <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
@@ -7,36 +10,33 @@ export default function AboutMission() {
         <div className="lg:col-span-8 space-y-12">
           <div>
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-100 text-brand-800 text-xs font-bold uppercase tracking-wider mb-4">
-              Wer wir sind
+              {t('mission.badge')}
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4">
-              Unser Leitbild: Solidarität, Bildung und Chancengleichheit
+              {t('mission.heading')}
             </h2>
             <p className="text-slate-600 text-base leading-relaxed">
-              Seit unserer Gründung begleiten wir Menschen mit Migrations- und
-              Fluchtbiografie bei ihren ersten Schritten und auf ihrem
-              langfristigen Lebensweg in Deutschland. Wir sind Ansprechpartner,
-              Wegweiser und verlässlicher Partner.
+              {t('mission.intro')}
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {valuesList.map((val) => (
               <div
-                key={val.title}
+                key={val.id}
                 className="p-6 rounded-2xl bg-white border border-stone-200/80 shadow-sm hover:shadow-md transition-all group"
               >
                 <div className="w-12 h-12 rounded-xl bg-brand-50 border border-brand-100 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
                   {val.icon}
                 </div>
                 <span className="text-[11px] font-bold text-limeAccent-600 uppercase tracking-wider block mb-1">
-                  {val.subtitle}
+                  {t(`values.${val.id}.subtitle`)}
                 </span>
                 <h3 className="text-lg font-bold text-slate-900 mb-2">
-                  {val.title}
+                  {t(`values.${val.id}.title`)}
                 </h3>
                 <p className="text-sm text-slate-600 leading-relaxed">
-                  {val.desc}
+                  {t(`values.${val.id}.desc`)}
                 </p>
               </div>
             ))}
@@ -48,10 +48,10 @@ export default function AboutMission() {
           <div className="sticky top-28 space-y-6">
             <div className="rounded-3xl bg-gradient-to-br from-brand-900 to-brand-950 text-white p-8 shadow-xl border border-brand-800">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-800 text-limeAccent-400 text-xs font-bold uppercase tracking-wider mb-4">
-                Direkter Kontakt
+                {t('sidebar.badge')}
               </span>
               <h3 className="text-xl font-bold text-white mb-6">
-                Wir sind für Sie da
+                {t('sidebar.heading')}
               </h3>
 
               <div className="space-y-6 text-sm">
@@ -73,7 +73,7 @@ export default function AboutMission() {
                   </div>
                   <div>
                     <span className="text-xs text-stone-400 uppercase tracking-wider block">
-                      E-Mail
+                      {t('sidebar.emailLabel')}
                     </span>
                     <a
                       href="mailto:info@engagement-integration.de"
@@ -82,7 +82,7 @@ export default function AboutMission() {
                       info@engagement-integration.de
                     </a>
                     <p className="text-xs text-stone-400 mt-0.5">
-                      Schnelle Antwort werktags binnen 24h.
+                      {t('sidebar.emailNote')}
                     </p>
                   </div>
                 </div>
@@ -111,25 +111,25 @@ export default function AboutMission() {
                   </div>
                   <div>
                     <span className="text-xs text-stone-400 uppercase tracking-wider block">
-                      Standorte
+                      {t('sidebar.locationsLabel')}
                     </span>
                     <strong className="text-white block font-semibold">
-                      Castrop-Rauxel
+                      {t('sidebar.castrop')}
                     </strong>
                     <span className="text-xs text-stone-300 block">
-                      Begegnungszentrum Merklinde, Wittener Str. 322B
+                      {t('sidebar.castropValue')}
                     </span>
                     <strong className="text-white block font-semibold mt-1">
-                      Dortmund
+                      {t('sidebar.dortmund')}
                     </strong>
                     <span className="text-xs text-stone-300 block">
-                      Netzwerk-Hub &amp; Tandem-Partnerschaften
+                      {t('sidebar.dortmundValue')}
                     </span>
                     <strong className="text-white block font-semibold mt-1">
-                      Berlin
+                      {t('sidebar.berlin')}
                     </strong>
                     <span className="text-xs text-stone-300 block">
-                      Bundesnetzwerk &amp; Dialog
+                      {t('sidebar.berlinValue')}
                     </span>
                   </div>
                 </div>
@@ -152,7 +152,7 @@ export default function AboutMission() {
                   </div>
                   <div>
                     <span className="text-xs text-stone-400 uppercase tracking-wider block">
-                      Telefon / WhatsApp
+                      {t('sidebar.phoneLabel')}
                     </span>
                     <a
                       href="tel:+491773218743"
@@ -161,7 +161,7 @@ export default function AboutMission() {
                       (+49) 0 177 3218743
                     </a>
                     <p className="text-xs text-stone-400 mt-0.5">
-                      Montag bis Freitag, 8:00 – 17:00 Uhr.
+                      {t('sidebar.phoneNote')}
                     </p>
                   </div>
                 </div>
@@ -172,7 +172,7 @@ export default function AboutMission() {
                   href="#kontakt-formular"
                   className="w-full inline-flex items-center justify-center px-4 py-2.5 rounded-full text-xs font-bold text-brand-950 bg-limeAccent-500 hover:bg-limeAccent-400 transition-colors"
                 >
-                  Nachricht senden
+                  {t('sidebar.cta')}
                 </a>
               </div>
             </div>
