@@ -31,6 +31,7 @@ export default function ProjectGallery() {
                 key={f.id}
                 type="button"
                 onClick={() => setGalleryFilter(f.id)}
+                data-gallery-filter={f.id}
                 className={`px-4 py-2 rounded-full text-xs font-bold transition-colors ${
                   galleryFilter === f.id
                     ? 'bg-brand-700 text-white'

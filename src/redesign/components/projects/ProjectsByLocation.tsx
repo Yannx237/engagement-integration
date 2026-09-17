@@ -59,6 +59,7 @@ export default function ProjectsByLocation() {
               type="button"
               onClick={() => selectCity(city.id)}
               aria-pressed={isActive}
+              data-city={city.id}
               className={`rounded-3xl border p-6 text-center transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600 ${
                 isActive
                   ? `bg-white border-brand-600 shadow-lg ring-2 ${accent.ring}`

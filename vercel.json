@@ -1,0 +1,81 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/about-us",
+      "destination": "/de/ueber-uns",
+      "permanent": true
+    },
+    {
+      "source": "/services-for-immigrants",
+      "destination": "/de/projekte",
+      "permanent": true
+    },
+    {
+      "source": "/projekte",
+      "destination": "/de/projekte",
+      "permanent": true
+    },
+    {
+      "source": "/international",
+      "destination": "/de/international",
+      "permanent": true
+    },
+    {
+      "source": "/news",
+      "destination": "/de/neuigkeiten",
+      "permanent": true
+    },
+    {
+      "source": "/neuigkeiten",
+      "destination": "/de/neuigkeiten",
+      "permanent": true
+    },
+    {
+      "source": "/contact",
+      "destination": "/de/kontakt",
+      "permanent": true
+    },
+    {
+      "source": "/kontakt",
+      "destination": "/de/kontakt",
+      "permanent": true
+    },
+    {
+      "source": "/mentions",
+      "destination": "/de/impressum",
+      "permanent": true
+    },
+    {
+      "source": "/impressum",
+      "destination": "/de/impressum",
+      "permanent": true
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/de/datenschutz",
+      "permanent": true
+    },
+    {
+      "source": "/datenschutz",
+      "destination": "/de/datenschutz",
+      "permanent": true
+    },
+    {
+      "source": "/redesign",
+      "destination": "/de",
+      "permanent": true
+    },
+    {
+      "source": "/404",
+      "destination": "/de/404",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

@@ -9,7 +9,7 @@ export default function PrivacyPolicy() {
         title="Datenschutzerklärung"
         highlight="nach DSGVO"
         description="Transparenz und Schutz Ihrer persönlichen Daten: Erfahren Sie, wie wir Daten erheben, verarbeiten und welche Rechte Ihnen zustehen."
-        breadcrumbs={[{ label: 'Home', to: '/' }]}
+        breadcrumbs={[{ label: 'Home', routeId: 'home' }]}
       />
 
       <LegalContent className="bg-white rounded-3xl p-8 sm:p-12 shadow-sm border border-stone-200/80 space-y-10 text-slate-700 text-sm leading-relaxed">

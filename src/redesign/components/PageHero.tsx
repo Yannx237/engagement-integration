@@ -1,11 +1,12 @@
-import { Link } from 'react-router-dom';
+import { LocalizedLink } from '../../i18n/LocalizedLink';
+import type { RouteId } from '../../i18n/routes';
 
 interface PageHeroProps {
   badge: string;
   title: string;
   highlight?: string;
   description: string;
-  breadcrumbs?: { label: string; to?: string }[];
+  breadcrumbs?: { label: string; routeId?: RouteId }[];
 }
 
 export default function PageHero({
@@ -13,7 +14,7 @@ export default function PageHero({
   title,
   highlight,
   description,
-  breadcrumbs = [{ label: 'Home', to: '/' }]
+  breadcrumbs = [{ label: 'Home', routeId: 'home' as RouteId }]
 }: PageHeroProps) {
   return (
     <section className="relative overflow-hidden bg-brand-deep text-white py-16 sm:py-20 lg:py-24 border-b border-brand-800">
@@ -26,10 +27,10 @@ export default function PageHero({
         <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs font-medium text-stone-300 mb-6">
           {breadcrumbs.map((crumb, idx) => (
             <div key={idx} className="flex items-center gap-2">
-              {crumb.to ? (
-                <Link to={crumb.to} className="hover:text-limeAccent-400 transition-colors">
+              {crumb.routeId ? (
+                <LocalizedLink routeId={crumb.routeId} className="hover:text-limeAccent-400 transition-colors">
                   {crumb.label}
-                </Link>
+                </LocalizedLink>
               ) : (
                 <span className="text-stone-300">{crumb.label}</span>
               )}

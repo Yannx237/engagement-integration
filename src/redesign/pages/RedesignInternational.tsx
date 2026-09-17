@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { LocalizedLink } from '../../i18n/LocalizedLink';
 import PageHero from '../components/PageHero';
 import ProjectCard from '../components/projects/ProjectCard';
 import PartnersStrip from '../components/PartnersStrip';
@@ -63,12 +63,12 @@ export default function RedesignInternational() {
               hier in Kürze veröffentlicht. Bis dahin geben wir Ihnen gerne
               persönlich Auskunft.
             </p>
-            <Link
-              to="/contact#kontaktformular"
+            <LocalizedLink
+              routeId="contact" hash="#kontaktformular"
               className="inline-flex items-center justify-center px-6 py-3 rounded-full text-sm font-bold text-brand-950 bg-limeAccent-500 hover:bg-limeAccent-400 shadow-sm transition-colors"
             >
               Kontakt aufnehmen
-            </Link>
+            </LocalizedLink>
           </div>
         )}
       </section>

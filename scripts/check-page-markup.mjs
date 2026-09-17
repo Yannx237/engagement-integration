@@ -13,14 +13,15 @@ assert(
   'Usage: node scripts/check-page-markup.mjs capture|compare <baseline.json>'
 );
 const pages = [
-  ['/', 'src/redesign/RedesignHome.tsx'],
-  ['/about-us', 'src/redesign/pages/RedesignAboutUs.tsx'],
-  ['/contact', 'src/redesign/pages/RedesignContact.tsx'],
-  ['/services-for-immigrants', 'src/redesign/pages/RedesignProjects.tsx'],
-  ['/news', 'src/redesign/pages/RedesignNews.tsx'],
-  ['/mentions', 'src/pages/Mentions.tsx'],
-  ['/privacy-policy', 'src/pages/PrivacyPolicy.tsx'],
-  ['/404', 'src/redesign/pages/RedesignNotFound.tsx'],
+  ['/de', 'src/redesign/RedesignHome.tsx'],
+  ['/de/ueber-uns', 'src/redesign/pages/RedesignAboutUs.tsx'],
+  ['/de/kontakt', 'src/redesign/pages/RedesignContact.tsx'],
+  ['/de/projekte', 'src/redesign/pages/RedesignProjects.tsx'],
+  ['/de/neuigkeiten', 'src/redesign/pages/RedesignNews.tsx'],
+  ['/de/international', 'src/redesign/pages/RedesignInternational.tsx'],
+  ['/de/impressum', 'src/pages/Mentions.tsx'],
+  ['/de/datenschutz', 'src/pages/PrivacyPolicy.tsx'],
+  ['/de/404', 'src/redesign/pages/RedesignNotFound.tsx'],
 ];
 const server = await createServer({
   server: { middlewareMode: true },

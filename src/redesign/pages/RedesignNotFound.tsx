@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { LocalizedLink } from '../../i18n/LocalizedLink';
 
 export default function RedesignNotFound() {
   return (
@@ -29,29 +29,29 @@ export default function RedesignNotFound() {
 
         {/* Action Buttons */}
         <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
-          <Link
-            to="/"
+          <LocalizedLink
+            routeId="home"
             className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-sm font-bold text-brand-950 bg-limeAccent-500 hover:bg-limeAccent-400 shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
             </svg>
             <span>Zurück zur Startseite</span>
-          </Link>
+          </LocalizedLink>
 
-          <Link
-            to="/services-for-immigrants"
+          <LocalizedLink
+            routeId="projects"
             className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-sm font-semibold text-brand-900 bg-brand-50 hover:bg-brand-100 border border-brand-200 transition-colors"
           >
             <span>Unsere Projekte</span>
-          </Link>
+          </LocalizedLink>
 
-          <Link
-            to="/contact"
+          <LocalizedLink
+            routeId="contact"
             className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-sm font-semibold text-slate-700 hover:text-slate-900 hover:bg-stone-100 border border-stone-200 transition-colors"
           >
             <span>Kontakt aufnehmen</span>
-          </Link>
+          </LocalizedLink>
         </div>
 
         {/* Direct Contact help note */}

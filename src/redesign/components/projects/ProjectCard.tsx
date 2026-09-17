@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { LocalizedLink } from '../../../i18n/LocalizedLink';
 import type { Project } from '../../data/projects';
 
 export default function ProjectCard({ project }: { project: Project }) {
@@ -100,8 +100,8 @@ export default function ProjectCard({ project }: { project: Project }) {
           </p>
         )}
 
-        <Link
-          to="/contact#kontaktformular"
+        <LocalizedLink
+          routeId="contact" hash="#kontaktformular"
           className="mt-5 inline-flex items-center gap-2 text-xs font-bold text-brand-700 hover:text-brand-800 uppercase tracking-wider"
         >
           <span>Jetzt teilnehmen oder anfragen</span>
@@ -119,7 +119,7 @@ export default function ProjectCard({ project }: { project: Project }) {
               d="M14 5l7 7m0 0l-7 7m7-7H3"
             />
           </svg>
-        </Link>
+        </LocalizedLink>
       </div>
     </div>
   );

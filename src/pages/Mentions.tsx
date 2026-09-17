@@ -9,7 +9,7 @@ export default function Mentions() {
         title="Impressum &amp;"
         highlight="Rechtliche Angaben"
         description="Angaben zum Verein, Kontaktinformationen und rechtliche Hinweise."
-        breadcrumbs={[{ label: 'Home', to: '/' }]}
+        breadcrumbs={[{ label: 'Home', routeId: 'home' }]}
       />
 
       <LegalContent className="bg-white rounded-3xl p-8 sm:p-12 shadow-sm border border-stone-200/80 space-y-8">

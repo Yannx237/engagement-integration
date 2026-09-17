@@ -50,14 +50,14 @@ try {
   for (const width of [1440, 390]) {
     await page.setViewport({ width, height: 900 });
     for (const route of [
-      '/',
-      '/about-us',
-      '/contact',
-      '/services-for-immigrants',
-      '/news',
-      '/mentions',
-      '/privacy-policy',
-      '/404',
+      '/de',
+      '/de/ueber-uns',
+      '/de/kontakt',
+      '/de/projekte',
+      '/de/neuigkeiten',
+      '/de/impressum',
+      '/de/datenschutz',
+      '/de/404',
     ]) {
       await visit(route);
       assert(await page.$('main'), `No main content: ${route}`);
@@ -65,7 +65,7 @@ try {
     console.log(`Eight routes render at ${width}px`);
   }
 
-  await visit('/');
+  await visit('/de');
   for (const [id, label] of [
     ['projekte', 'Nächstes Projekt'],
     ['shop', 'Nächstes Produkt'],
@@ -82,7 +82,7 @@ try {
   console.log('Both mobile carousels scroll');
 
   await page.click('button[aria-label="Navigation umschalten"]');
-  await page.waitForSelector('header a[href="/services-for-immigrants"]');
+  await page.waitForSelector('header a[href="/de/projekte"]');
   assert(
     await page.$eval('header', (header) =>
       header.textContent.includes('Unsere Projekte')
@@ -90,25 +90,26 @@ try {
   );
   await page.click('button[aria-label="Navigation umschalten"]');
 
-  await visit('/services-for-immigrants');
-  await clickText('button', 'Dortmund (Netzwerk-Hub)');
-  await page.waitForFunction(() =>
-    document
-      .querySelector('main')
-      .textContent.includes('Migration und Integration Dortmund')
+  // Stable data hooks rather than German labels: these assertions must survive
+  // translation.
+  await visit('/de/projekte');
+  await page.click('button[data-city="dortmund"]');
+  await page.waitForFunction(
+    () => document.querySelector('button[data-city="dortmund"]')
+      ?.getAttribute('aria-pressed') === 'true'
   );
-  await clickText('button', 'Berlin');
+  await page.click('button[data-gallery-filter="berlin"]');
   await page.waitForFunction(
     () => document.querySelectorAll('main img[src*="/f"]').length === 2
   );
-  await clickText('button', 'Alle Standorte');
+  await page.click('button[data-gallery-filter="all"]');
   await page.waitForFunction(
     () => document.querySelectorAll('main img[src*="/f"]').length === 11
   );
   console.log('Project and gallery filters work');
 
   for (const subject of ['spende', 'mitglied']) {
-    await visit(`/contact?thema=${subject}#kontaktformular`);
+    await visit(`/de/kontakt?thema=${subject}#kontaktformular`);
     await page.waitForFunction(
       (expected) =>
         document.querySelector('#kontaktformular select')?.value === expected,
