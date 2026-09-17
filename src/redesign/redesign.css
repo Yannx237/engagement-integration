@@ -1770,6 +1770,15 @@ body {
   background-color: rgb(7 89 133 / var(--tw-bg-opacity, 1));
 }
 
+/* Needed here, not only from the Tailwind CDN: the preflight in this file and
+   in index.css sets `[type="button"] { background-color: transparent }`, which
+   has the same specificity as a class and loads later, so a background that
+   only the CDN provides loses the cascade on every button. */
+.bg-brand-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(36 107 56 / var(--tw-bg-opacity, 1));
+}
+
 .bg-stone-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(245 245 244 / var(--tw-bg-opacity, 1));
@@ -1867,6 +1876,10 @@ body {
 
 .to-emerald-300 {
   --tw-gradient-to: #6ee7b7 var(--tw-gradient-to-position);
+}
+
+.to-limeAccent-300 {
+  --tw-gradient-to: #bef264 var(--tw-gradient-to-position);
 }
 
 .to-transparent {
