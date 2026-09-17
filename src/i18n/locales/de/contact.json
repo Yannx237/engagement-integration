@@ -1,5 +1,50 @@
 {
+  "hero": {
+    "badge": "Kontakt & Beratung",
+    "title": "Sich zu informieren, ist bereits",
+    "highlight": "eine weitere Hilfe.",
+    "description": "Wir haben stets ein offenes Ohr für Ihre Anliegen, Fragen zu unseren Angeboten oder Kooperationswünsche. Nehmen Sie direkt Kontakt zu unserem Team in Castrop-Rauxel und Dortmund auf."
+  },
+  "channels": {
+    "email": {
+      "eyebrow": "Schriftlicher Kontakt",
+      "title": "E-Mail Beratung",
+      "text": "Unser freundliches Team steht Ihnen bei allen Fragen gerne und zeitnah zur Verfügung."
+    },
+    "locations": {
+      "eyebrow": "Vor Ort Treffen",
+      "title": "Standorte",
+      "text": "Besuchen Sie uns in unserem Begegnungszentrum oder vereinbaren Sie einen Termin im Netzwerk-Hub.",
+      "castrop": "<strong>Castrop-Rauxel:</strong> Wittener Str. 322B (Begegnungszentrum)",
+      "dortmund": "<strong>Dortmund:</strong> Netzwerk-Hub & Patenschaften",
+      "berlin": "<strong>Berlin:</strong> Bundesnetzwerk & Dialog"
+    },
+    "phone": {
+      "eyebrow": "Telefonisch & WhatsApp",
+      "title": "Direkter Anruf",
+      "text": "Montag bis Freitag durchgehend von 8:00 bis 17:00 Uhr für Sie erreichbar."
+    }
+  },
   "form": {
+    "badge": "Nachricht senden",
+    "heading": "Wir freuen uns auf Ihre Nachricht",
+    "intro": "Ob Nachhilfeunterricht für Ihr Kind, Beratung zu Sprachkursen, ehrenamtliches Engagement als Tandem-Partner oder institutionelle Zusammenarbeit: Füllen Sie einfach das Formular aus, wir melden uns umgehend bei Ihnen.",
+    "privacyHeading": "Datenschutz & Diskretion",
+    "privacyText": "Ihre Angaben werden vertraulich behandelt und ausschließlich zur Beantwortung Ihrer persönlichen Anfrage verwendet. Keine Weitergabe an unbefugte Dritte.",
+    "successHeading": "Nachricht erfolgreich versendet!",
+    "successText": "Vielen Dank für Ihre Kontaktaufnahme. Unser Team wird Ihre Anfrage zeitnah bearbeiten.",
+    "lastName": "Name *",
+    "lastNamePlaceholder": "Ihr Nachname",
+    "firstName": "Vorname *",
+    "firstNamePlaceholder": "Ihr Vorname",
+    "email": "E-Mail Adresse *",
+    "emailPlaceholder": "ihre.mail@beispiel.de",
+    "phone": "Telefonnummer (optional)",
+    "phonePlaceholder": "+49 ...",
+    "subjectLabel": "Anliegen / Betreff *",
+    "message": "Ihre Nachricht *",
+    "messagePlaceholder": "Beschreiben Sie kurz Ihr Anliegen oder Ihre Frage...",
+    "submit": "Nachricht jetzt absenden",
     "subject": {
       "options": {
         "allgemein": "Allgemeine Anfrage",
@@ -11,5 +56,31 @@
         "shop": "Bestellung Solidar-Shop (Merchandise)"
       }
     }
+  },
+  "support": {
+    "donate": {
+      "badge": "Gemeinnützig & Steuerlich absetzbar",
+      "heading": "Spenden für Chancengleichheit",
+      "text": "Jede Spende kommt direkt den Kindern und Familien in NRW zugute: zur Finanzierung von Schulmaterialien, Nachhilfelehrkräften und interkulturellen Freizeitaktivitäten. Auf Wunsch stellen wir Ihnen eine Spendenbescheinigung aus.",
+      "recipient": "<strong>Empfänger:</strong> Engagement für Integration e.V.",
+      "purpose": "<strong>Verwendungszweck:</strong> Spende Bildungs- & Integrationsprojekte",
+      "account": "<strong>Kontoauskunft:</strong> Erfragen Sie gerne direkt unsere IBAN via Kontaktformular oder E-Mail.",
+      "mailCta": "Spendeninfos per E-Mail",
+      "formCta": "Direkt im Formular anfragen ↓"
+    },
+    "member": {
+      "badge": "Gemeinschaft gestalten",
+      "heading": "Mitglied werden bei EFI e.V.",
+      "text": "Werden Sie ordentliches oder förderndes Mitglied! Bringen Sie Ihre Ideen, Ihre Fachkompetenz oder Ihr Ehrenamt ein, um gemeinsam unsere Gesellschaft solidarischer zu gestalten.",
+      "benefitVote": "Mitbestimmung auf der Mitgliederversammlung",
+      "benefitReports": "Regelmäßige interne Projekt- und Planungsberichte",
+      "benefitNetwork": "Ein starkes Netzwerk für Vielfalt und Zivilgesellschaft",
+      "mailCta": "Mitgliedsantrag per E-Mail",
+      "formCta": "Direkt im Formular anfragen ↓"
+    }
+  },
+  "presets": {
+    "shopWithArticle": "Hallo EFI-Team,\n\nich möchte gerne folgenden Solidaritäts-Artikel bestellen:\n- Artikel: {{artikel}}\n\nBitte teilen Sie mir die Details zur Bezahlung und Abholung/Lieferung mit.\n\nMit freundlichen Grüßen",
+    "shopGeneral": "Hallo EFI-Team,\n\nich interessiere mich für die Solidaritäts-Artikel im Vereins-Shop.\n\nMit freundlichen Grüßen"
   }
 }

@@ -1,4 +1,7 @@
+import { Trans, useTranslation } from 'react-i18next';
+
 export default function ContactChannels() {
+  const { t } = useTranslation('contact');
   return (
     <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-20">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -21,14 +24,13 @@ export default function ContactChannels() {
               </svg>
             </div>
             <span className="text-xs font-bold text-limeAccent-600 uppercase tracking-wider block mb-1">
-              Schriftlicher Kontakt
+              {t('channels.email.eyebrow')}
             </span>
             <h3 className="text-xl font-bold text-slate-900 mb-2">
-              E-Mail Beratung
+              {t('channels.email.title')}
             </h3>
             <p className="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
-              Unser freundliches Team steht Ihnen bei allen Fragen gerne und
-              zeitnah zur Verfügung.
+              {t('channels.email.text')}
             </p>
           </div>
           <a
@@ -64,24 +66,24 @@ export default function ContactChannels() {
               </svg>
             </div>
             <span className="text-xs font-bold text-limeAccent-600 uppercase tracking-wider block mb-1">
-              Vor Ort Treffen
+              {t('channels.locations.eyebrow')}
             </span>
-            <h3 className="text-xl font-bold text-slate-900 mb-2">Standorte</h3>
+            <h3 className="text-xl font-bold text-slate-900 mb-2">
+              {t('channels.locations.title')}
+            </h3>
             <p className="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
-              Besuchen Sie uns in unserem Begegnungszentrum oder vereinbaren Sie
-              einen Termin im Netzwerk-Hub.
+              {t('channels.locations.text')}
             </p>
           </div>
           <div className="text-xs text-slate-700 space-y-1">
             <div>
-              <strong>Castrop-Rauxel:</strong> Wittener Str. 322B
-              (Begegnungszentrum)
+              <Trans i18nKey="channels.locations.castrop" ns="contact" />
             </div>
             <div>
-              <strong>Dortmund:</strong> Netzwerk-Hub &amp; Patenschaften
+              <Trans i18nKey="channels.locations.dortmund" ns="contact" />
             </div>
             <div>
-              <strong>Berlin:</strong> Bundesnetzwerk &amp; Dialog
+              <Trans i18nKey="channels.locations.berlin" ns="contact" />
             </div>
           </div>
         </div>
@@ -105,14 +107,13 @@ export default function ContactChannels() {
               </svg>
             </div>
             <span className="text-xs font-bold text-limeAccent-600 uppercase tracking-wider block mb-1">
-              Telefonisch &amp; WhatsApp
+              {t('channels.phone.eyebrow')}
             </span>
             <h3 className="text-xl font-bold text-slate-900 mb-2">
-              Direkter Anruf
+              {t('channels.phone.title')}
             </h3>
             <p className="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
-              Montag bis Freitag durchgehend von 8:00 bis 17:00 Uhr für Sie
-              erreichbar.
+              {t('channels.phone.text')}
             </p>
           </div>
           <a

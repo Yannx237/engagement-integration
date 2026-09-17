@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { useContactInquiry } from '../hooks/useContactInquiry';
 import ContactChannels from '../components/contact/ContactChannels';
 import ContactInquiry from '../components/contact/ContactInquiry';
@@ -13,15 +14,16 @@ export default function RedesignContact() {
     messageText,
     setMessageText,
   } = useContactInquiry();
+  const { t } = useTranslation('contact');
 
   return (
     <div className="w-full bg-[#fbfbfa] text-slate-800">
       {/* 1. Subpage Hero */}
       <PageHero
-        badge="Kontakt &amp; Beratung"
-        title="Sich zu informieren, ist bereits"
-        highlight="eine weitere Hilfe."
-        description="Wir haben stets ein offenes Ohr für Ihre Anliegen, Fragen zu unseren Angeboten oder Kooperationswünsche. Nehmen Sie direkt Kontakt zu unserem Team in Castrop-Rauxel und Dortmund auf."
+        badge={t('hero.badge')}
+        title={t('hero.title')}
+        highlight={t('hero.highlight')}
+        description={t('hero.description')}
       />
 
       {/* 2. Three Main Contact Channels */}
