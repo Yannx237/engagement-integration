@@ -1,4 +1,7 @@
+import { useTranslation } from 'react-i18next';
+
 export default function HomeJoinBanner() {
+  const { t } = useTranslation('home');
   return (
     <section
       className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mb-10 relative z-20"
@@ -7,14 +10,13 @@ export default function HomeJoinBanner() {
       <div className="rounded-3xl bg-gradient-to-r from-brand-800 via-brand-900 to-brand-950 p-8 sm:p-12 shadow-2xl border border-limeAccent-500/30 text-white flex flex-col lg:flex-row items-center justify-between gap-8">
         <div className="max-w-2xl text-center lg:text-left">
           <span className="text-xs font-bold uppercase tracking-wider text-limeAccent-400">
-            Gemeinsam Großes bewegen
+            {t('join.badge')}
           </span>
           <h3 className="text-2xl sm:text-3xl font-extrabold mt-1 tracking-tight text-white">
-            Magst du unsere Organisation unterstützen?
+            {t('join.heading')}
           </h3>
           <p className="text-sm sm:text-base text-stone-300 mt-2">
-            Hilf uns, bekannter zu werden! Teile unsere Angebote mit Freunden,
-            Familien und Nachbarn oder engagiere dich selbst aktiv bei EFI e.V.
+            {t('join.text')}
           </p>
         </div>
         <div className="flex flex-wrap items-center justify-center gap-4 flex-shrink-0">
@@ -35,13 +37,13 @@ export default function HomeJoinBanner() {
                 strokeWidth="2"
               ></path>
             </svg>
-            <span>Die Seite teilen</span>
+            <span>{t('join.share')}</span>
           </button>
           <a
             className="px-6 py-3.5 rounded-full text-sm font-bold bg-limeAccent-500 text-brand-950 hover:bg-limeAccent-400 transition-colors shadow-glow"
             href="#kontakt"
           >
-            Aktiv mitmachen
+            {t('join.cta')}
           </a>
         </div>
       </div>

@@ -1,1 +1,83 @@
-{}
+{
+  "hero": {
+    "badge": "Recognised migrant-led organisation • Castrop-Rauxel, Dortmund & Berlin",
+    "titleStart": "Together, so that",
+    "titleHighlight": "equal participation",
+    "titleEnd": "succeeds.",
+    "lead": "We accompany children, young people, refugees and families on their way to taking an active part in society — through free tutoring, language cafés and genuine encounters as equals.",
+    "ctaFields": "Our fields of action",
+    "ctaProjects": "See current projects",
+    "stats": {
+      "peopleLabel": "People supported",
+      "freeLabel": "Services free of charge",
+      "locationsLabel": "Locations & presence"
+    },
+    "bannerAlt": "Hands in solidarity in front of the German flag",
+    "sideAlt": "Pupils and teachers in conversation",
+    "card": {
+      "eyebrow": "Begegnungszentrum Merklinde",
+      "title": "Castrop-Rauxel & Dortmund",
+      "text": "Wittener Str. 322B • Tandem statt Barriere, digital skills and social advice on site."
+    }
+  },
+  "mission": {
+    "badge": "Who we are",
+    "heading": "We build bridges to equal opportunity and social participation.",
+    "intro": "<name>EFI - Engagement für Integration e.V.</name> is a non-profit association and a recognised migrant-led organisation. Our central aim is the lasting, all-round support of migrants and refugees on their path to integration — entirely regardless of origin, language or religious belief.",
+    "reach": "From our permanent base in Castrop-Rauxel, across the Dortmund area and out to our dialogue network in Berlin, we support people through practical education, one-to-one help with official procedures, and lively meeting places where mutual understanding can grow.",
+    "quote": "“Integration is not a one-way street. It is an encounter between equals.”",
+    "yearsLabel": "years building bridges in North Rhine-Westphalia",
+    "bullets": {
+      "participation": "Participation & empowerment",
+      "tutoring": "Free tutoring",
+      "cafes": "Language & culture cafés",
+      "tandem": "Strong tandem networks"
+    },
+    "cta": "Read more about our board and statutes",
+    "images": {
+      "friends": "A group of friends and volunteers standing together",
+      "team": "People working together on a shared task",
+      "puzzle": "Solving a puzzle, and challenges, together"
+    }
+  },
+  "areas": {
+    "badge": "The four pillars of our work",
+    "heading": "Support, advice, encounter and education.",
+    "intro": "Our all-round approach to social participation and independence in the Ruhr region.",
+    "begleitung": {
+      "pillar": "Pillar 01",
+      "title": "Support",
+      "description": "<strong>Language mediation & everyday orientation:</strong> trained volunteers who help overcome language barriers at public offices, doctors' appointments, nurseries and schools.",
+      "badge": "Language mediation",
+      "action": "Request support →"
+    },
+    "beratung": {
+      "pillar": "Pillar 02",
+      "title": "Advice",
+      "description": "<strong>General social advice:</strong> accessible help with official applications (citizens' office, immigration office, Jobcenter online), initial guidance and referral to specialist services.",
+      "badge": "Free of charge",
+      "action": "Book an appointment →"
+    },
+    "begegnung": {
+      "pillar": "Pillar 03",
+      "title": "Encounter",
+      "description": "<strong>Dance, women's café & dialogue:</strong> open and protected spaces at the Begegnungszentrum Merklinde to meet as equals, get to know one another and take down prejudice.",
+      "badge": "Women's café",
+      "action": "Find out more →"
+    },
+    "bildung": {
+      "pillar": "Pillar 04",
+      "title": "Education",
+      "description": "<strong>Tutoring, language café & workshops:</strong> free homework support for pupils, everyday language practice and hands-on seminars in basic digital skills.",
+      "badge": "Tutoring & courses",
+      "action": "See what we offer →"
+    }
+  },
+  "join": {
+    "badge": "Achieving more together",
+    "heading": "Would you like to support our organisation?",
+    "text": "Help us become better known. Share what we offer with friends, families and neighbours — or get involved with EFI e.V. yourself.",
+    "share": "Share this page",
+    "cta": "Get involved"
+  }
+}

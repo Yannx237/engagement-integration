@@ -1,4 +1,7 @@
+import { Trans, useTranslation } from 'react-i18next';
+
 export default function HomeMission() {
+  const { t } = useTranslation('home');
   return (
     <section
       className="py-24 bg-white relative scroll-mt-28"
@@ -12,14 +15,14 @@ export default function HomeMission() {
               <div className="space-y-4">
                 <div className="overflow-hidden rounded-2xl shadow-subtle border border-stone-200">
                   <img
-                    alt="Freundesgruppe und Ehrenamtliche halten zusammen"
+                    alt={t('mission.images.friends')}
                     className="w-full h-48 object-cover hover:scale-105 transition-transform duration-500"
                     src="/assets/images/about-5.png"
                   />
                 </div>
                 <div className="overflow-hidden rounded-2xl shadow-subtle border border-stone-200">
                   <img
-                    alt="Engagierte Menschen bei einer gemeinsamen Teamarbeit"
+                    alt={t('mission.images.team')}
                     className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
                     src="/assets/images/about-6.png"
                   />
@@ -28,7 +31,7 @@ export default function HomeMission() {
               <div className="space-y-4 pt-8">
                 <div className="overflow-hidden rounded-2xl shadow-subtle border border-stone-200">
                   <img
-                    alt="Gemeinsames Puzzeln und Lösen von Herausforderungen"
+                    alt={t('mission.images.puzzle')}
                     className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
                     src="/assets/images/about-7.png"
                   />
@@ -38,15 +41,14 @@ export default function HomeMission() {
                     10+
                   </span>
                   <span className="text-sm font-medium text-brand-900 mt-1">
-                    Jahre engagierte Brückenarbeit in NRW
+                    {t('mission.yearsLabel')}
                   </span>
                 </div>
               </div>
 
               <div className="absolute -bottom-6 left-6 right-6 bg-brand-deep text-white p-4 rounded-xl shadow-xl border border-limeAccent-500/40 hidden sm:block">
                 <p className="text-xs sm:text-sm font-medium italic text-stone-200">
-                  „Integration ist keine Einbahnstraße, sondern eine gemeinsame
-                  Begegnung auf Augenhöhe.“
+                  {t('mission.quote')}
                 </p>
               </div>
             </div>
@@ -54,28 +56,23 @@ export default function HomeMission() {
 
           <div className="lg:col-span-6 order-1 lg:order-2 space-y-6">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-100 text-brand-800 text-xs font-bold uppercase tracking-wider">
-              Wer sind wir?
+              {t('mission.badge')}
             </div>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
-              Wir bauen Brücken für Chancengleichheit und gesellschaftliche
-              Teilhabe.
+              {t('mission.heading')}
             </h2>
             <div className="space-y-4 text-base text-slate-600 leading-relaxed">
               <p>
-                <strong className="font-bold text-slate-900">
-                  EFI - Engagement für Integration e.V.
-                </strong>{' '}
-                ist ein gemeinnütziger Verein und eine anerkannte
-                Migrantenselbstorganisation. Unser Hauptziel ist die nachhaltige
-                und ganzheitliche Unterstützung der Integration von
-                Migrantinnen, Migranten und Geflüchteten – vollkommen unabhängig
-                von Herkunft, Sprache oder religiöser Überzeugung.
+                <Trans
+                  i18nKey="mission.intro"
+                  ns="home"
+                  components={{
+                    name: <strong className="font-bold text-slate-900" />,
+                  }}
+                />
               </p>
               <p>
-                Von unserem festen Standort in Castrop-Rauxel über den Raum
-                Dortmund bis hin zu unserem Dialog-Netzwerk in Berlin stärken wir Menschen durch alltagsnahe Bildungsformate,
-                individuelle Begleitung bei Behördengängen und lebendige
-                Begegnungsorte, an denen gegenseitiges Verständnis wächst.
+                {t('mission.reach')}
               </p>
             </div>
 
@@ -97,7 +94,7 @@ export default function HomeMission() {
                   </svg>
                 </div>
                 <span className="text-sm font-semibold text-slate-800">
-                  Partizipation &amp; Empowerment
+                  {t('mission.bullets.participation')}
                 </span>
               </div>
               <div className="flex items-start gap-2.5">
@@ -117,7 +114,7 @@ export default function HomeMission() {
                   </svg>
                 </div>
                 <span className="text-sm font-semibold text-slate-800">
-                  Kostenfreie Nachhilfe
+                  {t('mission.bullets.tutoring')}
                 </span>
               </div>
               <div className="flex items-start gap-2.5">
@@ -137,7 +134,7 @@ export default function HomeMission() {
                   </svg>
                 </div>
                 <span className="text-sm font-semibold text-slate-800">
-                  Sprach- &amp; Kulturcafés
+                  {t('mission.bullets.cafes')}
                 </span>
               </div>
               <div className="flex items-start gap-2.5">
@@ -157,7 +154,7 @@ export default function HomeMission() {
                   </svg>
                 </div>
                 <span className="text-sm font-semibold text-slate-800">
-                  Starke Tandem-Netzwerke
+                  {t('mission.bullets.tandem')}
                 </span>
               </div>
             </div>
@@ -167,7 +164,7 @@ export default function HomeMission() {
                 href="#kontakt"
               >
                 <span>
-                  Erfahren Sie mehr über unser Vorstandsteam &amp; Satzung
+                  {t('mission.cta')}
                 </span>
                 <span className="transform group-hover:translate-x-1 transition-transform">
                   →

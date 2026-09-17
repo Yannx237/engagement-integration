@@ -1,4 +1,7 @@
+import { useTranslation } from 'react-i18next';
+
 export default function HomeHero() {
+  const { t } = useTranslation('home');
   return (
     <section
       className="relative overflow-hidden bg-brand-deep text-white min-h-[85vh] flex items-center scroll-mt-28"
@@ -7,7 +10,7 @@ export default function HomeHero() {
     >
       <div className="absolute inset-0 z-0">
         <img
-          alt="Hände der Solidarität vor der deutschen Flagge"
+          alt={t('hero.bannerAlt')}
           className="w-full h-full object-cover object-center opacity-65 scale-105 transform hover:scale-100 transition-transform duration-1000 ease-out"
           src="/assets/images/banner-2.png"
         />
@@ -19,22 +22,19 @@ export default function HomeHero() {
           <div className="lg:col-span-8 space-y-7">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-800/80 border border-limeAccent-500/30 text-limeAccent-400 text-xs font-bold uppercase tracking-wider">
               <span className="w-2 h-2 rounded-full bg-limeAccent-400 animate-ping"></span>
-              Anerkannte Migrantenselbstorganisation • Castrop-Rauxel, Dortmund &amp; Berlin
+              {t('hero.badge')}
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.1]">
-              Gemeinsam, damit{' '}
+              {t('hero.titleStart')}{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-limeAccent-400 to-emerald-300 underline decoration-limeAccent-500/50 decoration-wavy decoration-2">
-                gleichberechtigte Teilhabe
+                {t('hero.titleHighlight')}
               </span>{' '}
-              gelingt.
+              {t('hero.titleEnd')}
             </h1>
 
             <p className="text-lg sm:text-xl text-stone-200 font-normal leading-relaxed max-w-2xl">
-              Wir begleiten Kinder, Jugendliche, Geflüchtete und Familien auf
-              ihrem Weg zur aktiven gesellschaftlichen Mitgestaltung – durch
-              kostenfreie Nachhilfe, Sprachcafés und ganzheitliche Begegnung auf
-              Augenhöhe.
+              {t('hero.lead')}
             </p>
 
             <div className="flex flex-wrap gap-4 pt-2">
@@ -42,7 +42,7 @@ export default function HomeHero() {
                 className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full text-base font-bold text-brand-950 bg-limeAccent-500 hover:bg-limeAccent-400 shadow-glow transition-all transform hover:-translate-y-0.5"
                 href="#handlungsfelder"
               >
-                <span>Unsere Handlungsfelder</span>
+                <span>{t('hero.ctaFields')}</span>
                 <svg
                   className="w-5 h-5 text-brand-950"
                   fill="none"
@@ -61,7 +61,7 @@ export default function HomeHero() {
                 className="inline-flex items-center justify-center px-7 py-4 rounded-full text-base font-semibold text-white bg-white/10 hover:bg-white/15 border border-white/20 backdrop-blur-sm transition-all"
                 href="#projekte"
               >
-                Aktuelle Projekte ansehen
+                {t('hero.ctaProjects')}
               </a>
             </div>
 
@@ -71,7 +71,7 @@ export default function HomeHero() {
                   1.200+
                 </div>
                 <div className="text-xs sm:text-sm text-stone-300 font-medium">
-                  Begleitete Menschen
+                  {t('hero.stats.peopleLabel')}
                 </div>
               </div>
               <div>
@@ -79,7 +79,7 @@ export default function HomeHero() {
                   100%
                 </div>
                 <div className="text-xs sm:text-sm text-stone-300 font-medium">
-                  Kostenfreie Angebote
+                  {t('hero.stats.freeLabel')}
                 </div>
               </div>
               <div>
@@ -87,7 +87,7 @@ export default function HomeHero() {
                   3
                 </div>
                 <div className="text-xs sm:text-sm text-stone-300 font-medium">
-                  Standorte &amp; Präsenz
+                  {t('hero.stats.locationsLabel')}
                 </div>
               </div>
             </div>
@@ -98,7 +98,7 @@ export default function HomeHero() {
               <div className="absolute -inset-2 rounded-3xl bg-gradient-to-tr from-limeAccent-500/30 to-brand-500/20 blur-lg"></div>
               <div className="relative rounded-2xl overflow-hidden bg-brand-900 border border-white/20 shadow-2xl p-3">
                 <img
-                  alt="Schülerinnen und Lehrende im gemeinsamen Austausch"
+                  alt={t('hero.sideAlt')}
                   className="w-full h-72 object-cover rounded-xl"
                   src="/assets/images/about-6.png"
                 />
@@ -109,16 +109,15 @@ export default function HomeHero() {
                     </div>
                     <div>
                       <p className="text-xs font-semibold text-stone-300 uppercase tracking-wider">
-                        Begegnungszentrum Merklinde
+                        {t('hero.card.eyebrow')}
                       </p>
                       <h4 className="text-sm font-bold text-white">
-                        Castrop-Rauxel &amp; Dortmund
+                        {t('hero.card.title')}
                       </h4>
                     </div>
                   </div>
                   <p className="text-xs text-stone-300 mt-2">
-                    Wittener Str. 322B • Tandem statt Barriere, digitale Bildung
-                    &amp; Sozialberatung vor Ort.
+                    {t('hero.card.text')}
                   </p>
                 </div>
               </div>

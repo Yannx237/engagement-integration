@@ -1,1 +1,83 @@
-{}
+{
+  "hero": {
+    "badge": "Anerkannte Migrantenselbstorganisation • Castrop-Rauxel, Dortmund & Berlin",
+    "titleStart": "Gemeinsam, damit",
+    "titleHighlight": "gleichberechtigte Teilhabe",
+    "titleEnd": "gelingt.",
+    "lead": "Wir begleiten Kinder, Jugendliche, Geflüchtete und Familien auf ihrem Weg zur aktiven gesellschaftlichen Mitgestaltung – durch kostenfreie Nachhilfe, Sprachcafés und ganzheitliche Begegnung auf Augenhöhe.",
+    "ctaFields": "Unsere Handlungsfelder",
+    "ctaProjects": "Aktuelle Projekte ansehen",
+    "stats": {
+      "peopleLabel": "Begleitete Menschen",
+      "freeLabel": "Kostenfreie Angebote",
+      "locationsLabel": "Standorte & Präsenz"
+    },
+    "bannerAlt": "Hände der Solidarität vor der deutschen Flagge",
+    "sideAlt": "Schülerinnen und Lehrende im gemeinsamen Austausch",
+    "card": {
+      "eyebrow": "Begegnungszentrum Merklinde",
+      "title": "Castrop-Rauxel & Dortmund",
+      "text": "Wittener Str. 322B • Tandem statt Barriere, digitale Bildung & Sozialberatung vor Ort."
+    }
+  },
+  "mission": {
+    "badge": "Wer sind wir?",
+    "heading": "Wir bauen Brücken für Chancengleichheit und gesellschaftliche Teilhabe.",
+    "intro": "<name>EFI - Engagement für Integration e.V.</name> ist ein gemeinnütziger Verein und eine anerkannte Migrantenselbstorganisation. Unser Hauptziel ist die nachhaltige und ganzheitliche Unterstützung der Integration von Migrantinnen, Migranten und Geflüchteten – vollkommen unabhängig von Herkunft, Sprache oder religiöser Überzeugung.",
+    "reach": "Von unserem festen Standort in Castrop-Rauxel über den Raum Dortmund bis hin zu unserem Dialog-Netzwerk in Berlin stärken wir Menschen durch alltagsnahe Bildungsformate, individuelle Begleitung bei Behördengängen und lebendige Begegnungsorte, an denen gegenseitiges Verständnis wächst.",
+    "quote": "„Integration ist keine Einbahnstraße, sondern eine gemeinsame Begegnung auf Augenhöhe.“",
+    "yearsLabel": "Jahre engagierte Brückenarbeit in NRW",
+    "bullets": {
+      "participation": "Partizipation & Empowerment",
+      "tutoring": "Kostenfreie Nachhilfe",
+      "cafes": "Sprach- & Kulturcafés",
+      "tandem": "Starke Tandem-Netzwerke"
+    },
+    "cta": "Erfahren Sie mehr über unser Vorstandsteam & Satzung",
+    "images": {
+      "friends": "Freundesgruppe und Ehrenamtliche halten zusammen",
+      "team": "Engagierte Menschen bei einer gemeinsamen Teamarbeit",
+      "puzzle": "Gemeinsames Puzzeln und Lösen von Herausforderungen"
+    }
+  },
+  "areas": {
+    "badge": "Die 4 Säulen unserer Arbeit",
+    "heading": "Begleitung, Beratung, Begegnung und Bildung.",
+    "intro": "Unser ganzheitlicher Ansatz für gelingende gesellschaftliche Teilhabe und Selbstständigkeit im Ruhrgebiet.",
+    "begleitung": {
+      "pillar": "Säule 01",
+      "title": "Begleitung",
+      "description": "<strong>Sprachmittlung & Alltagsorientierung:</strong> Geschulte ehrenamtliche Begleitpersonen zur Überwindung sprachlicher Barrieren bei Behördengängen, Arztbesuchen, Kitas und Schulen.",
+      "badge": "Sprachmittlung",
+      "action": "Begleitung anfragen →"
+    },
+    "beratung": {
+      "pillar": "Säule 02",
+      "title": "Beratung",
+      "description": "<strong>Allgemeine Sozialberatung:</strong> Niedrigschwellige Unterstützung bei behördlichen Anträgen (Bürgeramt, Ausländerbehörde, Jobcenter-Online), Erstberatung und Verweisung an Fachstellen.",
+      "badge": "Kostenfrei",
+      "action": "Termin buchen →"
+    },
+    "begegnung": {
+      "pillar": "Säule 03",
+      "title": "Begegnung",
+      "description": "<strong>Tanz, Frauencafé & Dialog:</strong> Offene und geschützte Begegnungsräume im Begegnungszentrum Merklinde zum Austausch auf Augenhöhe, gegenseitigen Kennenlernen und Abbau von Vorurteilen.",
+      "badge": "Frauencafé",
+      "action": "Mehr erfahren →"
+    },
+    "bildung": {
+      "pillar": "Säule 04",
+      "title": "Bildung",
+      "description": "<strong>Nachhilfe, Sprachcafé & Workshops:</strong> Kostenfreie Hausaufgabenbetreuung für Schüler, alltagsbezogene Sprachförderung und praxisnahe Seminare für digitale Grundbildung.",
+      "badge": "Nachhilfe & Kurse",
+      "action": "Angebote ansehen →"
+    }
+  },
+  "join": {
+    "badge": "Gemeinsam Großes bewegen",
+    "heading": "Magst du unsere Organisation unterstützen?",
+    "text": "Hilf uns, bekannter zu werden! Teile unsere Angebote mit Freunden, Familien und Nachbarn oder engagiere dich selbst aktiv bei EFI e.V.",
+    "share": "Die Seite teilen",
+    "cta": "Aktiv mitmachen"
+  }
+}

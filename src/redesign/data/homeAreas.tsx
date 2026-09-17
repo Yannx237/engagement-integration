@@ -1,17 +1,18 @@
 import type { ReactNode } from 'react';
+// Text lives in home.json under areas.<id>; this file keeps the identity, the
+// icon and the Tailwind classes.
+export type HomeAreaId = 'begleitung' | 'beratung' | 'begegnung' | 'bildung';
+
 export interface HomeArea {
+  id: HomeAreaId;
   iconClass: string;
   icon: ReactNode;
   pillarClass: string;
-  pillar: string;
-  title: string;
-  description: ReactNode;
   badgeClass: string;
-  badge: string;
-  action: string;
 }
 export const homeAreas: readonly HomeArea[] = [
   {
+    id: 'begleitung',
     iconClass:
       'w-14 h-14 rounded-2xl bg-brand-100 text-brand-800 flex items-center justify-center mb-6 group-hover:bg-brand-800 group-hover:text-limeAccent-400 transition-colors duration-300',
     icon: (
@@ -33,21 +34,11 @@ export const homeAreas: readonly HomeArea[] = [
     ),
     pillarClass:
       'text-xs font-bold uppercase tracking-wider text-brand-600 mb-1 block',
-    pillar: 'Säule 01',
-    title: 'Begleitung',
-    description: (
-      <>
-        <strong>Sprachmittlung &amp; Alltagsorientierung:</strong> Geschulte
-        ehrenamtliche Begleitpersonen zur Überwindung sprachlicher Barrieren bei
-        Behördengängen, Arztbesuchen, Kitas und Schulen.
-      </>
-    ),
     badgeClass:
       'text-xs font-bold text-brand-800 bg-brand-50 px-2.5 py-1 rounded-md',
-    badge: 'Sprachmittlung',
-    action: 'Begleitung anfragen →',
   },
   {
+    id: 'beratung',
     iconClass:
       'w-14 h-14 rounded-2xl bg-amber-100 text-amber-800 flex items-center justify-center mb-6 group-hover:bg-amber-800 group-hover:text-amber-200 transition-colors duration-300',
     icon: (
@@ -69,21 +60,11 @@ export const homeAreas: readonly HomeArea[] = [
     ),
     pillarClass:
       'text-xs font-bold uppercase tracking-wider text-amber-700 mb-1 block',
-    pillar: 'Säule 02',
-    title: 'Beratung',
-    description: (
-      <>
-        <strong>Allgemeine Sozialberatung:</strong> Niedrigschwellige
-        Unterstützung bei behördlichen Anträgen (Bürgeramt, Ausländerbehörde,
-        Jobcenter-Online), Erstberatung und Verweisung an Fachstellen.
-      </>
-    ),
     badgeClass:
       'text-xs font-bold text-amber-800 bg-amber-50 px-2.5 py-1 rounded-md',
-    badge: 'Kostenfrei',
-    action: 'Termin buchen →',
   },
   {
+    id: 'begegnung',
     iconClass:
       'w-14 h-14 rounded-2xl bg-rose-100 text-rose-800 flex items-center justify-center mb-6 group-hover:bg-rose-800 group-hover:text-rose-200 transition-colors duration-300',
     icon: (
@@ -105,21 +86,11 @@ export const homeAreas: readonly HomeArea[] = [
     ),
     pillarClass:
       'text-xs font-bold uppercase tracking-wider text-rose-700 mb-1 block',
-    pillar: 'Säule 03',
-    title: 'Begegnung',
-    description: (
-      <>
-        <strong>Tanz, Frauencafé &amp; Dialog:</strong> Offene und geschützte
-        Begegnungsräume im Begegnungszentrum Merklinde zum Austausch auf
-        Augenhöhe, gegenseitigen Kennenlernen und Abbau von Vorurteilen.
-      </>
-    ),
     badgeClass:
       'text-xs font-bold text-rose-800 bg-rose-50 px-2.5 py-1 rounded-md',
-    badge: 'Frauencafé',
-    action: 'Mehr erfahren →',
   },
   {
+    id: 'bildung',
     iconClass:
       'w-14 h-14 rounded-2xl bg-emerald-100 text-emerald-800 flex items-center justify-center mb-6 group-hover:bg-emerald-800 group-hover:text-emerald-200 transition-colors duration-300',
     icon: (
@@ -147,18 +118,7 @@ export const homeAreas: readonly HomeArea[] = [
     ),
     pillarClass:
       'text-xs font-bold uppercase tracking-wider text-emerald-700 mb-1 block',
-    pillar: 'Säule 04',
-    title: 'Bildung',
-    description: (
-      <>
-        <strong>Nachhilfe, Sprachcafé &amp; Workshops:</strong> Kostenfreie
-        Hausaufgabenbetreuung für Schüler, alltagsbezogene Sprachförderung und
-        praxisnahe Seminare für digitale Grundbildung.
-      </>
-    ),
     badgeClass:
       'text-xs font-bold text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded-md',
-    badge: 'Nachhilfe & Kurse',
-    action: 'Angebote ansehen →',
   },
 ];
