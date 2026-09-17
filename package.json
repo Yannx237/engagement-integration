@@ -13,9 +13,11 @@
   },
   "dependencies": {
     "@types/mapbox-gl": "^3.4.1",
+    "i18next": "^26.4.2",
     "mapbox-gl": "^3.30.0",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
+    "react-i18next": "^17.0.14",
     "react-router-dom": "^7.18.3"
   },
   "devDependencies": {
