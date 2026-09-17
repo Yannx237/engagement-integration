@@ -1,7 +1,9 @@
+import { useTranslation } from 'react-i18next';
 import FeaturedProjectCard from './FeaturedProjectCard';
 import { featuredProjects } from '../../data/featuredProjects';
 import { useHorizontalScroll } from '../../hooks/useHorizontalScroll';
 export default function HomeProjects() {
+  const { t } = useTranslation('home');
   const { containerRef: projectsContainerRef, scroll: scrollProjects } =
     useHorizontalScroll(350);
   return (
@@ -14,21 +16,20 @@ export default function HomeProjects() {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-800/80 border border-limeAccent-500/30 text-limeAccent-400 text-xs font-bold uppercase tracking-wider mb-3">
-              Unsere Projekte
+              {t('projects.badge')}
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
-              Folgen Sie allen unseren Projekten &amp; Aktivitäten.
+              {t('projects.heading')}
             </h2>
             <p className="text-stone-300 mt-2 max-w-xl text-base">
-              Einblicke in unsere laufenden Initiativen, Sprachworkshops und
-              Begegnungsstätten in der Region.
+              {t('projects.intro')}
             </p>
           </div>
 
           <div className="flex items-center gap-3">
             <button
               onClick={() => scrollProjects('left')}
-              aria-label="Vorheriges Projekt"
+              aria-label={t('projects.prev')}
               className="w-12 h-12 rounded-full border border-white/20 bg-white/5 hover:bg-white/10 active:scale-95 flex items-center justify-center text-white transition-all cursor-pointer"
             >
               <svg
@@ -47,7 +48,7 @@ export default function HomeProjects() {
             </button>
             <button
               onClick={() => scrollProjects('right')}
-              aria-label="Nächstes Projekt"
+              aria-label={t('projects.next')}
               className="w-12 h-12 rounded-full bg-limeAccent-500 hover:bg-limeAccent-400 active:scale-95 text-brand-950 flex items-center justify-center transition-all shadow-md cursor-pointer"
             >
               <svg
@@ -80,7 +81,7 @@ export default function HomeProjects() {
             className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full font-bold text-sm text-brand-deep bg-white hover:bg-limeAccent-400 transition-colors shadow-lg"
             href="#kontakt"
           >
-            <span>Alle aktuellen Veranstaltungen &amp; Kurse anfragen</span>
+            <span>{t('projects.cta')}</span>
             <svg
               className="w-4 h-4"
               fill="none"

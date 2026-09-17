@@ -1,1 +1,15 @@
-{}
+{
+  "form": {
+    "subject": {
+      "options": {
+        "allgemein": "Allgemeine Anfrage",
+        "nachhilfe": "Kostenfreie Nachhilfe (Deutsch, Mathe, Englisch)",
+        "beratung": "Integrationsberatung & Sprachcafé",
+        "tandem": "Tandem-Patenschaften / Mentoring",
+        "spende": "Spenden & Förderpartnerschaft",
+        "mitglied": "Mitgliedschaft im Verein",
+        "shop": "Bestellung Solidar-Shop (Merchandise)"
+      }
+    }
+  }
+}

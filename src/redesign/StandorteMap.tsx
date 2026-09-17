@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import './standorte-map.css';
@@ -17,13 +18,21 @@ const LOCATIONS = [
 ];
 
 // The two Ruhrgebiet cities share a regional marker at this map scale.
-const REGIONS: { label: string; description: string; coords: [number, number]; color: string }[] = [
-  { label: '1 · 2', description: 'Castrop-Rauxel und Dortmund', coords: [7.3873, 51.5339], color: '#246b38' },
-  { label: '3', description: 'Berlin', coords: [13.405, 52.52], color: '#b45309' },
+// The label is typography, not prose; the description is translated by id.
+const REGIONS: {
+  id: 'ruhr' | 'berlin';
+  label: string;
+  coords: [number, number];
+  color: string;
+}[] = [
+  { id: 'ruhr', label: '1 · 2', coords: [7.3873, 51.5339], color: '#246b38' },
+  { id: 'berlin', label: '3', coords: [13.405, 52.52], color: '#b45309' },
 ];
 
 export default function StandorteMap() {
+  const { t } = useTranslation('home');
   const mapContainerRef = useRef<HTMLDivElement>(null);
+  const markerElementsRef = useRef<HTMLDivElement[]>([]);
 
   useEffect(() => {
     const container = mapContainerRef.current;
@@ -82,14 +91,15 @@ export default function StandorteMap() {
       });
     });
 
+    markerElementsRef.current = [];
     const markers = REGIONS.map(region => {
       const element = document.createElement('div');
       element.className = 'efi-map-marker';
       element.style.borderColor = region.color;
       element.style.color = region.color;
       element.textContent = region.label;
+      markerElementsRef.current.push(element);
       element.setAttribute('role', 'img');
-      element.setAttribute('aria-label', region.description);
       return new mapboxgl.Marker({
         element,
         anchor: region.label === '3' ? 'top' : 'bottom',
@@ -119,10 +129,21 @@ export default function StandorteMap() {
     };
   }, []);
 
+  // A separate effect, deliberately: putting `t` in the map effect above would
+  // tear down and rebuild the Mapbox instance on every language switch.
+  useEffect(() => {
+    markerElementsRef.current.forEach((element, index) => {
+      element.setAttribute(
+        'aria-label',
+        t(`locations.map.regions.${REGIONS[index].id}`)
+      );
+    });
+  }, [t]);
+
   return (
     <div className="efi-locations-map">
       <div ref={mapContainerRef} className="efi-locations-map__canvas" />
-      <ul className="efi-locations-map__legend" aria-label="Unsere Standorte">
+      <ul className="efi-locations-map__legend" aria-label={t('locations.map.legend')}>
         {LOCATIONS.map(location => (
           <li key={location.number}>
             <span className="efi-locations-map__number" style={{ backgroundColor: location.color }} aria-hidden="true">

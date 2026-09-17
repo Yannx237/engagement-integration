@@ -1,8 +1,10 @@
+import { useTranslation } from 'react-i18next';
 import ShopProductCard from './ShopProductCard';
 import { shopProducts } from '../../data/shopProducts';
 import { useHorizontalScroll } from '../../hooks/useHorizontalScroll';
 
 export default function HomeShop() {
+  const { t } = useTranslation('home');
   const { containerRef: shopContainerRef, scroll: scrollShop } =
     useHorizontalScroll(320);
 
@@ -16,21 +18,19 @@ export default function HomeShop() {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-100 text-brand-800 text-xs font-bold uppercase tracking-wider mb-2">
-              Support-Gadgets &amp; Solidarität
+              {t('shop.badge')}
             </div>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-              Trage unsere Botschaft nach außen.
+              {t('shop.heading')}
             </h2>
             <p className="text-slate-600 text-sm sm:text-base mt-2 max-w-xl">
-              Mit dem Erwerb unserer Vereins-Gadgets fließt jeder Reinerlös zu
-              100% direkt in Lernmaterialien für unsere kostenfreien
-              Nachhilfekurse.
+              {t('shop.intro')}
             </p>
           </div>
           <div className="flex items-center gap-2">
             <button
               onClick={() => scrollShop('left')}
-              aria-label="Vorheriges Produkt"
+              aria-label={t('shop.prev')}
               className="w-10 h-10 rounded-full border border-stone-300 bg-white hover:bg-stone-50 active:scale-95 flex items-center justify-center text-slate-700 transition-all cursor-pointer shadow-sm"
             >
               <svg
@@ -49,7 +49,7 @@ export default function HomeShop() {
             </button>
             <button
               onClick={() => scrollShop('right')}
-              aria-label="Nächstes Produkt"
+              aria-label={t('shop.next')}
               className="w-10 h-10 rounded-full bg-brand-800 hover:bg-brand-900 active:scale-95 text-white flex items-center justify-center transition-all cursor-pointer shadow-sm"
             >
               <svg

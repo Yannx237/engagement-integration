@@ -1,14 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
-export type ContactSubject =
-  | 'allgemein'
-  | 'nachhilfe'
-  | 'beratung'
-  | 'tandem'
-  | 'spende'
-  | 'mitglied'
-  | 'shop';
+export type { ContactSubject } from '../data/contactSubjects';
+import type { ContactSubject } from '../data/contactSubjects';
 
 interface ContactTargetResult {
   subject?: ContactSubject;

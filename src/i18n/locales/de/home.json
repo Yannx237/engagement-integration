@@ -79,5 +79,171 @@
     "text": "Hilf uns, bekannter zu werden! Teile unsere Angebote mit Freunden, Familien und Nachbarn oder engagiere dich selbst aktiv bei EFI e.V.",
     "share": "Die Seite teilen",
     "cta": "Aktiv mitmachen"
+  },
+  "projects": {
+    "badge": "Unsere Projekte",
+    "heading": "Folgen Sie allen unseren Projekten & Aktivitäten.",
+    "intro": "Einblicke in unsere laufenden Initiativen, Sprachworkshops und Begegnungsstätten in der Region.",
+    "prev": "Vorheriges Projekt",
+    "next": "Nächstes Projekt",
+    "cta": "Alle aktuellen Veranstaltungen & Kurse anfragen"
+  },
+  "featured": {
+    "badges": {
+      "castrop": "Castrop-Rauxel",
+      "aktionMensch": "Aktion Mensch",
+      "kimNrw": "KIM NRW & Land",
+      "free": "100% Kostenfrei",
+      "merklinde": "Merklinde"
+    },
+    "tandem": {
+      "imageAlt": "Tandem statt Barriere – Inklusives Radfahren in Castrop-Rauxel",
+      "category": "Inklusion & Mobilität",
+      "title": "Tandem statt Barriere",
+      "description": "Gemeinsam mobil werden: Fahr- & Sicherheitstrainings für Menschen mit und ohne Behinderung jeden Alters. Fahrräder & Begleitung vorhanden.",
+      "schedule": "Sa 11:00–13:00 Uhr",
+      "link": "WhatsApp"
+    },
+    "digitalWomen": {
+      "imageAlt": "Digitale Orientierung im Alltag für Frauen",
+      "category": "Frauen & Digitales",
+      "title": "Digitale Orientierung im Alltag",
+      "description": "Für geflüchtete & zugewanderte Frauen: Online-Termine bei Bürgeramt/Jobcenter, Dokumente scannen, Kita-Apps & Postfach selbstständig nutzen.",
+      "schedule": "2x im Monat",
+      "link": "Anmelden"
+    },
+    "tutoring": {
+      "imageAlt": "Kostenfreie schulische Nachhilfe und Betreuung",
+      "category": "Schule & Jugend",
+      "title": "Kostenfreie Nachhilfe",
+      "description": "Qualifizierte Begleitung in Deutsch, Französisch, Mathematik und Englisch für Kinder aller Altersstufen in Castrop-Rauxel und Dortmund.",
+      "schedule": "Wöchentlich",
+      "link": "Details"
+    },
+    "womensCafe": {
+      "imageAlt": "Frauencafé im Begegnungszentrum Merklinde",
+      "category": "Begegnung & Austausch",
+      "title": "Frauencafé Castrop-Rauxel",
+      "description": "Ein geschützter Raum zum Kennenlernen, Deutsch sprechen, Erfahrungen austauschen und Kraft tanken bei Kaffee & guten Gesprächen.",
+      "schedule": "Regelmäßig",
+      "link": "Kennenlernen"
+    }
+  },
+  "locations": {
+    "badge": "Unsere Standorte & Präsenz",
+    "heading": "Verwurzelt im Ruhrgebiet – Vernetzt bis nach Berlin.",
+    "intro": "Mit unserem Begegnungszentrum in Castrop-Rauxel, dem Projekt-Hub in Dortmund und unserer Dialogpräsenz in der Bundeshauptstadt Berlin sind wir nah bei den Menschen und im bundesweiten Austausch.",
+    "map": {
+      "legend": "Unsere Standorte",
+      "regions": {
+        "ruhr": "Castrop-Rauxel und Dortmund",
+        "berlin": "Berlin"
+      }
+    },
+    "castrop": {
+      "name": "Castrop-Rauxel",
+      "address": "Begegnungszentrum Merklinde, Wittener Str. 322B, 44577 Castrop-Rauxel",
+      "tandem": "<strong>Tandem statt Barriere:</strong> Jeden Samstag 11:00 – 13:00 Uhr (Aktion Mensch)",
+      "digital": "<strong>Digitale Orientierung für Frauen:</strong> 2x im Monat (KIM NRW & MKJFGFI)",
+      "advice": "<strong>Allgemeine Sozialberatung & Sprachmittlung:</strong> Nach Terminabsprache",
+      "cafe": "<strong>Frauencafé & Kostenfreie Nachhilfe:</strong> Regelmäßige Gruppen",
+      "flyers": "Angebote & Flyer in Castrop-Rauxel",
+      "whatsapp": "WhatsApp: +49 177 3218743",
+      "directions": "Wegbeschreibung"
+    },
+    "dortmund": {
+      "name": "Dortmund",
+      "subtitle": "Regionaler Netzwerk- und Tandem-Knotenpunkt",
+      "tandem": "<strong>Tandem-Partnerschaften:</strong> 1:1 Begleitung zwischen Einheimischen & Neuzugewanderten",
+      "mentoring": "<strong>Mentoring für Jugendliche:</strong> Unterstützung beim Schulabschluss & Berufseinstieg",
+      "schools": "<strong>Schul- & Kita-Vernetzung:</strong> Enge Kooperation mit Bildungsträgern im Ruhrgebiet",
+      "workshops": "<strong>Multiplikatoren-Workshops:</strong> Schulungen für interkulturelle Ehrenamtliche",
+      "flyers": "Angebote & Flyer in Dortmund",
+      "network": "Netzwerk anfragen"
+    },
+    "berlin": {
+      "name": "Berlin",
+      "subtitle": "Hauptstadt-Dialog & Botschaftskooperation",
+      "embassy": "<strong>Botschafts- & Verbandsaustausch:</strong> Offizieller Dialog mit diplomatischen Vertretungen (u. a. Botschaft Kamerun)",
+      "conferences": "<strong>Bundesweite Fachtagungen:</strong> Mitwirkung an Konferenzen zu Teilhabe und Diversität",
+      "programmes": "<strong>Bundesprogramm-Kooperation:</strong> Vernetzung mit Trägern (BMFSFJ, KIM, Stiftungen)",
+      "umbrella": "<strong>Dachverbands-Präsenz:</strong> Repräsentation und Impulse aus der Migrantenselbstorganisation",
+      "flyers": "Angebote & Flyer in Berlin",
+      "newsLink": "Berlin-Besuch ansehen",
+      "dialog": "Dialog anfragen"
+    },
+    "facts": {
+      "locationsTitle": "Aktive Standorte",
+      "locationsValue": "Castrop-Rauxel, Dortmund & Berlin",
+      "consultationsTitle": "Monatliche Beratungen",
+      "consultationsValue": "Alltagsberatung & Sprachmittlung",
+      "partnersTitle": "Kooperationen & Partner",
+      "partnersValue": "Schulen, Ministerien & Netzwerke"
+    }
+  },
+  "shop": {
+    "badge": "Support-Gadgets & Solidarität",
+    "heading": "Trage unsere Botschaft nach außen.",
+    "intro": "Mit dem Erwerb unserer Vereins-Gadgets fließt jeder Reinerlös zu 100% direkt in Lernmaterialien für unsere kostenfreien Nachhilfekurse.",
+    "prev": "Vorheriges Produkt",
+    "next": "Nächstes Produkt",
+    "buy": "Kaufen",
+    "whatsappTitle": "Per WhatsApp anfragen / bestellen",
+    "whatsappAria": "Per WhatsApp {{product}} anfragen",
+    "orderMessage": "Hallo EFI-Team, ich möchte gerne {{product}} bestellen ({{price}}).",
+    "products": {
+      "tshirt": {
+        "name": "EFI Charity T-Shirt",
+        "badge": "Bio-Baumwolle",
+        "subtitle": "Fair produziert mit gesticktem EFI-Logo",
+        "orderPhrase": "das EFI Charity T-Shirt"
+      },
+      "snapback": {
+        "name": "EFI Basecap Snapback",
+        "badge": "Verstellbar",
+        "subtitle": "Hochwertiger 3D-Stick auf der Front",
+        "orderPhrase": "die EFI Basecap Snapback"
+      },
+      "tasche": {
+        "name": "Robuste Canvas-Tasche",
+        "badge": "Canvas 340g",
+        "subtitle": "Langlebige Tragetasche für Unterricht & Alltag",
+        "orderPhrase": "die robuste Canvas-Tasche"
+      },
+      "kugelschreiber": {
+        "name": "EFI Kugelschreiber",
+        "badge": "Recycelt",
+        "subtitle": "Ergonomisch & nachfüllbar mit blauer Mine",
+        "orderPhrase": "den EFI Kugelschreiber"
+      }
+    }
+  },
+  "contact": {
+    "badge": "Kontaktieren Sie uns",
+    "heading": "Sich zu informieren, ist bereits eine weitere Hilfe.",
+    "intro": "Haben Sie Fragen zu unseren kostenfreien Nachhilfekursen, möchten Sie ehrenamtlich mitwirken oder benötigen Sie Beratung bei Behördenschreiben? Schreiben Sie uns oder kommen Sie vorbei.",
+    "locationLabel": "Zentraler Standort",
+    "locationName": "Begegnungszentrum Merklinde",
+    "locationAddress": "Wittener Str. 322B, 44577 Castrop-Rauxel",
+    "locationNote": "Barrierefreier Zugang • ÖPNV-nah",
+    "phoneLabel": "Telefon & WhatsApp",
+    "phoneLink": "Direkt per WhatsApp schreiben",
+    "emailLabel": "E-Mail & Anfragen",
+    "hoursLabel": "Sprechzeiten & Treffen",
+    "hoursWeek": "<strong>Dienstag – Freitag:</strong> 10:00 – 17:00 Uhr",
+    "hoursSaturday": "<strong>Samstag:</strong> 11:00 – 13:00 Uhr (Tandem-Gruppe)",
+    "form": {
+      "firstName": "Vorname",
+      "firstNamePlaceholder": "z. B. Amina",
+      "lastName": "Nachname",
+      "lastNamePlaceholder": "z. B. Schmidt",
+      "email": "E-Mail-Adresse",
+      "emailPlaceholder": "name@beispiel.de",
+      "topic": "Anliegen / Bereich",
+      "message": "Ihre Nachricht",
+      "messagePlaceholder": "Wie können wir Ihnen weiterhelfen?",
+      "privacy": "Ich stimme der Verarbeitung meiner Angaben zum Zweck der Bearbeitung meiner Kontaktanfrage gemäß der Datenschutzerklärung zu.",
+      "submit": "Nachricht absenden"
+    }
   }
 }

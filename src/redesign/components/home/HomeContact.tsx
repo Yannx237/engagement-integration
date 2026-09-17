@@ -1,4 +1,8 @@
+import { Trans, useTranslation } from 'react-i18next';
+import { CONTACT_SUBJECTS } from '../../data/contactSubjects';
+
 export default function HomeContact() {
+  const { t } = useTranslation(['home', 'contact']);
   return (
     <section
       className="py-24 bg-white scroll-mt-28"
@@ -10,15 +14,13 @@ export default function HomeContact() {
           <div className="lg:col-span-5 space-y-8">
             <div>
               <span className="text-xs font-bold text-brand-700 uppercase tracking-wider block mb-2">
-                Kontaktieren Sie uns
+                {t('contact.badge')}
               </span>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
-                Sich zu informieren, ist bereits eine weitere Hilfe.
+                {t('contact.heading')}
               </h2>
               <p className="text-slate-600 text-sm sm:text-base mt-4 leading-relaxed">
-                Haben Sie Fragen zu unseren kostenfreien Nachhilfekursen,
-                möchten Sie ehrenamtlich mitwirken oder benötigen Sie Beratung
-                bei Behördenschreiben? Schreiben Sie uns oder kommen Sie vorbei.
+                {t('contact.intro')}
               </p>
             </div>
 
@@ -47,16 +49,16 @@ export default function HomeContact() {
                 </div>
                 <div>
                   <h4 className="text-xs font-bold uppercase tracking-wider text-stone-500">
-                    Zentraler Standort
+                    {t('contact.locationLabel')}
                   </h4>
                   <p className="text-sm font-bold text-slate-900 mt-0.5">
-                    Begegnungszentrum Merklinde
+                    {t('contact.locationName')}
                   </p>
                   <p className="text-xs text-slate-700 font-medium">
-                    Wittener Str. 322B, 44577 Castrop-Rauxel
+                    {t('contact.locationAddress')}
                   </p>
                   <span className="text-[11px] text-brand-700 font-semibold mt-1 block">
-                    Barrierefreier Zugang • ÖPNV-nah
+                    {t('contact.locationNote')}
                   </span>
                 </div>
               </div>
@@ -73,7 +75,7 @@ export default function HomeContact() {
                 </div>
                 <div>
                   <h4 className="text-xs font-bold uppercase tracking-wider text-emerald-800">
-                    Telefon &amp; WhatsApp
+                    {t('contact.phoneLabel')}
                   </h4>
                   <a
                     className="text-sm font-bold text-slate-900 block mt-0.5 hover:text-emerald-700 transition-colors"
@@ -89,7 +91,7 @@ export default function HomeContact() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <span>Direkt per WhatsApp schreiben</span> →
+                    <span>{t('contact.phoneLink')}</span> →
                   </a>
                 </div>
               </div>
@@ -112,7 +114,7 @@ export default function HomeContact() {
                 </div>
                 <div>
                   <h4 className="text-xs font-bold uppercase tracking-wider text-stone-500">
-                    E-Mail &amp; Anfragen
+                    {t('contact.emailLabel')}
                   </h4>
                   <a
                     className="text-sm font-semibold text-brand-700 hover:text-brand-900 block mt-0.5"
@@ -144,15 +146,13 @@ export default function HomeContact() {
                 </div>
                 <div>
                   <h4 className="text-xs font-bold uppercase tracking-wider text-stone-500">
-                    Sprechzeiten &amp; Treffen
+                    {t('contact.hoursLabel')}
                   </h4>
                   <p className="text-xs text-slate-700 mt-0.5">
-                    <strong className="font-bold">Dienstag – Freitag:</strong>{' '}
-                    10:00 – 17:00 Uhr
+                    <Trans i18nKey="contact.hoursWeek" ns="home" />
                   </p>
                   <p className="text-xs text-slate-700">
-                    <strong className="font-bold">Samstag:</strong> 11:00 –
-                    13:00 Uhr (Tandem-Gruppe)
+                    <Trans i18nKey="contact.hoursSaturday" ns="home" />
                   </p>
                 </div>
               </div>
@@ -175,13 +175,13 @@ export default function HomeContact() {
                       className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2"
                       htmlFor="first-name"
                     >
-                      Vorname
+                      {t('contact.form.firstName')}
                     </label>
                     <input
                       className="w-full px-4 py-3 rounded-xl bg-white border border-stone-300 focus:border-brand-600 focus:ring-2 focus:ring-brand-500/20 text-slate-900 text-sm outline-none transition-all placeholder:text-stone-400"
                       id="first-name"
                       name="first-name"
-                      placeholder="z. B. Amina"
+                      placeholder={t('contact.form.firstNamePlaceholder')}
                       required
                       type="text"
                     />
@@ -191,13 +191,13 @@ export default function HomeContact() {
                       className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2"
                       htmlFor="last-name"
                     >
-                      Nachname
+                      {t('contact.form.lastName')}
                     </label>
                     <input
                       className="w-full px-4 py-3 rounded-xl bg-white border border-stone-300 focus:border-brand-600 focus:ring-2 focus:ring-brand-500/20 text-slate-900 text-sm outline-none transition-all placeholder:text-stone-400"
                       id="last-name"
                       name="last-name"
-                      placeholder="z. B. Schmidt"
+                      placeholder={t('contact.form.lastNamePlaceholder')}
                       required
                       type="text"
                     />
@@ -208,13 +208,13 @@ export default function HomeContact() {
                     className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2"
                     htmlFor="email"
                   >
-                    E-Mail-Adresse
+                    {t('contact.form.email')}
                   </label>
                   <input
                     className="w-full px-4 py-3 rounded-xl bg-white border border-stone-300 focus:border-brand-600 focus:ring-2 focus:ring-brand-500/20 text-slate-900 text-sm outline-none transition-all placeholder:text-stone-400"
                     id="email"
                     name="email"
-                    placeholder="name@beispiel.de"
+                    placeholder={t('contact.form.emailPlaceholder')}
                     required
                     type="email"
                   />
@@ -224,22 +224,18 @@ export default function HomeContact() {
                     className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2"
                     htmlFor="topic"
                   >
-                    Anliegen / Bereich
+                    {t('contact.form.topic')}
                   </label>
                   <select
                     className="w-full px-4 py-3 rounded-xl bg-white border border-stone-300 focus:border-brand-600 focus:ring-2 focus:ring-brand-500/20 text-slate-900 text-sm outline-none transition-all"
                     id="topic"
                     name="topic"
                   >
-                    <option value="nachhilfe">
-                      Kostenfreie Nachhilfe anfragen
-                    </option>
-                    <option value="deutschkurs">
-                      Deutschkurse &amp; Frauencafé
-                    </option>
-                    <option value="beratung">Niedrigschwellige Beratung</option>
-                    <option value="ehrenamt">Ehrenamt / Mitgliedschaft</option>
-                    <option value="spende">Spenden &amp; Sponsoring</option>
+                    {CONTACT_SUBJECTS.map((subject) => (
+                      <option key={subject} value={subject}>
+                        {t(`contact:form.subject.options.${subject}`)}
+                      </option>
+                    ))}
                   </select>
                 </div>
                 <div>
@@ -247,13 +243,13 @@ export default function HomeContact() {
                     className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2"
                     htmlFor="message"
                   >
-                    Ihre Nachricht
+                    {t('contact.form.message')}
                   </label>
                   <textarea
                     className="w-full px-4 py-3 rounded-xl bg-white border border-stone-300 focus:border-brand-600 focus:ring-2 focus:ring-brand-500/20 text-slate-900 text-sm outline-none transition-all placeholder:text-stone-400"
                     id="message"
                     name="message"
-                    placeholder="Wie können wir Ihnen weiterhelfen?"
+                    placeholder={t('contact.form.messagePlaceholder')}
                     required
                     rows={4}
                   ></textarea>
@@ -266,9 +262,7 @@ export default function HomeContact() {
                     type="checkbox"
                   />
                   <label className="text-xs text-slate-600" htmlFor="privacy">
-                    Ich stimme der Verarbeitung meiner Angaben zum Zweck der
-                    Bearbeitung meiner Kontaktanfrage gemäß der
-                    Datenschutzerklärung zu.
+                    {t('contact.form.privacy')}
                   </label>
                 </div>
                 <button
@@ -288,7 +282,7 @@ export default function HomeContact() {
                       strokeWidth="2"
                     ></path>
                   </svg>
-                  <span>Nachricht absenden</span>
+                  <span>{t('contact.form.submit')}</span>
                 </button>
               </form>
             </div>

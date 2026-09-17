@@ -1,1 +1,15 @@
-{}
+{
+  "form": {
+    "subject": {
+      "options": {
+        "allgemein": "General enquiry",
+        "nachhilfe": "Free tutoring (German, maths, English)",
+        "beratung": "Integration advice & language café",
+        "tandem": "Tandem partnerships / mentoring",
+        "spende": "Donations & funding partnership",
+        "mitglied": "Membership of the association",
+        "shop": "Solidarity shop order (merchandise)"
+      }
+    }
+  }
+}

@@ -79,5 +79,171 @@
     "text": "Help us become better known. Share what we offer with friends, families and neighbours — or get involved with EFI e.V. yourself.",
     "share": "Share this page",
     "cta": "Get involved"
+  },
+  "projects": {
+    "badge": "Our projects",
+    "heading": "Follow all our projects and activities.",
+    "intro": "A look at our current initiatives, language workshops and meeting places across the region.",
+    "prev": "Previous project",
+    "next": "Next project",
+    "cta": "Ask about all current events & courses"
+  },
+  "featured": {
+    "badges": {
+      "castrop": "Castrop-Rauxel",
+      "aktionMensch": "Aktion Mensch",
+      "kimNrw": "KIM NRW & state",
+      "free": "100% free",
+      "merklinde": "Merklinde"
+    },
+    "tandem": {
+      "imageAlt": "Tandem statt Barriere – inclusive cycling in Castrop-Rauxel",
+      "category": "Inclusion & mobility",
+      "title": "Tandem statt Barriere",
+      "description": "Getting mobile together: cycling and road safety training for people with and without disabilities, at any age. Bicycles and guidance provided.",
+      "schedule": "Sat 11:00–13:00",
+      "link": "WhatsApp"
+    },
+    "digitalWomen": {
+      "imageAlt": "Everyday digital skills for women",
+      "category": "Women & digital skills",
+      "title": "Everyday digital orientation",
+      "description": "For refugee and migrant women: booking online appointments at the citizens' office or Jobcenter, scanning documents, using nursery apps and online mailboxes independently.",
+      "schedule": "Twice a month",
+      "link": "Sign up"
+    },
+    "tutoring": {
+      "imageAlt": "Free school tutoring and support",
+      "category": "School & youth",
+      "title": "Free tutoring",
+      "description": "Qualified support in German, French, mathematics and English for children of all ages in Castrop-Rauxel and Dortmund.",
+      "schedule": "Weekly",
+      "link": "Details"
+    },
+    "womensCafe": {
+      "imageAlt": "Women's café at the Begegnungszentrum Merklinde",
+      "category": "Meeting & exchange",
+      "title": "Women's café Castrop-Rauxel",
+      "description": "A protected space to meet people, practise German, share experiences and gather strength over coffee and good conversation.",
+      "schedule": "Regularly",
+      "link": "Come and see"
+    }
+  },
+  "locations": {
+    "badge": "Our locations & presence",
+    "heading": "Rooted in the Ruhr region — connected all the way to Berlin.",
+    "intro": "With our meeting centre in Castrop-Rauxel, our project hub in Dortmund and our dialogue presence in the federal capital, we are close to people locally and connected nationally.",
+    "map": {
+      "legend": "Our locations",
+      "regions": {
+        "ruhr": "Castrop-Rauxel and Dortmund",
+        "berlin": "Berlin"
+      }
+    },
+    "castrop": {
+      "name": "Castrop-Rauxel",
+      "address": "Begegnungszentrum Merklinde, Wittener Str. 322B, 44577 Castrop-Rauxel",
+      "tandem": "<strong>Tandem statt Barriere:</strong> every Saturday 11:00 – 13:00 (Aktion Mensch)",
+      "digital": "<strong>Digital orientation for women:</strong> twice a month (KIM NRW & MKJFGFI)",
+      "advice": "<strong>General social advice & language mediation:</strong> by appointment",
+      "cafe": "<strong>Women's café & free tutoring:</strong> regular groups",
+      "flyers": "Services & flyers in Castrop-Rauxel",
+      "whatsapp": "WhatsApp: +49 177 3218743",
+      "directions": "Directions"
+    },
+    "dortmund": {
+      "name": "Dortmund",
+      "subtitle": "Regional network and tandem hub",
+      "tandem": "<strong>Tandem partnerships:</strong> one-to-one support between local residents and newcomers",
+      "mentoring": "<strong>Mentoring for young people:</strong> help with finishing school and starting work",
+      "schools": "<strong>School & nursery links:</strong> close cooperation with education providers in the Ruhr region",
+      "workshops": "<strong>Multiplier workshops:</strong> training for intercultural volunteers",
+      "flyers": "Services & flyers in Dortmund",
+      "network": "Ask about the network"
+    },
+    "berlin": {
+      "name": "Berlin",
+      "subtitle": "Capital dialogue & embassy cooperation",
+      "embassy": "<strong>Embassy & association exchange:</strong> official dialogue with diplomatic missions, including the embassy of Cameroon",
+      "conferences": "<strong>National conferences:</strong> contributing to conferences on participation and diversity",
+      "programmes": "<strong>Federal programme cooperation:</strong> working with providers such as the BMFSFJ, KIM and foundations",
+      "umbrella": "<strong>Umbrella body presence:</strong> representing migrant-led organisations and bringing their perspective",
+      "flyers": "Services & flyers in Berlin",
+      "newsLink": "Read about the Berlin visit",
+      "dialog": "Request a dialogue"
+    },
+    "facts": {
+      "locationsTitle": "Active locations",
+      "locationsValue": "Castrop-Rauxel, Dortmund & Berlin",
+      "consultationsTitle": "Consultations per month",
+      "consultationsValue": "Everyday advice & language mediation",
+      "partnersTitle": "Cooperations & partners",
+      "partnersValue": "Schools, ministries & networks"
+    }
+  },
+  "shop": {
+    "badge": "Support gear & solidarity",
+    "heading": "Carry our message with you.",
+    "intro": "When you buy our merchandise, 100% of the net proceeds go directly into learning materials for our free tutoring courses.",
+    "prev": "Previous product",
+    "next": "Next product",
+    "buy": "Buy",
+    "whatsappTitle": "Ask or order via WhatsApp",
+    "whatsappAria": "Ask about {{product}} via WhatsApp",
+    "orderMessage": "Hello EFI team, I would like to order {{product}} ({{price}}).",
+    "products": {
+      "tshirt": {
+        "name": "EFI charity T-shirt",
+        "badge": "Organic cotton",
+        "subtitle": "Fairly produced, with an embroidered EFI logo",
+        "orderPhrase": "the EFI charity T-shirt"
+      },
+      "snapback": {
+        "name": "EFI snapback cap",
+        "badge": "Adjustable",
+        "subtitle": "High-quality 3D embroidery on the front",
+        "orderPhrase": "the EFI snapback cap"
+      },
+      "tasche": {
+        "name": "Sturdy canvas bag",
+        "badge": "340g canvas",
+        "subtitle": "A hard-wearing tote for lessons and everyday use",
+        "orderPhrase": "the sturdy canvas bag"
+      },
+      "kugelschreiber": {
+        "name": "EFI ballpoint pen",
+        "badge": "Recycled",
+        "subtitle": "Ergonomic and refillable, with a blue cartridge",
+        "orderPhrase": "the EFI ballpoint pen"
+      }
+    }
+  },
+  "contact": {
+    "badge": "Get in touch",
+    "heading": "Asking is already a step forward.",
+    "intro": "Do you have questions about our free tutoring courses, would you like to volunteer, or do you need help with a letter from the authorities? Write to us or come and see us.",
+    "locationLabel": "Main location",
+    "locationName": "Begegnungszentrum Merklinde",
+    "locationAddress": "Wittener Str. 322B, 44577 Castrop-Rauxel",
+    "locationNote": "Step-free access • close to public transport",
+    "phoneLabel": "Phone & WhatsApp",
+    "phoneLink": "Message us on WhatsApp",
+    "emailLabel": "Email & enquiries",
+    "hoursLabel": "Opening hours & meetings",
+    "hoursWeek": "<strong>Tuesday – Friday:</strong> 10:00 – 17:00",
+    "hoursSaturday": "<strong>Saturday:</strong> 11:00 – 13:00 (tandem group)",
+    "form": {
+      "firstName": "First name",
+      "firstNamePlaceholder": "e.g. Amina",
+      "lastName": "Surname",
+      "lastNamePlaceholder": "e.g. Schmidt",
+      "email": "Email address",
+      "emailPlaceholder": "name@example.com",
+      "topic": "Subject / area",
+      "message": "Your message",
+      "messagePlaceholder": "How can we help you?",
+      "privacy": "I consent to my details being processed in order to handle my enquiry, in accordance with the privacy policy.",
+      "submit": "Send message"
+    }
   }
 }
