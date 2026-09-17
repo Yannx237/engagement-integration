@@ -3,18 +3,9 @@ import type { Project } from './projects';
 /**
  * Projects EFI runs abroad, kept apart from the three German locations.
  *
- * Fill one entry per project, using the same shape as the city fields of
- * action so the cards render identically:
- *
- *   {
- *     badge: 'Kamerun',                      // country, shown as the pill
- *     title: 'Name des Projekts',
- *     desc: 'Ein bis zwei Sätze zum Projekt.',
- *     details: ['Schwerpunkt 1', 'Schwerpunkt 2'],
- *     iconBg: 'bg-brand-50 text-brand-800 border-brand-100',
- *     icon: (<svg ... />),
- *     flyers: [{ title: 'Flyer …', file: '/assets/flyers/international/….pdf' }],
- *   }
+ * Add one entry per project: an id, an iconBg, an icon and optional flyers.
+ * The text belongs in projects.json under international.projects.<id>, with
+ * badge / title / desc / detail1..3, exactly like the city fields of action.
  *
  * While the list is empty the page shows an honest placeholder with a contact
  * route instead of inventing content.

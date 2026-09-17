@@ -1,8 +1,12 @@
+import { useTranslation } from 'react-i18next';
 import { LocalizedLink } from '../../../i18n/LocalizedLink';
 import type { Project } from '../../data/projects';
 
 export default function ProjectCard({ project }: { project: Project }) {
+  const { t } = useTranslation('projects');
+  const { fieldPath } = project;
   const flyers = project.flyers ?? [];
+
   return (
     <div className="rounded-3xl bg-white border border-stone-200/80 p-8 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
       <div>
@@ -13,21 +17,21 @@ export default function ProjectCard({ project }: { project: Project }) {
             {project.icon}
           </div>
           <span className="text-[11px] font-bold tracking-wider uppercase px-3 py-1 rounded-full bg-stone-100 text-stone-700">
-            {project.badge}
+            {t(`${fieldPath}.badge`)}
           </span>
         </div>
 
         <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-brand-700 transition-colors">
-          {project.title}
+          {t(`${fieldPath}.title`)}
         </h3>
         <p className="text-sm text-slate-600 leading-relaxed mb-6">
-          {project.desc}
+          {t(`${fieldPath}.desc`)}
         </p>
 
         <div className="space-y-2.5 border-t border-stone-100 pt-5">
-          {project.details.map((item) => (
+          {(['detail1', 'detail2', 'detail3'] as const).map((key) => (
             <div
-              key={item}
+              key={key}
               className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700"
             >
               <svg
@@ -44,7 +48,7 @@ export default function ProjectCard({ project }: { project: Project }) {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <span>{item}</span>
+              <span>{t(`${fieldPath}.${key}`)}</span>
             </div>
           ))}
         </div>
@@ -53,7 +57,7 @@ export default function ProjectCard({ project }: { project: Project }) {
       {/* Flyers for this field of action, or a contact route when none exists. */}
       <div className="mt-8 pt-6 border-t border-stone-100">
         <h4 className="text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-3">
-          Flyer zum Projekt
+          {t('flyers.heading')}
         </h4>
 
         {flyers.length > 0 ? (
@@ -94,17 +98,16 @@ export default function ProjectCard({ project }: { project: Project }) {
           </ul>
         ) : (
           <p className="text-xs text-slate-500 leading-relaxed">
-            Für dieses Handlungsfeld liegt an diesem Standort derzeit kein Flyer
-            zum Download bereit. Sprechen Sie uns an — wir informieren Sie
-            persönlich.
+            {t('flyers.none')}
           </p>
         )}
 
         <LocalizedLink
-          routeId="contact" hash="#kontaktformular"
+          routeId="contact"
+          hash="#kontaktformular"
           className="mt-5 inline-flex items-center gap-2 text-xs font-bold text-brand-700 hover:text-brand-800 uppercase tracking-wider"
         >
-          <span>Jetzt teilnehmen oder anfragen</span>
+          <span>{t('flyers.cta')}</span>
           <svg
             className="w-4 h-4"
             fill="none"

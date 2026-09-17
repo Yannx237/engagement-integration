@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { useSearchParams } from 'react-router-dom';
 import ProjectCard from './ProjectCard';
 import { cities } from '../../data/projects';
@@ -13,6 +14,7 @@ const cityAccent: Record<ProjectLocation, { dot: string; ring: string }> = {
 };
 
 export default function ProjectsByLocation() {
+  const { t } = useTranslation('projects');
   const [searchParams, setSearchParams] = useSearchParams();
   const requested = searchParams.get('stadt');
   const selected =
@@ -33,26 +35,24 @@ export default function ProjectsByLocation() {
     >
       <div className="text-center max-w-3xl mx-auto mb-12">
         <span className="text-xs font-bold text-brand-700 uppercase tracking-[0.2em] block mb-3">
-          Unsere Standorte
+          {t('locations.eyebrow')}
         </span>
         <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-          Vor Ort aktiv in Berlin, Castrop-Rauxel und Dortmund
+          {t('locations.heading')}
         </h2>
-        <p className="text-slate-600 text-base mt-3">
-          Wählen Sie zuerst einen Standort. Anschließend sehen Sie die dortigen
-          Handlungsfelder und die zugehörigen Flyer.
-        </p>
+        <p className="text-slate-600 text-base mt-3">{t('locations.intro')}</p>
       </div>
 
       {/* Step 1 — pick a city */}
       <div
         className="grid grid-cols-1 sm:grid-cols-3 gap-5 sm:gap-6 max-w-4xl mx-auto"
         role="group"
-        aria-label="Standort auswählen"
+        aria-label={t('locations.groupLabel')}
       >
         {cities.map((city) => {
           const isActive = city.id === selected.id;
           const accent = cityAccent[city.id];
+          const name = t(`locations.cities.${city.id}.name`);
           return (
             <button
               key={city.id}
@@ -91,10 +91,10 @@ export default function ProjectsByLocation() {
                 </svg>
               </span>
               <span className="block text-lg font-bold text-slate-900">
-                {city.name}
+                {name}
               </span>
               <span className="block text-xs text-slate-500 mt-1 leading-relaxed">
-                {city.tagline}
+                {t(`locations.cities.${city.id}.tagline`)}
               </span>
               <span
                 className={`mt-4 inline-flex items-center justify-center w-full px-4 py-2.5 rounded-full text-xs font-bold transition-colors ${
@@ -103,7 +103,7 @@ export default function ProjectsByLocation() {
                     : 'bg-stone-100 text-brand-900'
                 }`}
               >
-                {isActive ? 'Ausgewählt' : city.name}
+                {isActive ? t('locations.selected') : name}
               </span>
             </button>
           );
@@ -114,12 +114,14 @@ export default function ProjectsByLocation() {
       <div className="mt-16">
         <div className="text-center max-w-3xl mx-auto mb-10">
           <span className="text-xs font-bold text-slate-500 uppercase tracking-[0.2em] block mb-2">
-            Handlungsfelder in
+            {t('locations.fieldsIn')}
           </span>
           <h3 className="text-2xl sm:text-3xl font-extrabold text-brand-700 tracking-tight">
-            {selected.name}
+            {t(`locations.cities.${selected.id}.name`)}
           </h3>
-          <p className="text-sm text-slate-600 mt-2">{selected.address}</p>
+          <p className="text-sm text-slate-600 mt-2">
+            {t(`locations.cities.${selected.id}.address`)}
+          </p>
         </div>
 
         <div
@@ -127,7 +129,7 @@ export default function ProjectsByLocation() {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {selected.domains.map((domain) => (
-            <ProjectCard key={domain.title} project={domain} />
+            <ProjectCard key={domain.fieldPath} project={domain} />
           ))}
         </div>
       </div>

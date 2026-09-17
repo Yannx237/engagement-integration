@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import ProjectsByLocation from '../components/projects/ProjectsByLocation';
 import ProjectGallery from '../components/projects/ProjectGallery';
 import PageHero from '../components/PageHero';
@@ -5,14 +6,15 @@ import PartnersStrip from '../components/PartnersStrip';
 import ShareCTA from '../components/ShareCTA';
 
 export default function RedesignProjects() {
+  const { t } = useTranslation('projects');
   return (
     <div className="w-full bg-[#fbfbfa] text-slate-800">
       {/* 1. Page Hero */}
       <PageHero
-        badge="Unsere Projekte"
-        title="Wir tun dies für jedes"
-        highlight="menschliche Projekt."
-        description="Als gemeinnützige Migrantenselbstorganisation fördern wir gesellschaftliche Teilhabe durch zielgerichtete Handlungsfelder: von kostenfreier Nachhilfe über Sprachförderung bis zu individuellen Tandem-Patenschaften in NRW und darüber hinaus."
+        badge={t('hero.badge')}
+        title={t('hero.title')}
+        highlight={t('hero.highlight')}
+        description={t('hero.description')}
       />
 
       {/* 2. Standort → Handlungsfeld → Flyer */}

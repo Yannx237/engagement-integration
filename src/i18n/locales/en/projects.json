@@ -1,1 +1,148 @@
-{}
+{
+  "hero": {
+    "badge": "Our projects",
+    "title": "We do this for every",
+    "highlight": "human project.",
+    "description": "As a non-profit migrant-led organisation, we support social participation through targeted fields of action: from free tutoring and language support to individual tandem partnerships, in North Rhine-Westphalia and beyond."
+  },
+  "locations": {
+    "eyebrow": "Our locations",
+    "heading": "Active on the ground in Berlin, Castrop-Rauxel and Dortmund",
+    "intro": "Choose a location first. You will then see the fields of action there and the flyers that go with them.",
+    "groupLabel": "Choose a location",
+    "selected": "Selected",
+    "fieldsIn": "Fields of action in",
+    "cities": {
+      "berlin": {
+        "name": "Berlin",
+        "tagline": "Dialogue and network presence in the federal capital",
+        "address": "Berlin"
+      },
+      "castrop": {
+        "name": "Castrop-Rauxel",
+        "tagline": "Begegnungszentrum Merklinde",
+        "address": "Wittener Str. 322B, 44577 Castrop-Rauxel"
+      },
+      "dortmund": {
+        "name": "Dortmund",
+        "tagline": "Project hub and network activity",
+        "address": "Lütgendortmunder Str. 132, 44388 Dortmund"
+      }
+    }
+  },
+  "fields": {
+    "castrop": {
+      "bildung": {
+        "badge": "Education & tutoring",
+        "title": "Education and upbringing",
+        "desc": "Free, qualified tutoring in the core subjects German, mathematics and English, for pupils of every school type.",
+        "detail1": "Focused homework support & exam preparation",
+        "detail2": "Multilingual learning support for children with German as a second language",
+        "detail3": "Building media literacy and independent learning"
+      },
+      "migration": {
+        "badge": "Language & encounter",
+        "title": "Migration and integration",
+        "desc": "Language and cultural support for adults, women and newcomers in the neighbourhood.",
+        "detail1": "Open language café for relaxed German conversation",
+        "detail2": "Women's café focused on empowerment and health",
+        "detail3": "Accessible advice and accompaniment to authorities and institutions"
+      },
+      "kinder": {
+        "badge": "Children & youth",
+        "title": "Children, youth and family",
+        "desc": "Outdoor and leisure education, intercultural outings and dependable tandem partnerships.",
+        "detail1": "One-to-one tandem partnerships for children and young people",
+        "detail2": "Creative holiday camps, sports activities and educational trips",
+        "detail3": "Advice for parents and support with the German school system"
+      }
+    },
+    "dortmund": {
+      "migration": {
+        "badge": "Network & advice",
+        "title": "Migration and integration in Dortmund",
+        "desc": "Accessible advice, guidance and cultural support across the Dortmund area.",
+        "detail1": "Orientation advice for newcomers",
+        "detail2": "Cultural bridge-building and intercultural workshops",
+        "detail3": "Help with applications, documents and contact with authorities"
+      },
+      "erlebnis": {
+        "badge": "Mentoring & sponsorship",
+        "title": "Outdoor and leisure education",
+        "desc": "Tandem partnerships and leisure activities for young people, building confidence and connections.",
+        "detail1": "Building stable mentor-mentee relationships",
+        "detail2": "Shared leisure and cultural activities in the region",
+        "detail3": "Developing social skills and resilience"
+      }
+    },
+    "berlin": {
+      "migration": {
+        "badge": "Language & encounter",
+        "title": "Migration and integration",
+        "desc": "Language and cultural support, and accessible accompaniment for newcomers in the federal capital.",
+        "detail1": "Language café for relaxed German conversation",
+        "detail2": "Women's café focused on empowerment and health",
+        "detail3": "Accessible advice and accompaniment to authorities"
+      },
+      "bildung": {
+        "badge": "Education & tutoring",
+        "title": "Education and upbringing",
+        "desc": "Free tutoring in the core subjects German, mathematics and English for schoolchildren.",
+        "detail1": "Free tutoring in German, maths and English",
+        "detail2": "Homework support and exam preparation",
+        "detail3": "Multilingual learning support for children with German as a second language"
+      },
+      "kinder": {
+        "badge": "Children & youth",
+        "title": "Children, youth and family",
+        "desc": "Outdoor and leisure education for children and young people, plus dependable tandem partnerships.",
+        "detail1": "Outdoor and leisure education for children and young people",
+        "detail2": "Tandem partnerships as dependable one-to-one support",
+        "detail3": "Advice for parents and support with the German school system"
+      }
+    }
+  },
+  "flyers": {
+    "heading": "Project flyer",
+    "none": "There is currently no flyer to download for this field of action at this location. Get in touch — we will tell you about it in person.",
+    "cta": "Take part or ask us"
+  },
+  "gallery": {
+    "badge": "Photo gallery",
+    "heading": "Our activities in pictures",
+    "intro": "Impressions from our projects, outings, education services and neighbourhood activities across all our locations.",
+    "filters": {
+      "all": "All locations",
+      "castrop": "Castrop-Rauxel",
+      "dortmund": "Dortmund",
+      "berlin": "Berlin"
+    },
+    "photos": {
+      "f1": "Learning and tutoring group – children doing homework together",
+      "f2": "Community activity – creative workshop in the neighbourhood",
+      "f3": "Women's meeting & exchange – open dialogue and support",
+      "f4": "Language support on site – language practice in small groups",
+      "f5": "Leisure and outdoor education – sport in the open air",
+      "f6": "Cultural celebration – meeting and solidarity",
+      "f7": "Tandem project Castrop – young people in mentoring exchange",
+      "f8": "Network meeting Dortmund – coordination talks on partnerships",
+      "f9": "Advice & support Dortmund – individual orientation support",
+      "f10": "National representation Berlin – professional exchange and cooperation talks",
+      "f11": "Delegation & dialogue Berlin – institutional exchange on integration"
+    }
+  },
+  "international": {
+    "hero": {
+      "badge": "EFI International",
+      "title": "Our work",
+      "highlight": "beyond Germany.",
+      "description": "Alongside our work in Berlin, Castrop-Rauxel and Dortmund, we support projects abroad. This is where we bring those international initiatives together with their partners and flyers."
+    },
+    "badge": "Projects abroad",
+    "heading": "International cooperation",
+    "intro": "Exchange, education partnerships and youth encounters beyond our German locations.",
+    "emptyHeading": "These project pages are being built",
+    "emptyText": "Our international initiatives and their flyers will be published here shortly. Until then we are glad to tell you about them in person.",
+    "emptyCta": "Get in touch"
+  }
+}

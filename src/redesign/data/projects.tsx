@@ -11,11 +11,28 @@ export interface Flyer {
   note?: string;
 }
 
+/**
+ * Every field of action that exists, spelled out. This is what lets
+ * `t(`${fieldPath}.title`)` type-check as a real translation key instead of an
+ * arbitrary string — a new field of action is added here and in projects.json,
+ * and tsc points at anything that does not line up.
+ */
+export type FieldPath =
+  | 'fields.castrop.bildung'
+  | 'fields.castrop.migration'
+  | 'fields.castrop.kinder'
+  | 'fields.dortmund.migration'
+  | 'fields.dortmund.erlebnis'
+  | 'fields.berlin.migration'
+  | 'fields.berlin.bildung'
+  | 'fields.berlin.kinder';
+
+/**
+ * A field of action. Text lives in projects.json at `fieldPath`; this file
+ * keeps the icon and the flyers, neither of which is translated.
+ */
 export interface Project {
-  badge: string;
-  title: string;
-  desc: string;
-  details: readonly string[];
+  fieldPath: FieldPath;
   iconBg: string;
   icon: ReactNode;
   // Flyers belong to one city and one field of action. A field without its own
@@ -24,30 +41,26 @@ export interface Project {
   flyers?: readonly Flyer[];
 }
 
+export type ActivityPhotoId =
+  | 'f1' | 'f2' | 'f3' | 'f4' | 'f5' | 'f6'
+  | 'f7' | 'f8' | 'f9' | 'f10' | 'f11';
+
 export interface ActivityPhoto {
+  id: ActivityPhotoId;
   src: string;
   location: GalleryLocation;
-  title: string;
-  desc: string;
 }
 
-export const galleryFilters: readonly { id: GalleryFilter; label: string }[] = [
-  { id: 'all', label: 'Alle Standorte' },
-  { id: 'castrop', label: 'Castrop-Rauxel' },
-  { id: 'dortmund', label: 'Dortmund' },
-  { id: 'berlin', label: 'Berlin' },
+export const galleryFilters: readonly GalleryFilter[] = [
+  'all',
+  'castrop',
+  'dortmund',
+  'berlin',
 ];
 
 export const castropProjects: readonly Project[] = [
   {
-    badge: 'Bildung & Nachhilfe',
-    title: 'Bildung und Erziehung',
-    desc: 'Kostenfreie qualifizierte Nachhilfe in den Kernfächern Deutsch, Mathematik und Englisch für Schüler aller Schulformen.',
-    details: [
-      'Gezielte Hausaufgabenbetreuung & Prüfungsvorbereitung',
-      'Mehrsprachige Lernbegleitung für Kinder mit Deutsch als Zweitsprache',
-      'Stärkung der Medienkompetenz und des selbstständigen Lernens',
-    ],
+    fieldPath: 'fields.castrop.bildung',
     iconBg: 'bg-emerald-50 text-emerald-700 border-emerald-100',
     icon: (
       <svg
@@ -66,14 +79,7 @@ export const castropProjects: readonly Project[] = [
     ),
   },
   {
-    badge: 'Sprache & Begegnung',
-    title: 'Migration und Integration',
-    desc: 'Sprach- und Kulturförderung für Erwachsene, Frauen und Neuzugewanderte im Stadtteil.',
-    details: [
-      'Offenes Sprachcafé zum ungezwungenen Deutschsprechen',
-      'Frauencafé mit Schwerpunkt auf Empowerment und Gesundheit',
-      'Niedrigschwellige Beratung und Begleitung zu Behörden und Institutionen',
-    ],
+    fieldPath: 'fields.castrop.migration',
     iconBg: 'bg-lime-50 text-lime-800 border-lime-200',
     icon: (
       <svg
@@ -92,14 +98,7 @@ export const castropProjects: readonly Project[] = [
     ),
   },
   {
-    badge: 'Kinder & Jugend',
-    title: 'Kinder, Jugend und Familie',
-    desc: 'Erlebnis- und Freizeitpädagogik, interkulturelle Ausflüge und verlässliche Tandem-Patenschaften.',
-    details: [
-      'Eins-zu-eins Tandem-Patenschaften für Kinder und Jugendliche',
-      'Kreative Feriencamps, Sportangebote und Bildungsreisen',
-      'Elternberatung und Unterstützung im deutschen Schulsystem',
-    ],
+    fieldPath: 'fields.castrop.kinder',
     iconBg: 'bg-brand-50 text-brand-800 border-brand-100',
     icon: (
       <svg
@@ -121,14 +120,7 @@ export const castropProjects: readonly Project[] = [
 
 export const dortmundProjects: readonly Project[] = [
   {
-    badge: 'Netzwerk & Beratung',
-    title: 'Migration und Integration Dortmund',
-    desc: 'Niedrigschwellige Beratung, Lotsenfunktionen und Kulturförderung im Raum Dortmund.',
-    details: [
-      'Orientierungsberatung für Neuzugewanderte',
-      'Kulturelle Brückenangebote und interkulturelle Workshops',
-      'Hilfestellung bei Anträgen, Dokumenten und Behördenkontakten',
-    ],
+    fieldPath: 'fields.dortmund.migration',
     iconBg: 'bg-lime-50 text-lime-800 border-lime-200',
     icon: (
       <svg
@@ -147,14 +139,7 @@ export const dortmundProjects: readonly Project[] = [
     ),
   },
   {
-    badge: 'Mentoring & Patenschaft',
-    title: 'Erlebnis- und Freizeitpädagogik',
-    desc: 'Tandem-Patenschaften und Freizeitangebote für Jugendliche zur Förderung von Selbstvertrauen und Vernetzung.',
-    details: [
-      'Aufbau stabiler Mentor-Mentee-Beziehungen',
-      'Gemeinsame Freizeit- und Kulturaktivitäten in der Region',
-      'Förderung von sozialer Kompetenz und Resilienz',
-    ],
+    fieldPath: 'fields.dortmund.erlebnis',
     iconBg: 'bg-emerald-50 text-emerald-700 border-emerald-100',
     icon: (
       <svg
@@ -176,14 +161,7 @@ export const dortmundProjects: readonly Project[] = [
 
 export const berlinProjects: readonly Project[] = [
   {
-    badge: 'Sprache & Begegnung',
-    title: 'Migration und Integration',
-    desc: 'Sprach- und Kulturförderung sowie niedrigschwellige Begleitung für Neuzugewanderte in der Bundeshauptstadt.',
-    details: [
-      'Sprachcafé zum ungezwungenen Deutschsprechen',
-      'Frauencafé mit Schwerpunkt Empowerment und Gesundheit',
-      'Niedrigschwellige Beratung und Begleitung zu Behörden',
-    ],
+    fieldPath: 'fields.berlin.migration',
     iconBg: 'bg-lime-50 text-lime-800 border-lime-200',
     icon: (
       <svg
@@ -202,14 +180,7 @@ export const berlinProjects: readonly Project[] = [
     ),
   },
   {
-    badge: 'Bildung & Nachhilfe',
-    title: 'Bildung und Erziehung',
-    desc: 'Kostenfreie Nachhilfe in den Kernfächern Deutsch, Mathematik und Englisch für Schülerinnen und Schüler.',
-    details: [
-      'Kostenfreie Nachhilfe in Deutsch, Mathe und Englisch',
-      'Hausaufgabenbetreuung und Prüfungsvorbereitung',
-      'Mehrsprachige Lernbegleitung für Kinder mit Deutsch als Zweitsprache',
-    ],
+    fieldPath: 'fields.berlin.bildung',
     iconBg: 'bg-emerald-50 text-emerald-700 border-emerald-100',
     icon: (
       <svg
@@ -228,14 +199,7 @@ export const berlinProjects: readonly Project[] = [
     ),
   },
   {
-    badge: 'Kinder & Jugend',
-    title: 'Kinder, Jugend und Familie',
-    desc: 'Erlebnis- und Freizeitpädagogik für Kinder und Jugendliche sowie verlässliche Tandem-Patenschaften.',
-    details: [
-      'Erlebnis- und Freizeitpädagogik für Kinder und Jugendliche',
-      'Tandem-Patenschaften als verlässliche Eins-zu-eins Begleitung',
-      'Elternberatung und Unterstützung im deutschen Schulsystem',
-    ],
+    fieldPath: 'fields.berlin.kinder',
     iconBg: 'bg-brand-50 text-brand-800 border-brand-100',
     icon: (
       <svg
@@ -257,105 +221,27 @@ export const berlinProjects: readonly Project[] = [
 
 export interface City {
   id: ProjectLocation;
-  name: string;
-  tagline: string;
-  address: string;
   domains: readonly Project[];
 }
 
 // One entry per city; the fields of action follow from the chosen city.
 export const cities: readonly City[] = [
-  {
-    id: 'berlin',
-    name: 'Berlin',
-    tagline: 'Dialog- und Netzwerkpräsenz in der Bundeshauptstadt',
-    address: 'Berlin',
-    domains: berlinProjects,
-  },
-  {
-    id: 'castrop',
-    name: 'Castrop-Rauxel',
-    tagline: 'Begegnungszentrum Merklinde',
-    address: 'Wittener Str. 322B, 44577 Castrop-Rauxel',
-    domains: castropProjects,
-  },
-  {
-    id: 'dortmund',
-    name: 'Dortmund',
-    tagline: 'Projekt-Hub und Netzwerkarbeit',
-    // The walk-in office, as shown on the storefront and on every Dortmund
-    // flyer. Klarastr. 19 in the Impressum is the postal address, not the venue.
-    address: 'Lütgendortmunder Str. 132, 44388 Dortmund',
-    domains: dortmundProjects,
-  },
+  { id: 'berlin', domains: berlinProjects },
+  { id: 'castrop', domains: castropProjects },
+  { id: 'dortmund', domains: dortmundProjects },
 ];
 
 // Activities gallery with original images
 export const activityPhotos: readonly ActivityPhoto[] = [
-  {
-    src: '/assets/images/f1.png',
-    location: 'castrop',
-    title: 'Lern- und Nachhilfegruppe',
-    desc: 'Kinder bei der gemeinsamen Hausaufgabenbetreuung',
-  },
-  {
-    src: '/assets/images/f2.png',
-    location: 'castrop',
-    title: 'Gemeinschaftsaktivität',
-    desc: 'Kreativworkshop im Stadtteil',
-  },
-  {
-    src: '/assets/images/f3.png',
-    location: 'castrop',
-    title: 'Frauentreffen & Austausch',
-    desc: 'Offener Dialog und Unterstützung',
-  },
-  {
-    src: '/assets/images/f4.png',
-    location: 'castrop',
-    title: 'Sprachförderung vor Ort',
-    desc: 'Sprachtraining in Kleingruppen',
-  },
-  {
-    src: '/assets/images/f5.png',
-    location: 'castrop',
-    title: 'Freizeit- und Erlebnispädagogik',
-    desc: 'Sportliche Aktivität im Freien',
-  },
-  {
-    src: '/assets/images/f6.png',
-    location: 'castrop',
-    title: 'Kulturelle Feierlichkeit',
-    desc: 'Begegnung und Zusammenhalt',
-  },
-  {
-    src: '/assets/images/f7.png',
-    location: 'castrop',
-    title: 'Tandem-Projekt Castrop',
-    desc: 'Jugendliche im Mentoring-Austausch',
-  },
-  {
-    src: '/assets/images/f8.png',
-    location: 'dortmund',
-    title: 'Netzwerktreffen Dortmund',
-    desc: 'Koordinierungsgespräche der Patenschaften',
-  },
-  {
-    src: '/assets/images/f9.png',
-    location: 'dortmund',
-    title: 'Beratung & Begleitung Dortmund',
-    desc: 'Individuelle Orientierungsunterstützung',
-  },
-  {
-    src: '/assets/images/f10.png',
-    location: 'berlin',
-    title: 'Bundesweite Repräsentanz Berlin',
-    desc: 'Fachaustausch und Kooperationsgespräche',
-  },
-  {
-    src: '/assets/images/f11.png',
-    location: 'berlin',
-    title: 'Delegation & Dialog Berlin',
-    desc: 'Institutioneller Austausch für Integrationsfragen',
-  },
+  { id: 'f1', src: '/assets/images/f1.png', location: 'castrop' },
+  { id: 'f2', src: '/assets/images/f2.png', location: 'castrop' },
+  { id: 'f3', src: '/assets/images/f3.png', location: 'castrop' },
+  { id: 'f4', src: '/assets/images/f4.png', location: 'castrop' },
+  { id: 'f5', src: '/assets/images/f5.png', location: 'castrop' },
+  { id: 'f6', src: '/assets/images/f6.png', location: 'castrop' },
+  { id: 'f7', src: '/assets/images/f7.png', location: 'castrop' },
+  { id: 'f8', src: '/assets/images/f8.png', location: 'dortmund' },
+  { id: 'f9', src: '/assets/images/f9.png', location: 'dortmund' },
+  { id: 'f10', src: '/assets/images/f10.png', location: 'berlin' },
+  { id: 'f11', src: '/assets/images/f11.png', location: 'berlin' },
 ];

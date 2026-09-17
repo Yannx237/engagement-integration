@@ -1,8 +1,11 @@
-import GalleryPhotoCard from './GalleryPhotoCard';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import GalleryPhotoCard from './GalleryPhotoCard';
 import { activityPhotos, galleryFilters } from '../../data/projects';
 import type { GalleryFilter } from '../../data/projects';
+
 export default function ProjectGallery() {
+  const { t } = useTranslation('projects');
   const [galleryFilter, setGalleryFilter] = useState<GalleryFilter>('all');
   const filteredPhotos = activityPhotos.filter(
     (photo) => galleryFilter === 'all' || photo.location === galleryFilter
@@ -13,32 +16,31 @@ export default function ProjectGallery() {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div>
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-100 text-brand-800 text-xs font-bold uppercase tracking-wider mb-3">
-              Fotogalerie
+              {t('gallery.badge')}
             </span>
             <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">
-              Unsere Aktivitäten in Bildern
+              {t('gallery.heading')}
             </h2>
             <p className="text-slate-600 text-sm mt-2 max-w-xl">
-              Eindrücke aus unseren Projekten, Ausflügen, Bildungsangeboten und
-              Stadtteilaktionen an all unseren Standorten.
+              {t('gallery.intro')}
             </p>
           </div>
 
           {/* Gallery Filter Chips */}
           <div className="flex flex-wrap gap-2">
-            {galleryFilters.map((f) => (
+            {galleryFilters.map((filter) => (
               <button
-                key={f.id}
+                key={filter}
                 type="button"
-                onClick={() => setGalleryFilter(f.id)}
-                data-gallery-filter={f.id}
+                onClick={() => setGalleryFilter(filter)}
+                data-gallery-filter={filter}
                 className={`px-4 py-2 rounded-full text-xs font-bold transition-colors ${
-                  galleryFilter === f.id
+                  galleryFilter === filter
                     ? 'bg-brand-700 text-white'
                     : 'bg-stone-100 text-stone-700 hover:bg-stone-200'
                 }`}
               >
-                {f.label}
+                {t(`gallery.filters.${filter}`)}
               </button>
             ))}
           </div>
@@ -50,12 +52,6 @@ export default function ProjectGallery() {
             <GalleryPhotoCard key={photo.src} photo={photo} />
           ))}
         </div>
-
-        {filteredPhotos.length === 0 && (
-          <div className="text-center py-12 text-slate-500 text-sm">
-            Keine Fotos für diesen Standort hinterlegt.
-          </div>
-        )}
       </div>
     </section>
   );

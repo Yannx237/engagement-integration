@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { LocalizedLink } from '../../i18n/LocalizedLink';
 import PageHero from '../components/PageHero';
 import ProjectCard from '../components/projects/ProjectCard';
@@ -6,33 +7,33 @@ import ShareCTA from '../components/ShareCTA';
 import { internationalProjects } from '../data/international';
 
 export default function RedesignInternational() {
+  const { t } = useTranslation('projects');
   return (
     <div className="w-full bg-[#fbfbfa] text-slate-800">
       <PageHero
-        badge="EFI International"
-        title="Unser Engagement"
-        highlight="über Deutschland hinaus."
-        description="Neben unserer Arbeit in Berlin, Castrop-Rauxel und Dortmund begleiten wir Projekte im Ausland. Hier bündeln wir diese internationalen Vorhaben, ihre Partner und die zugehörigen Flyer."
+        badge={t('international.hero.badge')}
+        title={t('international.hero.title')}
+        highlight={t('international.hero.highlight')}
+        description={t('international.hero.description')}
       />
 
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <span className="text-xs font-bold text-brand-700 uppercase tracking-[0.2em] block mb-3">
-            Projekte im Ausland
+            {t('international.badge')}
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-            Internationale Zusammenarbeit
+            {t('international.heading')}
           </h2>
           <p className="text-slate-600 text-base mt-3">
-            Austausch, Bildungspartnerschaften und Jugendbegegnungen jenseits
-            der deutschen Standorte.
+            {t('international.intro')}
           </p>
         </div>
 
         {internationalProjects.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {internationalProjects.map((project) => (
-              <ProjectCard key={project.title} project={project} />
+              <ProjectCard key={project.fieldPath} project={project} />
             ))}
           </div>
         ) : (
@@ -56,18 +57,16 @@ export default function RedesignInternational() {
               </svg>
             </div>
             <h3 className="text-xl font-bold text-slate-900">
-              Die Projektseiten werden derzeit aufgebaut
+              {t('international.emptyHeading')}
             </h3>
             <p className="text-sm text-slate-600 leading-relaxed">
-              Unsere internationalen Vorhaben und die dazugehörigen Flyer werden
-              hier in Kürze veröffentlicht. Bis dahin geben wir Ihnen gerne
-              persönlich Auskunft.
+              {t('international.emptyText')}
             </p>
             <LocalizedLink
               routeId="contact" hash="#kontaktformular"
               className="inline-flex items-center justify-center px-6 py-3 rounded-full text-sm font-bold text-brand-950 bg-limeAccent-500 hover:bg-limeAccent-400 shadow-sm transition-colors"
             >
-              Kontakt aufnehmen
+              {t('international.emptyCta')}
             </LocalizedLink>
           </div>
         )}

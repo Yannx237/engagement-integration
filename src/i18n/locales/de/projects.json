@@ -1,1 +1,148 @@
-{}
+{
+  "hero": {
+    "badge": "Unsere Projekte",
+    "title": "Wir tun dies für jedes",
+    "highlight": "menschliche Projekt.",
+    "description": "Als gemeinnützige Migrantenselbstorganisation fördern wir gesellschaftliche Teilhabe durch zielgerichtete Handlungsfelder: von kostenfreier Nachhilfe über Sprachförderung bis zu individuellen Tandem-Patenschaften in NRW und darüber hinaus."
+  },
+  "locations": {
+    "eyebrow": "Unsere Standorte",
+    "heading": "Vor Ort aktiv in Berlin, Castrop-Rauxel und Dortmund",
+    "intro": "Wählen Sie zuerst einen Standort. Anschließend sehen Sie die dortigen Handlungsfelder und die zugehörigen Flyer.",
+    "groupLabel": "Standort auswählen",
+    "selected": "Ausgewählt",
+    "fieldsIn": "Handlungsfelder in",
+    "cities": {
+      "berlin": {
+        "name": "Berlin",
+        "tagline": "Dialog- und Netzwerkpräsenz in der Bundeshauptstadt",
+        "address": "Berlin"
+      },
+      "castrop": {
+        "name": "Castrop-Rauxel",
+        "tagline": "Begegnungszentrum Merklinde",
+        "address": "Wittener Str. 322B, 44577 Castrop-Rauxel"
+      },
+      "dortmund": {
+        "name": "Dortmund",
+        "tagline": "Projekt-Hub und Netzwerkarbeit",
+        "address": "Lütgendortmunder Str. 132, 44388 Dortmund"
+      }
+    }
+  },
+  "fields": {
+    "castrop": {
+      "bildung": {
+        "badge": "Bildung & Nachhilfe",
+        "title": "Bildung und Erziehung",
+        "desc": "Kostenfreie qualifizierte Nachhilfe in den Kernfächern Deutsch, Mathematik und Englisch für Schüler aller Schulformen.",
+        "detail1": "Gezielte Hausaufgabenbetreuung & Prüfungsvorbereitung",
+        "detail2": "Mehrsprachige Lernbegleitung für Kinder mit Deutsch als Zweitsprache",
+        "detail3": "Stärkung der Medienkompetenz und des selbstständigen Lernens"
+      },
+      "migration": {
+        "badge": "Sprache & Begegnung",
+        "title": "Migration und Integration",
+        "desc": "Sprach- und Kulturförderung für Erwachsene, Frauen und Neuzugewanderte im Stadtteil.",
+        "detail1": "Offenes Sprachcafé zum ungezwungenen Deutschsprechen",
+        "detail2": "Frauencafé mit Schwerpunkt auf Empowerment und Gesundheit",
+        "detail3": "Niedrigschwellige Beratung und Begleitung zu Behörden und Institutionen"
+      },
+      "kinder": {
+        "badge": "Kinder & Jugend",
+        "title": "Kinder, Jugend und Familie",
+        "desc": "Erlebnis- und Freizeitpädagogik, interkulturelle Ausflüge und verlässliche Tandem-Patenschaften.",
+        "detail1": "Eins-zu-eins Tandem-Patenschaften für Kinder und Jugendliche",
+        "detail2": "Kreative Feriencamps, Sportangebote und Bildungsreisen",
+        "detail3": "Elternberatung und Unterstützung im deutschen Schulsystem"
+      }
+    },
+    "dortmund": {
+      "migration": {
+        "badge": "Netzwerk & Beratung",
+        "title": "Migration und Integration Dortmund",
+        "desc": "Niedrigschwellige Beratung, Lotsenfunktionen und Kulturförderung im Raum Dortmund.",
+        "detail1": "Orientierungsberatung für Neuzugewanderte",
+        "detail2": "Kulturelle Brückenangebote und interkulturelle Workshops",
+        "detail3": "Hilfestellung bei Anträgen, Dokumenten und Behördenkontakten"
+      },
+      "erlebnis": {
+        "badge": "Mentoring & Patenschaft",
+        "title": "Erlebnis- und Freizeitpädagogik",
+        "desc": "Tandem-Patenschaften und Freizeitangebote für Jugendliche zur Förderung von Selbstvertrauen und Vernetzung.",
+        "detail1": "Aufbau stabiler Mentor-Mentee-Beziehungen",
+        "detail2": "Gemeinsame Freizeit- und Kulturaktivitäten in der Region",
+        "detail3": "Förderung von sozialer Kompetenz und Resilienz"
+      }
+    },
+    "berlin": {
+      "migration": {
+        "badge": "Sprache & Begegnung",
+        "title": "Migration und Integration",
+        "desc": "Sprach- und Kulturförderung sowie niedrigschwellige Begleitung für Neuzugewanderte in der Bundeshauptstadt.",
+        "detail1": "Sprachcafé zum ungezwungenen Deutschsprechen",
+        "detail2": "Frauencafé mit Schwerpunkt Empowerment und Gesundheit",
+        "detail3": "Niedrigschwellige Beratung und Begleitung zu Behörden"
+      },
+      "bildung": {
+        "badge": "Bildung & Nachhilfe",
+        "title": "Bildung und Erziehung",
+        "desc": "Kostenfreie Nachhilfe in den Kernfächern Deutsch, Mathematik und Englisch für Schülerinnen und Schüler.",
+        "detail1": "Kostenfreie Nachhilfe in Deutsch, Mathe und Englisch",
+        "detail2": "Hausaufgabenbetreuung und Prüfungsvorbereitung",
+        "detail3": "Mehrsprachige Lernbegleitung für Kinder mit Deutsch als Zweitsprache"
+      },
+      "kinder": {
+        "badge": "Kinder & Jugend",
+        "title": "Kinder, Jugend und Familie",
+        "desc": "Erlebnis- und Freizeitpädagogik für Kinder und Jugendliche sowie verlässliche Tandem-Patenschaften.",
+        "detail1": "Erlebnis- und Freizeitpädagogik für Kinder und Jugendliche",
+        "detail2": "Tandem-Patenschaften als verlässliche Eins-zu-eins Begleitung",
+        "detail3": "Elternberatung und Unterstützung im deutschen Schulsystem"
+      }
+    }
+  },
+  "flyers": {
+    "heading": "Flyer zum Projekt",
+    "none": "Für dieses Handlungsfeld liegt an diesem Standort derzeit kein Flyer zum Download bereit. Sprechen Sie uns an — wir informieren Sie persönlich.",
+    "cta": "Jetzt teilnehmen oder anfragen"
+  },
+  "gallery": {
+    "badge": "Fotogalerie",
+    "heading": "Unsere Aktivitäten in Bildern",
+    "intro": "Eindrücke aus unseren Projekten, Ausflügen, Bildungsangeboten und Stadtteilaktionen an all unseren Standorten.",
+    "filters": {
+      "all": "Alle Standorte",
+      "castrop": "Castrop-Rauxel",
+      "dortmund": "Dortmund",
+      "berlin": "Berlin"
+    },
+    "photos": {
+      "f1": "Lern- und Nachhilfegruppe – Kinder bei der gemeinsamen Hausaufgabenbetreuung",
+      "f2": "Gemeinschaftsaktivität – Kreativworkshop im Stadtteil",
+      "f3": "Frauentreffen & Austausch – Offener Dialog und Unterstützung",
+      "f4": "Sprachförderung vor Ort – Sprachtraining in Kleingruppen",
+      "f5": "Freizeit- und Erlebnispädagogik – Sportliche Aktivität im Freien",
+      "f6": "Kulturelle Feierlichkeit – Begegnung und Zusammenhalt",
+      "f7": "Tandem-Projekt Castrop – Jugendliche im Mentoring-Austausch",
+      "f8": "Netzwerktreffen Dortmund – Koordinierungsgespräche der Patenschaften",
+      "f9": "Beratung & Begleitung Dortmund – Individuelle Orientierungsunterstützung",
+      "f10": "Bundesweite Repräsentanz Berlin – Fachaustausch und Kooperationsgespräche",
+      "f11": "Delegation & Dialog Berlin – Institutioneller Austausch für Integrationsfragen"
+    }
+  },
+  "international": {
+    "hero": {
+      "badge": "EFI International",
+      "title": "Unser Engagement",
+      "highlight": "über Deutschland hinaus.",
+      "description": "Neben unserer Arbeit in Berlin, Castrop-Rauxel und Dortmund begleiten wir Projekte im Ausland. Hier bündeln wir diese internationalen Vorhaben, ihre Partner und die zugehörigen Flyer."
+    },
+    "badge": "Projekte im Ausland",
+    "heading": "Internationale Zusammenarbeit",
+    "intro": "Austausch, Bildungspartnerschaften und Jugendbegegnungen jenseits der deutschen Standorte.",
+    "emptyHeading": "Die Projektseiten werden derzeit aufgebaut",
+    "emptyText": "Unsere internationalen Vorhaben und die dazugehörigen Flyer werden hier in Kürze veröffentlicht. Bis dahin geben wir Ihnen gerne persönlich Auskunft.",
+    "emptyCta": "Kontakt aufnehmen"
+  }
+}
