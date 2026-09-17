@@ -1,20 +1,28 @@
+import { useTranslation } from 'react-i18next';
 import PageMeta from '../i18n/PageMeta';
+import { useLocale } from '../i18n/useLocale';
+import LegalGermanOnlyNotice from '../redesign/components/LegalGermanOnlyNotice';
 import LegalContent from '../redesign/components/LegalContent';
 import PageHero from '../redesign/components/PageHero';
 
 export default function PrivacyPolicy() {
+  const { t } = useTranslation('legal');
+  const locale = useLocale();
   return (
     <div className="w-full bg-[#fbfbfa] text-slate-800">
-      <PageMeta routeId="privacy" />
+      <PageMeta routeId="privacy" canonicalLocale="de" />
       <PageHero
-        badge="Datenschutz"
-        title="Datenschutzerklärung"
-        highlight="nach DSGVO"
-        description="Transparenz und Schutz Ihrer persönlichen Daten: Erfahren Sie, wie wir Daten erheben, verarbeiten und welche Rechte Ihnen zustehen."
+        badge={t('privacy.badge')}
+        title={t('privacy.title')}
+        highlight={t('privacy.highlight')}
+        description={t('privacy.description')}
         breadcrumbs={[{ label: 'Home', routeId: 'home' }]}
       />
 
-      <LegalContent className="bg-white rounded-3xl p-8 sm:p-12 shadow-sm border border-stone-200/80 space-y-10 text-slate-700 text-sm leading-relaxed">
+      {locale !== 'de' && <LegalGermanOnlyNotice />}
+
+      <LegalContent
+        lang="de" className="bg-white rounded-3xl p-8 sm:p-12 shadow-sm border border-stone-200/80 space-y-10 text-slate-700 text-sm leading-relaxed">
         {/* Section 1 */}
         <div className="border-b border-stone-100 pb-8 space-y-4">
           <h2 className="text-xl font-bold text-slate-900">

@@ -1,20 +1,28 @@
+import { useTranslation } from 'react-i18next';
 import PageMeta from '../i18n/PageMeta';
+import { useLocale } from '../i18n/useLocale';
+import LegalGermanOnlyNotice from '../redesign/components/LegalGermanOnlyNotice';
 import LegalContent from '../redesign/components/LegalContent';
 import PageHero from '../redesign/components/PageHero';
 
 export default function Mentions() {
+  const { t } = useTranslation('legal');
+  const locale = useLocale();
   return (
     <div className="w-full bg-[#fbfbfa] text-slate-800">
-      <PageMeta routeId="imprint" />
+      <PageMeta routeId="imprint" canonicalLocale="de" />
       <PageHero
-        badge="Rechtliches"
-        title="Impressum &amp;"
-        highlight="Rechtliche Angaben"
-        description="Angaben zum Verein, Kontaktinformationen und rechtliche Hinweise."
+        badge={t('imprint.badge')}
+        title={t('imprint.title')}
+        highlight={t('imprint.highlight')}
+        description={t('imprint.description')}
         breadcrumbs={[{ label: 'Home', routeId: 'home' }]}
       />
 
-      <LegalContent className="bg-white rounded-3xl p-8 sm:p-12 shadow-sm border border-stone-200/80 space-y-8">
+      {locale !== 'de' && <LegalGermanOnlyNotice />}
+
+      <LegalContent
+        lang="de" className="bg-white rounded-3xl p-8 sm:p-12 shadow-sm border border-stone-200/80 space-y-8">
         <div className="border-b border-stone-100 pb-6">
           <h2 className="text-xl font-bold text-slate-900 mb-2">
             EFI-Engagement für Integration e.V.

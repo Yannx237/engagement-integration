@@ -1,1 +1,18 @@
-{}
+{
+  "imprint": {
+    "badge": "Rechtliches",
+    "title": "Impressum &",
+    "highlight": "Rechtliche Angaben",
+    "description": "Angaben zum Verein, Kontaktinformationen und rechtliche Hinweise."
+  },
+  "privacy": {
+    "badge": "Datenschutz",
+    "title": "Datenschutzerklärung",
+    "highlight": "nach DSGVO",
+    "description": "Transparenz und Schutz Ihrer persönlichen Daten: Erfahren Sie, wie wir Daten erheben, verarbeiten und welche Rechte Ihnen zustehen."
+  },
+  "germanOnly": {
+    "heading": "Nur auf Deutsch verfügbar",
+    "text": "Dieses Dokument ist rechtsverbindlich und liegt ausschließlich in deutscher Sprache vor."
+  }
+}
