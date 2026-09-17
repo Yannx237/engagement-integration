@@ -9,7 +9,8 @@
     "lint": "oxlint",
     "preview": "vite preview",
     "check:markup": "node scripts/check-page-markup.mjs",
-    "test:ui": "node scripts/check-page-interactions.mjs"
+    "test:ui": "node scripts/check-page-interactions.mjs",
+    "check:i18n": "node scripts/check-i18n-keys.mjs"
   },
   "dependencies": {
     "@types/mapbox-gl": "^3.4.1",
