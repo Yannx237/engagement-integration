@@ -80,6 +80,13 @@ export default function HomeLocations() {
                   </div>
                 </div>
               </div>
+              <Link
+                to="/services-for-immigrants?stadt=castrop#standorte"
+                className="mb-4 flex items-center justify-between gap-2 rounded-xl border bg-white px-3.5 py-2.5 text-xs font-bold transition-colors text-brand-800 hover:bg-brand-50 border-brand-200"
+              >
+                <span>Angebote &amp; Flyer in Castrop-Rauxel</span>
+                <span aria-hidden="true">&rarr;</span>
+              </Link>
               <div className="pt-4 border-t border-stone-200/80 flex items-center justify-between">
                 <a
                   href="https://wa.me/491773218743"
@@ -147,6 +154,13 @@ export default function HomeLocations() {
                   </div>
                 </div>
               </div>
+              <Link
+                to="/services-for-immigrants?stadt=dortmund#standorte"
+                className="mb-4 flex items-center justify-between gap-2 rounded-xl border bg-white px-3.5 py-2.5 text-xs font-bold transition-colors text-sky-800 hover:bg-sky-50 border-sky-200"
+              >
+                <span>Angebote &amp; Flyer in Dortmund</span>
+                <span aria-hidden="true">&rarr;</span>
+              </Link>
               <div className="pt-4 border-t border-stone-200/80 flex items-center justify-between">
                 <a
                   href="mailto:info@engagement-integration.de"
@@ -212,6 +226,13 @@ export default function HomeLocations() {
                   </div>
                 </div>
               </div>
+              <Link
+                to="/services-for-immigrants?stadt=berlin#standorte"
+                className="mb-4 flex items-center justify-between gap-2 rounded-xl border bg-white px-3.5 py-2.5 text-xs font-bold transition-colors text-amber-900 hover:bg-amber-50 border-amber-200"
+              >
+                <span>Angebote &amp; Flyer in Berlin</span>
+                <span aria-hidden="true">&rarr;</span>
+              </Link>
               <div className="pt-4 border-t border-stone-200/80 flex items-center justify-between">
                 <Link
                   to="/news"

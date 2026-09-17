@@ -28,8 +28,8 @@ export default function RedesignHeader() {
       <div className="hidden lg:block max-w-7xl mx-auto px-4 xl:px-8 relative">
         <div className="flex items-center justify-between h-20">
 
-          {/* Left Navigation Links: Home, Über uns, Unsere Projekte */}
-          <nav aria-label="Hauptnavigation Links" className="flex-1 flex items-center justify-end gap-6 xl:gap-10 pr-8 xl:pr-14" data-purpose="primary-navigation-left">
+          {/* Left Navigation Links: Home, Über uns, Unsere Projekte, International */}
+          <nav aria-label="Hauptnavigation Links" className="flex-1 flex items-center justify-end gap-5 xl:gap-9 pr-6 xl:pr-12" data-purpose="primary-navigation-left">
             <NavLink 
               to="/"
               end
@@ -49,6 +49,12 @@ export default function RedesignHeader() {
             >
               Unsere Projekte
             </NavLink>
+            <NavLink 
+              to="/international"
+              className={desktopNavLinkClass}
+            >
+              International
+            </NavLink>
           </nav>
 
           {/* Center Logo Slot: Guaranteed space, large logo overflowing downward */}
@@ -65,9 +71,9 @@ export default function RedesignHeader() {
           </div>
 
           {/* Right Navigation Links & Buttons: Neuigkeiten, Kontakt + Spenden, Mitglied werden */}
-          <div className="flex-1 flex items-center justify-between pl-8 xl:pl-14" data-purpose="primary-navigation-right">
-            <nav className="flex items-center gap-6 xl:gap-10">
-              <NavLink 
+          <div className="flex-1 flex items-center justify-between gap-6 xl:gap-10 pl-6 xl:pl-12" data-purpose="primary-navigation-right">
+            <nav className="flex items-center gap-5 xl:gap-9">
+              <NavLink
                 to="/news"
                 className={desktopNavLinkClass}
               >
@@ -166,9 +172,16 @@ export default function RedesignHeader() {
           >
             Unsere Projekte
           </NavLink>
-          <NavLink 
-            to="/news" 
-            onClick={() => setIsMobileMenuOpen(false)} 
+          <NavLink
+            to="/international"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className={mobileNavLinkClass}
+          >
+            EFI International
+          </NavLink>
+          <NavLink
+            to="/news"
+            onClick={() => setIsMobileMenuOpen(false)}
             className={mobileNavLinkClass}
           >
             Neuigkeiten

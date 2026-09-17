@@ -2,7 +2,7 @@ import HomeHero from './components/home/HomeHero';
 import HomeMission from './components/home/HomeMission';
 import HomeAreas from './components/home/HomeAreas';
 import HomeProjects from './components/home/HomeProjects';
-import HomePartners from './components/home/HomePartners';
+import PartnersStrip from './components/PartnersStrip';
 import HomeJoinBanner from './components/home/HomeJoinBanner';
 import HomeLocations from './components/home/HomeLocations';
 import HomeContact from './components/home/HomeContact';
@@ -20,7 +20,7 @@ export default function RedesignHome() {
 
         <HomeProjects />
 
-        <HomePartners />
+        <PartnersStrip />
 
         <HomeJoinBanner />
 

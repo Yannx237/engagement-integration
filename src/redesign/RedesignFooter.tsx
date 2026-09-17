@@ -31,6 +31,7 @@ export default function RedesignFooter() {
               <li><Link className="hover:text-white transition-colors" to="/">Startseite</Link></li>
               <li><Link className="hover:text-white transition-colors" to="/about-us">Über uns &amp; Team</Link></li>
               <li><Link className="hover:text-white transition-colors" to="/services-for-immigrants">Unsere Projekte</Link></li>
+              <li><Link className="hover:text-white transition-colors" to="/international">EFI International</Link></li>
               <li><Link className="hover:text-white transition-colors" to="/news">Neuigkeiten &amp; Presse</Link></li>
               <li><Link className="hover:text-white transition-colors" to="/contact">Kontakt &amp; Beratung</Link></li>
               <li><Link className="hover:text-white transition-colors" to="/contact?thema=spende#spenden">Spenden &amp; Fördern</Link></li>

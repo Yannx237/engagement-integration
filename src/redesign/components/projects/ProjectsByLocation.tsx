@@ -1,59 +1,134 @@
+import { useSearchParams } from 'react-router-dom';
 import ProjectCard from './ProjectCard';
-import { useState } from 'react';
-import { castropProjects, dortmundProjects } from '../../data/projects';
+import { cities } from '../../data/projects';
+import type { ProjectLocation } from '../../data/projects';
+
+const DEFAULT_CITY: ProjectLocation = 'castrop';
+
+// Same accent colours as the legend of the Standorte globe on the home page.
+const cityAccent: Record<ProjectLocation, { dot: string; ring: string }> = {
+  berlin: { dot: 'bg-amber-700', ring: 'ring-amber-700/30' },
+  castrop: { dot: 'bg-brand-700', ring: 'ring-brand-700/30' },
+  dortmund: { dot: 'bg-sky-700', ring: 'ring-sky-700/30' },
+};
+
 export default function ProjectsByLocation() {
-  const [selectedLocation, setSelectedLocation] = useState<
-    'castrop' | 'dortmund'
-  >('castrop');
+  const [searchParams, setSearchParams] = useSearchParams();
+  const requested = searchParams.get('stadt');
+  const selected =
+    cities.find((city) => city.id === requested) ??
+    cities.find((city) => city.id === DEFAULT_CITY)!;
+
+  function selectCity(id: ProjectLocation) {
+    const next = new URLSearchParams(searchParams);
+    next.set('stadt', id);
+    setSearchParams(next, { replace: true });
+  }
+
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+    <section
+      id="standorte"
+      className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 scroll-mt-28"
+      data-purpose="locations-and-fields-of-action"
+    >
       <div className="text-center max-w-3xl mx-auto mb-12">
-        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-100 text-brand-800 text-xs font-bold uppercase tracking-wider mb-3">
-          Handlungsfelder nach Standort
+        <span className="text-xs font-bold text-brand-700 uppercase tracking-[0.2em] block mb-3">
+          Unsere Standorte
         </span>
         <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-          Gezielte Unterstützung genau dort, wo sie gebraucht wird
+          Vor Ort aktiv in Berlin, Castrop-Rauxel und Dortmund
         </h2>
         <p className="text-slate-600 text-base mt-3">
-          Wählen Sie einen unserer Hauptstandorte, um die spezifischen Programme
-          und Angebote kennenzulernen.
+          Wählen Sie zuerst einen Standort. Anschließend sehen Sie die dortigen
+          Handlungsfelder und die zugehörigen Flyer.
         </p>
-
-        {/* Location Toggle Tabs */}
-        <div className="inline-flex p-1.5 rounded-full bg-stone-200/80 border border-stone-300/80 mt-8 gap-1">
-          <button
-            type="button"
-            onClick={() => setSelectedLocation('castrop')}
-            className={`px-6 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all ${
-              selectedLocation === 'castrop'
-                ? 'bg-brand-700 text-white shadow-md'
-                : 'text-slate-700 hover:text-brand-800'
-            }`}
-          >
-            Castrop-Rauxel (Zentrum)
-          </button>
-          <button
-            type="button"
-            onClick={() => setSelectedLocation('dortmund')}
-            className={`px-6 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all ${
-              selectedLocation === 'dortmund'
-                ? 'bg-brand-700 text-white shadow-md'
-                : 'text-slate-700 hover:text-brand-800'
-            }`}
-          >
-            Dortmund (Netzwerk-Hub)
-          </button>
-        </div>
       </div>
 
-      {/* Project Cards Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
-        {(selectedLocation === 'castrop'
-          ? castropProjects
-          : dortmundProjects
-        ).map((project) => (
-          <ProjectCard key={project.title} project={project} />
-        ))}
+      {/* Step 1 — pick a city */}
+      <div
+        className="grid grid-cols-1 sm:grid-cols-3 gap-5 sm:gap-6 max-w-4xl mx-auto"
+        role="group"
+        aria-label="Standort auswählen"
+      >
+        {cities.map((city) => {
+          const isActive = city.id === selected.id;
+          const accent = cityAccent[city.id];
+          return (
+            <button
+              key={city.id}
+              type="button"
+              onClick={() => selectCity(city.id)}
+              aria-pressed={isActive}
+              className={`rounded-3xl border p-6 text-center transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600 ${
+                isActive
+                  ? `bg-white border-brand-600 shadow-lg ring-2 ${accent.ring}`
+                  : 'bg-white/70 border-stone-200 hover:border-brand-400 hover:shadow-md'
+              }`}
+            >
+              <span
+                className={`w-12 h-12 mx-auto mb-4 rounded-2xl flex items-center justify-center text-white ${accent.dot}`}
+                aria-hidden="true"
+              >
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                </svg>
+              </span>
+              <span className="block text-lg font-bold text-slate-900">
+                {city.name}
+              </span>
+              <span className="block text-xs text-slate-500 mt-1 leading-relaxed">
+                {city.tagline}
+              </span>
+              <span
+                className={`mt-4 inline-flex items-center justify-center w-full px-4 py-2.5 rounded-full text-xs font-bold transition-colors ${
+                  isActive
+                    ? 'bg-brand-700 text-white'
+                    : 'bg-stone-100 text-brand-900'
+                }`}
+              >
+                {isActive ? 'Ausgewählt' : city.name}
+              </span>
+            </button>
+          );
+        })}
+      </div>
+
+      {/* Step 2 — the fields of action of the selected city */}
+      <div className="mt-16">
+        <div className="text-center max-w-3xl mx-auto mb-10">
+          <span className="text-xs font-bold text-slate-500 uppercase tracking-[0.2em] block mb-2">
+            Handlungsfelder in
+          </span>
+          <h3 className="text-2xl sm:text-3xl font-extrabold text-brand-700 tracking-tight">
+            {selected.name}
+          </h3>
+          <p className="text-sm text-slate-600 mt-2">{selected.address}</p>
+        </div>
+
+        <div
+          key={selected.id}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          {selected.domains.map((domain) => (
+            <ProjectCard key={domain.title} project={domain} />
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -1,8 +1,15 @@
 import type { ReactNode } from 'react';
 
-export type ProjectLocation = 'castrop' | 'dortmund';
-export type GalleryLocation = ProjectLocation | 'berlin';
+export type ProjectLocation = 'berlin' | 'castrop' | 'dortmund';
+export type GalleryLocation = ProjectLocation;
 export type GalleryFilter = GalleryLocation | 'all';
+
+// A downloadable project flyer. `file` is a path under /assets/flyers/<stadt>/.
+export interface Flyer {
+  title: string;
+  file: string;
+  note?: string;
+}
 
 export interface Project {
   badge: string;
@@ -11,6 +18,10 @@ export interface Project {
   details: readonly string[];
   iconBg: string;
   icon: ReactNode;
+  // Flyers belong to one city and one field of action. A field without its own
+  // document stays empty and offers a contact route instead — flyers are never
+  // borrowed from another city.
+  flyers?: readonly Flyer[];
 }
 
 export interface ActivityPhoto {
@@ -160,6 +171,120 @@ export const dortmundProjects: readonly Project[] = [
         />
       </svg>
     ),
+  },
+];
+
+export const berlinProjects: readonly Project[] = [
+  {
+    badge: 'Sprache & Begegnung',
+    title: 'Migration und Integration',
+    desc: 'Sprach- und Kulturförderung sowie niedrigschwellige Begleitung für Neuzugewanderte in der Bundeshauptstadt.',
+    details: [
+      'Sprachcafé zum ungezwungenen Deutschsprechen',
+      'Frauencafé mit Schwerpunkt Empowerment und Gesundheit',
+      'Niedrigschwellige Beratung und Begleitung zu Behörden',
+    ],
+    iconBg: 'bg-lime-50 text-lime-800 border-lime-200',
+    icon: (
+      <svg
+        className="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
+        />
+      </svg>
+    ),
+  },
+  {
+    badge: 'Bildung & Nachhilfe',
+    title: 'Bildung und Erziehung',
+    desc: 'Kostenfreie Nachhilfe in den Kernfächern Deutsch, Mathematik und Englisch für Schülerinnen und Schüler.',
+    details: [
+      'Kostenfreie Nachhilfe in Deutsch, Mathe und Englisch',
+      'Hausaufgabenbetreuung und Prüfungsvorbereitung',
+      'Mehrsprachige Lernbegleitung für Kinder mit Deutsch als Zweitsprache',
+    ],
+    iconBg: 'bg-emerald-50 text-emerald-700 border-emerald-100',
+    icon: (
+      <svg
+        className="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+        />
+      </svg>
+    ),
+  },
+  {
+    badge: 'Kinder & Jugend',
+    title: 'Kinder, Jugend und Familie',
+    desc: 'Erlebnis- und Freizeitpädagogik für Kinder und Jugendliche sowie verlässliche Tandem-Patenschaften.',
+    details: [
+      'Erlebnis- und Freizeitpädagogik für Kinder und Jugendliche',
+      'Tandem-Patenschaften als verlässliche Eins-zu-eins Begleitung',
+      'Elternberatung und Unterstützung im deutschen Schulsystem',
+    ],
+    iconBg: 'bg-brand-50 text-brand-800 border-brand-100',
+    icon: (
+      <svg
+        className="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+        />
+      </svg>
+    ),
+  },
+];
+
+export interface City {
+  id: ProjectLocation;
+  name: string;
+  tagline: string;
+  address: string;
+  domains: readonly Project[];
+}
+
+// One entry per city; the fields of action follow from the chosen city.
+export const cities: readonly City[] = [
+  {
+    id: 'berlin',
+    name: 'Berlin',
+    tagline: 'Dialog- und Netzwerkpräsenz in der Bundeshauptstadt',
+    address: 'Berlin',
+    domains: berlinProjects,
+  },
+  {
+    id: 'castrop',
+    name: 'Castrop-Rauxel',
+    tagline: 'Begegnungszentrum Merklinde',
+    address: 'Wittener Str. 322B, 44577 Castrop-Rauxel',
+    domains: castropProjects,
+  },
+  {
+    id: 'dortmund',
+    name: 'Dortmund',
+    tagline: 'Projekt-Hub und Netzwerkarbeit',
+    address: 'Klarastr. 19, 44388 Dortmund',
+    domains: dortmundProjects,
   },
 ];
 

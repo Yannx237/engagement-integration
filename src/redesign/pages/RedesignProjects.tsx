@@ -1,6 +1,7 @@
 import ProjectsByLocation from '../components/projects/ProjectsByLocation';
 import ProjectGallery from '../components/projects/ProjectGallery';
 import PageHero from '../components/PageHero';
+import PartnersStrip from '../components/PartnersStrip';
 import ShareCTA from '../components/ShareCTA';
 
 export default function RedesignProjects() {
@@ -14,13 +15,16 @@ export default function RedesignProjects() {
         description="Als gemeinnützige Migrantenselbstorganisation fördern wir gesellschaftliche Teilhabe durch zielgerichtete Handlungsfelder: von kostenfreier Nachhilfe über Sprachförderung bis zu individuellen Tandem-Patenschaften in NRW und darüber hinaus."
       />
 
-      {/* 2. Handlungsfelder & Projekte nach Standort */}
+      {/* 2. Standort → Handlungsfeld → Flyer */}
       <ProjectsByLocation />
 
       {/* 3. Unsere Aktivitäten in Bildern (Authentic Gallery with f1.png to f11.png) */}
       <ProjectGallery />
 
-      {/* 4. Reusable Share CTA */}
+      {/* 4. Gemeinsamer Partnerblock */}
+      <PartnersStrip />
+
+      {/* 5. Reusable Share CTA */}
       <ShareCTA />
     </div>
   );
