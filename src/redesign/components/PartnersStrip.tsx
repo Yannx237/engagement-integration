@@ -46,36 +46,28 @@ const partners: readonly { src: string; alt: string; title: string }[] = [
     title: 'Bundesministerium für Familie, Senioren, Frauen und Jugend',
   },
   {
-    src: '/assets/images/logo-bmz.png',
+    src: '/assets/images/logo-bmz.jpg',
     alt: 'Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung',
     title:
       'Mit Mitteln des Bundesministeriums für wirtschaftliche Zusammenarbeit und Entwicklung',
   },
   {
-    src: '/assets/images/logo-engagement-global.png',
+    src: '/assets/images/logo-engagement-global.jpg',
     alt: 'Engagement Global',
     title: 'Engagement Global – Service für Entwicklungsinitiativen',
   },
   {
-    src: '/assets/images/logo-deutsch-afrikanisches-jugendwerk.png',
+    src: '/assets/images/logo-deutsch-afrikanisches-jugendwerk.jpg',
     alt: 'Deutsch-Afrikanisches Jugendwerk',
     title: 'Deutsch-Afrikanisches Jugendwerk',
   },
   {
-    src: '/assets/images/logo-bezirksamt-steglitz-zehlendorf.png',
+    src: '/assets/images/logo-bezirksamt-steglitz-zehlendorf.jpg',
     alt: 'Bezirksamt Steglitz-Zehlendorf, Berlin',
     title: 'Bezirksamt Steglitz-Zehlendorf, Berlin',
   },
 ];
 
-/**
- * The last four tiles reference files that are not in the repository yet
- * (logo-bmz.png, logo-engagement-global.png,
- * logo-deutsch-afrikanisches-jugendwerk.png,
- * logo-bezirksamt-steglitz-zehlendorf.png). PartnerLogo keeps a tile out of
- * the layout until its image loads, so they cost nothing until the files are
- * dropped into public/assets/images — at which point they simply appear.
- */
 /**
  * A tile stays out of the layout until its image has actually loaded. A logo
  * whose file is not in the repository yet therefore shows nothing at all,
