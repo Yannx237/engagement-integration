@@ -49,28 +49,28 @@
       "title": "Begleitung",
       "description": "<strong>Sprachmittlung & Alltagsorientierung:</strong> Geschulte ehrenamtliche Begleitpersonen zur Überwindung sprachlicher Barrieren bei Behördengängen, Arztbesuchen, Kitas und Schulen.",
       "badge": "Sprachmittlung",
-      "action": "Begleitung anfragen →"
+      "action": "Begleitung anfragen"
     },
     "beratung": {
       "pillar": "Säule 02",
       "title": "Beratung",
       "description": "<strong>Allgemeine Sozialberatung:</strong> Niedrigschwellige Unterstützung bei behördlichen Anträgen (Bürgeramt, Ausländerbehörde, Jobcenter-Online), Erstberatung und Verweisung an Fachstellen.",
       "badge": "Kostenfrei",
-      "action": "Termin buchen →"
+      "action": "Termin buchen"
     },
     "begegnung": {
       "pillar": "Säule 03",
       "title": "Begegnung",
       "description": "<strong>Tanz, Frauencafé & Dialog:</strong> Offene und geschützte Begegnungsräume im Begegnungszentrum Merklinde zum Austausch auf Augenhöhe, gegenseitigen Kennenlernen und Abbau von Vorurteilen.",
       "badge": "Frauencafé",
-      "action": "Mehr erfahren →"
+      "action": "Mehr erfahren"
     },
     "bildung": {
       "pillar": "Säule 04",
       "title": "Bildung",
       "description": "<strong>Nachhilfe, Sprachcafé & Workshops:</strong> Kostenfreie Hausaufgabenbetreuung für Schüler, alltagsbezogene Sprachförderung und praxisnahe Seminare für digitale Grundbildung.",
       "badge": "Nachhilfe & Kurse",
-      "action": "Angebote ansehen →"
+      "action": "Angebote ansehen"
     }
   },
   "join": {

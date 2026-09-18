@@ -49,28 +49,28 @@
       "title": "Support",
       "description": "<strong>Language mediation & everyday orientation:</strong> trained volunteers who help overcome language barriers at public offices, doctors' appointments, nurseries and schools.",
       "badge": "Language mediation",
-      "action": "Request support →"
+      "action": "Request support"
     },
     "beratung": {
       "pillar": "Pillar 02",
       "title": "Advice",
       "description": "<strong>General social advice:</strong> accessible help with official applications (citizens' office, immigration office, Jobcenter online), initial guidance and referral to specialist services.",
       "badge": "Free of charge",
-      "action": "Book an appointment →"
+      "action": "Book an appointment"
     },
     "begegnung": {
       "pillar": "Pillar 03",
       "title": "Encounter",
       "description": "<strong>Dance, women's café & dialogue:</strong> open and protected spaces at the Begegnungszentrum Merklinde to meet as equals, get to know one another and take down prejudice.",
       "badge": "Women's café",
-      "action": "Find out more →"
+      "action": "Find out more"
     },
     "bildung": {
       "pillar": "Pillar 04",
       "title": "Education",
       "description": "<strong>Tutoring, language café & workshops:</strong> free homework support for pupils, everyday language practice and hands-on seminars in basic digital skills.",
       "badge": "Tutoring & courses",
-      "action": "See what we offer →"
+      "action": "See what we offer"
     }
   },
   "join": {

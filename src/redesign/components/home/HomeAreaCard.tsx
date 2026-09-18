@@ -15,13 +15,19 @@ export default function HomeAreaCard({ item }: { item: HomeArea }) {
           <Trans i18nKey={`areas.${item.id}.description`} ns="home" />
         </p>
       </div>
-      <div className="pt-5 border-t border-stone-100 flex items-center justify-between">
-        <span className={item.badgeClass}>{t(`areas.${item.id}.badge`)}</span>
+      {/* Wraps as a row rather than letting each label break: English labels are
+          longer than the German ones, and a pill split over two lines or a lone
+          arrow on its own line both read as a mistake. */}
+      <div className="pt-5 border-t border-stone-100 flex flex-wrap items-center justify-between gap-3">
+        <span className={`${item.badgeClass} whitespace-nowrap`}>
+          {t(`areas.${item.id}.badge`)}
+        </span>
         <a
-          className="inline-flex items-center text-xs font-bold text-brand-700 hover:text-brand-950 group-hover:translate-x-1 transition-transform"
+          className="inline-flex items-center gap-1 whitespace-nowrap text-xs font-bold text-brand-700 hover:text-brand-950 group-hover:translate-x-1 transition-transform"
           href="#kontakt"
         >
           {t(`areas.${item.id}.action`)}
+          <span aria-hidden="true">&rarr;</span>
         </a>
       </div>
     </div>
