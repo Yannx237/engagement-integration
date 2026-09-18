@@ -41,9 +41,25 @@ export default function AboutPartners() {
             src: '/assets/images/image-8.png',
             alt: 'Bundesministerium für Familie, Senioren, Frauen und Jugend',
           },
-        ].map((partner, i) => (
+          {
+            src: '/assets/images/logo-bmz.jpg',
+            alt: 'Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung',
+          },
+          {
+            src: '/assets/images/logo-engagement-global.jpg',
+            alt: 'Engagement Global',
+          },
+          {
+            src: '/assets/images/logo-deutsch-afrikanisches-jugendwerk.jpg',
+            alt: 'Deutsch-Afrikanisches Jugendwerk',
+          },
+          {
+            src: '/assets/images/logo-bezirksamt-steglitz-zehlendorf.jpg',
+            alt: 'Bezirksamt Steglitz-Zehlendorf, Berlin',
+          },
+        ].map((partner) => (
           <div
-            key={i}
+            key={partner.src}
             className="w-full h-24 p-4 rounded-2xl bg-white border border-stone-200/80 shadow-sm flex items-center justify-center hover:border-brand-500 transition-colors"
           >
             <img

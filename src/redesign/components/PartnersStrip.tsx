@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 // One shared partner block for the whole site: every logo is listed here once,
@@ -68,42 +67,6 @@ const partners: readonly { src: string; alt: string; title: string }[] = [
   },
 ];
 
-/**
- * A tile stays out of the layout until its image has actually loaded. A logo
- * whose file is not in the repository yet therefore shows nothing at all,
- * rather than a broken image that only disappears once the browser has tried
- * and failed to fetch it. Drop the file in and the logo appears.
- *
- * Loading is eager on purpose: a lazy image inside a hidden tile would never
- * enter the viewport, so it would never load and the tile would never appear.
- */
-function PartnerLogo({
-  partner,
-}: {
-  partner: { src: string; alt: string; title: string };
-}) {
-  const [loaded, setLoaded] = useState(false);
-  return (
-    <li
-      hidden={!loaded}
-      className="h-24 p-3 rounded-2xl border border-stone-200 bg-white flex items-center justify-center hover:border-brand-500/40 hover:shadow-md transition-all shadow-sm"
-      title={partner.title}
-    >
-      <img
-        src={partner.src}
-        alt={partner.alt}
-        decoding="async"
-        className="max-h-14 max-w-full object-contain"
-        onLoad={(event) => setLoaded(event.currentTarget.naturalWidth > 0)}
-        ref={(element) => {
-          // A cached image can finish before React attaches onLoad.
-          if (element?.complete && element.naturalWidth > 0) setLoaded(true);
-        }}
-      />
-    </li>
-  );
-}
-
 export default function PartnersStrip() {
   const { t } = useTranslation();
   return (
@@ -127,7 +90,19 @@ export default function PartnersStrip() {
 
         <ul className="grid grid-cols-2 sm:grid-cols-4 xl:grid-cols-8 gap-4 sm:gap-6 items-center">
           {partners.map((partner) => (
-            <PartnerLogo key={partner.src} partner={partner} />
+            <li
+              key={partner.src}
+              className="h-24 p-3 rounded-2xl border border-stone-200 bg-white flex items-center justify-center hover:border-brand-500/40 hover:shadow-md transition-all shadow-sm"
+              title={partner.title}
+            >
+              <img
+                src={partner.src}
+                alt={partner.alt}
+                loading="lazy"
+                decoding="async"
+                className="max-h-14 max-w-full object-contain"
+              />
+            </li>
           ))}
         </ul>
       </div>
