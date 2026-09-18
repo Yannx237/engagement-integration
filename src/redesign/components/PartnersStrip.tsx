@@ -1,3 +1,4 @@
+import type { SyntheticEvent } from 'react';
 import { useTranslation } from 'react-i18next';
 
 // One shared partner block for the whole site: every logo is listed here once,
@@ -44,10 +45,37 @@ const partners: readonly { src: string; alt: string; title: string }[] = [
     alt: 'Bundesministerium für Familie, Senioren, Frauen und Jugend',
     title: 'Bundesministerium für Familie, Senioren, Frauen und Jugend',
   },
+  {
+    src: '/assets/images/logo-bmz.png',
+    alt: 'Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung',
+    title:
+      'Mit Mitteln des Bundesministeriums für wirtschaftliche Zusammenarbeit und Entwicklung',
+  },
+  {
+    src: '/assets/images/logo-engagement-global.png',
+    alt: 'Engagement Global',
+    title: 'Engagement Global – Service für Entwicklungsinitiativen',
+  },
+  {
+    src: '/assets/images/logo-deutsch-afrikanisches-jugendwerk.png',
+    alt: 'Deutsch-Afrikanisches Jugendwerk',
+    title: 'Deutsch-Afrikanisches Jugendwerk',
+  },
+  {
+    src: '/assets/images/logo-bezirksamt-steglitz-zehlendorf.png',
+    alt: 'Bezirksamt Steglitz-Zehlendorf, Berlin',
+    title: 'Bezirksamt Steglitz-Zehlendorf, Berlin',
+  },
 ];
 
 export default function PartnersStrip() {
   const { t } = useTranslation();
+
+  // A logo whose file is not in place yet hides its tile rather than showing a
+  // broken image. Drop the file in and it appears; nothing else to change.
+  function hideOnMissingFile(event: SyntheticEvent<HTMLImageElement>) {
+    event.currentTarget.closest('li')?.setAttribute('hidden', '');
+  }
   return (
     <section
       className="py-20 bg-white scroll-mt-28"
@@ -79,6 +107,7 @@ export default function PartnersStrip() {
                 alt={partner.alt}
                 loading="lazy"
                 decoding="async"
+                onError={hideOnMissingFile}
                 className="max-h-14 max-w-full object-contain"
               />
             </li>
