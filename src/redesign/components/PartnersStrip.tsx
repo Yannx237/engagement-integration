@@ -1,4 +1,4 @@
-import type { SyntheticEvent } from 'react';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 // One shared partner block for the whole site: every logo is listed here once,
@@ -45,37 +45,57 @@ const partners: readonly { src: string; alt: string; title: string }[] = [
     alt: 'Bundesministerium für Familie, Senioren, Frauen und Jugend',
     title: 'Bundesministerium für Familie, Senioren, Frauen und Jugend',
   },
-  {
-    src: '/assets/images/logo-bmz.png',
-    alt: 'Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung',
-    title:
-      'Mit Mitteln des Bundesministeriums für wirtschaftliche Zusammenarbeit und Entwicklung',
-  },
-  {
-    src: '/assets/images/logo-engagement-global.png',
-    alt: 'Engagement Global',
-    title: 'Engagement Global – Service für Entwicklungsinitiativen',
-  },
-  {
-    src: '/assets/images/logo-deutsch-afrikanisches-jugendwerk.png',
-    alt: 'Deutsch-Afrikanisches Jugendwerk',
-    title: 'Deutsch-Afrikanisches Jugendwerk',
-  },
-  {
-    src: '/assets/images/logo-bezirksamt-steglitz-zehlendorf.png',
-    alt: 'Bezirksamt Steglitz-Zehlendorf, Berlin',
-    title: 'Bezirksamt Steglitz-Zehlendorf, Berlin',
-  },
 ];
+
+/**
+ * Still to add, once the image files are in public/assets/images. A tile is
+ * only listed above when its file exists: referencing a missing one renders a
+ * broken image before any script can react to it.
+ *
+ *   logo-bmz.png                              Bundesministerium für wirtschaftliche
+ *                                             Zusammenarbeit und Entwicklung
+ *   logo-engagement-global.png                Engagement Global
+ *   logo-deutsch-afrikanisches-jugendwerk.png Deutsch-Afrikanisches Jugendwerk
+ *   logo-bezirksamt-steglitz-zehlendorf.png   Bezirksamt Steglitz-Zehlendorf
+ */
+/**
+ * A tile stays out of the layout until its image has actually loaded. A logo
+ * whose file is not in the repository yet therefore shows nothing at all,
+ * rather than a broken image that only disappears once the browser has tried
+ * and failed to fetch it. Drop the file in and the logo appears.
+ *
+ * Loading is eager on purpose: a lazy image inside a hidden tile would never
+ * enter the viewport, so it would never load and the tile would never appear.
+ */
+function PartnerLogo({
+  partner,
+}: {
+  partner: { src: string; alt: string; title: string };
+}) {
+  const [loaded, setLoaded] = useState(false);
+  return (
+    <li
+      hidden={!loaded}
+      className="h-24 p-3 rounded-2xl border border-stone-200 bg-white flex items-center justify-center hover:border-brand-500/40 hover:shadow-md transition-all shadow-sm"
+      title={partner.title}
+    >
+      <img
+        src={partner.src}
+        alt={partner.alt}
+        decoding="async"
+        className="max-h-14 max-w-full object-contain"
+        onLoad={(event) => setLoaded(event.currentTarget.naturalWidth > 0)}
+        ref={(element) => {
+          // A cached image can finish before React attaches onLoad.
+          if (element?.complete && element.naturalWidth > 0) setLoaded(true);
+        }}
+      />
+    </li>
+  );
+}
 
 export default function PartnersStrip() {
   const { t } = useTranslation();
-
-  // A logo whose file is not in place yet hides its tile rather than showing a
-  // broken image. Drop the file in and it appears; nothing else to change.
-  function hideOnMissingFile(event: SyntheticEvent<HTMLImageElement>) {
-    event.currentTarget.closest('li')?.setAttribute('hidden', '');
-  }
   return (
     <section
       className="py-20 bg-white scroll-mt-28"
@@ -97,20 +117,7 @@ export default function PartnersStrip() {
 
         <ul className="grid grid-cols-2 sm:grid-cols-4 xl:grid-cols-8 gap-4 sm:gap-6 items-center">
           {partners.map((partner) => (
-            <li
-              key={partner.src}
-              className="h-24 p-3 rounded-2xl border border-stone-200 bg-white flex items-center justify-center hover:border-brand-500/40 hover:shadow-md transition-all shadow-sm"
-              title={partner.title}
-            >
-              <img
-                src={partner.src}
-                alt={partner.alt}
-                loading="lazy"
-                decoding="async"
-                onError={hideOnMissingFile}
-                className="max-h-14 max-w-full object-contain"
-              />
-            </li>
+            <PartnerLogo key={partner.src} partner={partner} />
           ))}
         </ul>
       </div>
