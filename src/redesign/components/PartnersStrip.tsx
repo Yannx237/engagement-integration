@@ -45,18 +45,36 @@ const partners: readonly { src: string; alt: string; title: string }[] = [
     alt: 'Bundesministerium für Familie, Senioren, Frauen und Jugend',
     title: 'Bundesministerium für Familie, Senioren, Frauen und Jugend',
   },
+  {
+    src: '/assets/images/logo-bmz.png',
+    alt: 'Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung',
+    title:
+      'Mit Mitteln des Bundesministeriums für wirtschaftliche Zusammenarbeit und Entwicklung',
+  },
+  {
+    src: '/assets/images/logo-engagement-global.png',
+    alt: 'Engagement Global',
+    title: 'Engagement Global – Service für Entwicklungsinitiativen',
+  },
+  {
+    src: '/assets/images/logo-deutsch-afrikanisches-jugendwerk.png',
+    alt: 'Deutsch-Afrikanisches Jugendwerk',
+    title: 'Deutsch-Afrikanisches Jugendwerk',
+  },
+  {
+    src: '/assets/images/logo-bezirksamt-steglitz-zehlendorf.png',
+    alt: 'Bezirksamt Steglitz-Zehlendorf, Berlin',
+    title: 'Bezirksamt Steglitz-Zehlendorf, Berlin',
+  },
 ];
 
 /**
- * Still to add, once the image files are in public/assets/images. A tile is
- * only listed above when its file exists: referencing a missing one renders a
- * broken image before any script can react to it.
- *
- *   logo-bmz.png                              Bundesministerium für wirtschaftliche
- *                                             Zusammenarbeit und Entwicklung
- *   logo-engagement-global.png                Engagement Global
- *   logo-deutsch-afrikanisches-jugendwerk.png Deutsch-Afrikanisches Jugendwerk
- *   logo-bezirksamt-steglitz-zehlendorf.png   Bezirksamt Steglitz-Zehlendorf
+ * The last four tiles reference files that are not in the repository yet
+ * (logo-bmz.png, logo-engagement-global.png,
+ * logo-deutsch-afrikanisches-jugendwerk.png,
+ * logo-bezirksamt-steglitz-zehlendorf.png). PartnerLogo keeps a tile out of
+ * the layout until its image loads, so they cost nothing until the files are
+ * dropped into public/assets/images — at which point they simply appear.
  */
 /**
  * A tile stays out of the layout until its image has actually loaded. A logo
