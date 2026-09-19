@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import PageMeta from '../../i18n/PageMeta';
-import { LocalizedLink } from '../../i18n/LocalizedLink';
+import InternationalPartnership from '../components/international/InternationalPartnership';
 import PageHero from '../components/PageHero';
 import ProjectCard from '../components/projects/ProjectCard';
 import PartnersStrip from '../components/PartnersStrip';
@@ -32,47 +32,18 @@ export default function RedesignInternational() {
           </p>
         </div>
 
-        {internationalProjects.length > 0 ? (
+        {/* Structured projects, once there are any. The partnership block below
+            carries the page on its own until then, so no placeholder here. */}
+        {internationalProjects.length > 0 && (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {internationalProjects.map((project) => (
               <ProjectCard key={project.fieldPath} project={project} />
             ))}
           </div>
-        ) : (
-          <div className="max-w-2xl mx-auto rounded-3xl bg-white border border-stone-200/80 shadow-sm p-8 sm:p-12 text-center space-y-4">
-            <div
-              className="w-14 h-14 mx-auto rounded-2xl bg-brand-50 text-brand-800 border border-brand-100 flex items-center justify-center"
-              aria-hidden="true"
-            >
-              <svg
-                className="w-7 h-7"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
-                />
-              </svg>
-            </div>
-            <h3 className="text-xl font-bold text-slate-900">
-              {t('international.emptyHeading')}
-            </h3>
-            <p className="text-sm text-slate-600 leading-relaxed">
-              {t('international.emptyText')}
-            </p>
-            <LocalizedLink
-              routeId="contact" hash="#kontaktformular"
-              className="inline-flex items-center justify-center px-6 py-3 rounded-full text-sm font-bold text-brand-950 bg-limeAccent-500 hover:bg-limeAccent-400 shadow-sm transition-colors"
-            >
-              {t('international.emptyCta')}
-            </LocalizedLink>
-          </div>
         )}
       </section>
+
+      <InternationalPartnership />
 
       <PartnersStrip />
 

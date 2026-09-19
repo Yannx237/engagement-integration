@@ -141,8 +141,24 @@
     "badge": "Projects abroad",
     "heading": "International cooperation",
     "intro": "Exchange, education partnerships and youth encounters beyond our German locations.",
-    "emptyHeading": "These project pages are being built",
-    "emptyText": "Our international initiatives and their flyers will be published here shortly. Until then we are glad to tell you about them in person.",
-    "emptyCta": "Get in touch"
+    "partnership": {
+      "eyebrow": "Partnership",
+      "school": "Complexe Scolaire Bilingue Jean-Paul Sartre Primero",
+      "location": "Yaoundé III, Afanoyoa — Cameroon",
+      "logoAlt": "Logo of the Complexe Scolaire Bilingue Jean-Paul Sartre Primero",
+      "motto": "Crescam et lucebo — Grow and shine",
+      "lead": "In November 2025, Mr Noa Sylvain Paco came to Germany for a training seminar as the official representative of the school's promoter.",
+      "body1": "The seminar brought together education professionals and institutional partners to look at new approaches to teaching, school governance and international cooperation.",
+      "body2": "Discussions with specialists and international partners covered the quality of learning, school administration and intercultural cooperation. What was learned feeds back into the daily work of the school in Yaoundé.",
+      "sourceLabel": "Read the school's own report",
+      "sourceNote": "Text and photographs: Complexe Scolaire Bilingue Jean-Paul Sartre Primero, 16 November 2025.",
+      "photos": {
+        "seminar1": "Mr Noa Sylvain Paco wearing a name badge in the seminar building in Germany",
+        "seminar2": "Working through the seminar material during the training",
+        "seminar3": "Mr Paco outside the Pavillon-Presse printing workshop",
+        "school1": "Children of the school in Yaoundé playing together in the yard",
+        "school2": "Teachers and parents at a school event"
+      }
+    }
   }
 }
